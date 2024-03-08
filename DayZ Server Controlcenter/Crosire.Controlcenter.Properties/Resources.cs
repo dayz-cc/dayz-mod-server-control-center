@@ -227,15 +227,6 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		internal static Bitmap logo_dayzpriv
-		{
-			get
-			{
-				object @object = ResourceManager.GetObject("logo_dayzpriv", resourceCulture);
-				return (Bitmap)@object;
-			}
-		}
-
 		internal static string maxbandwidth => ResourceManager.GetString("maxbandwidth", resourceCulture);
 
 		internal static string maxcustomsize => ResourceManager.GetString("maxcustomsize", resourceCulture);

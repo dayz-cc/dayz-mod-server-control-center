@@ -46,9 +46,7 @@ namespace Crosire.Controlcenter.Forms
 
 		public string versionBetaOnline = "0.0.0.0";
 
-		private string url_dayzcc = "http://www.dayzcc.tk";
-
-		private string url_dayzpriv = "http://www.dayzpriv.com";
+		private string url_dayzcc = "http://www.dayzcc.org";
 
 		private static Logger logger = LogManager.GetCurrentClassLogger();
 
@@ -71,10 +69,6 @@ namespace Crosire.Controlcenter.Forms
 		private ProgressBar progressUpdate;
 
 		private RichTextBox textProgress;
-
-		private PictureBox pictureSupporter;
-
-		private Label lblSupporter;
 
 		private Label lblMaintainer;
 
@@ -431,27 +425,12 @@ namespace Crosire.Controlcenter.Forms
 			Process.Start(url_dayzcc);
 		}
 
-		private void pictureSupporter_Click(object sender, EventArgs e)
-		{
-			Process.Start(url_dayzpriv);
-		}
-
 		private void pictureBanner_MouseHover(object sender, EventArgs e)
 		{
 			Cursor = Cursors.Hand;
 		}
 
 		private void pictureBanner_MouseLeave(object sender, EventArgs e)
-		{
-			Cursor = Cursors.Default;
-		}
-
-		private void pictureSupporter_MouseHover(object sender, EventArgs e)
-		{
-			Cursor = Cursors.Hand;
-		}
-
-		private void pictureSupporter_MouseLeave(object sender, EventArgs e)
 		{
 			Cursor = Cursors.Default;
 		}
@@ -477,11 +456,8 @@ namespace Crosire.Controlcenter.Forms
 			this.labelProgress = new System.Windows.Forms.Label();
 			this.progressUpdate = new System.Windows.Forms.ProgressBar();
 			this.textProgress = new System.Windows.Forms.RichTextBox();
-			this.pictureSupporter = new System.Windows.Forms.PictureBox();
-			this.lblSupporter = new System.Windows.Forms.Label();
 			this.lblMaintainer = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)this.pictureBanner).BeginInit();
-			((System.ComponentModel.ISupportInitialize)this.pictureSupporter).BeginInit();
 			base.SuspendLayout();
 			this.workerMain.DoWork += new System.ComponentModel.DoWorkEventHandler(workerMain_DoWork);
 			this.workerMain.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(workerMain_RunWorkerCompleted);
@@ -516,11 +492,11 @@ namespace Crosire.Controlcenter.Forms
 			this.labelCopyright.BackColor = System.Drawing.Color.Transparent;
 			this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.labelCopyright.ForeColor = System.Drawing.Color.Gray;
-			this.labelCopyright.Location = new System.Drawing.Point(13, 389);
+			this.labelCopyright.Location = new System.Drawing.Point(13, 320);
 			this.labelCopyright.Name = "labelCopyright";
 			this.labelCopyright.Size = new System.Drawing.Size(471, 15);
 			this.labelCopyright.TabIndex = 16;
-			this.labelCopyright.Text = "Copyright ©2012 - 2013 Crosire and DayZ Priv. All rights reserved.";
+			this.labelCopyright.Text = "Copyright ©2012 - 2013 Crosire. All rights reserved.";
 			this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.pictureBanner.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.pictureBanner.BackColor = System.Drawing.Color.Transparent;
@@ -561,45 +537,21 @@ namespace Crosire.Controlcenter.Forms
 			this.textProgress.TabIndex = 22;
 			this.textProgress.TabStop = false;
 			this.textProgress.Text = "Initializing ...";
-			this.pictureSupporter.BackColor = System.Drawing.Color.Transparent;
-			this.pictureSupporter.BackgroundImage = Crosire.Controlcenter.Properties.Resources.logo_dayzpriv;
-			this.pictureSupporter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureSupporter.Location = new System.Drawing.Point(12, 336);
-			this.pictureSupporter.Name = "pictureSupporter";
-			this.pictureSupporter.Size = new System.Drawing.Size(472, 50);
-			this.pictureSupporter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureSupporter.TabIndex = 25;
-			this.pictureSupporter.TabStop = false;
-			this.pictureSupporter.Click += new System.EventHandler(pictureSupporter_Click);
-			this.pictureSupporter.MouseLeave += new System.EventHandler(pictureSupporter_MouseLeave);
-			this.pictureSupporter.MouseHover += new System.EventHandler(pictureSupporter_MouseHover);
-			this.lblSupporter.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.lblSupporter.BackColor = System.Drawing.Color.Transparent;
-			this.lblSupporter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			this.lblSupporter.ForeColor = System.Drawing.Color.White;
-			this.lblSupporter.Location = new System.Drawing.Point(10, 308);
-			this.lblSupporter.Name = "lblSupporter";
-			this.lblSupporter.Size = new System.Drawing.Size(472, 25);
-			this.lblSupporter.TabIndex = 30;
-			this.lblSupporter.Text = "Proudly Supported and Maintained By";
-			this.lblSupporter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lblMaintainer.AutoSize = true;
 			this.lblMaintainer.BackColor = System.Drawing.Color.Transparent;
 			this.lblMaintainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblMaintainer.ForeColor = System.Drawing.Color.White;
 			this.lblMaintainer.Location = new System.Drawing.Point(339, 293);
 			this.lblMaintainer.Name = "lblMaintainer";
-			this.lblMaintainer.Size = new System.Drawing.Size(147, 15);
+			this.lblMaintainer.Size = new System.Drawing.Size(144, 15);
 			this.lblMaintainer.TabIndex = 31;
-			this.lblMaintainer.Text = "Maintained by: NovoGeek";
+			this.lblMaintainer.Text = "Maintained by: Squadron";
 			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
 			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = Crosire.Controlcenter.Properties.Resources.background;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			base.ClientSize = new System.Drawing.Size(498, 413);
+			base.ClientSize = new System.Drawing.Size(498, 340);
 			base.Controls.Add(this.lblMaintainer);
-			base.Controls.Add(this.lblSupporter);
-			base.Controls.Add(this.pictureSupporter);
 			base.Controls.Add(this.labelProgress);
 			base.Controls.Add(this.progressUpdate);
 			base.Controls.Add(this.textProgress);
@@ -622,7 +574,6 @@ namespace Crosire.Controlcenter.Forms
 			base.Load += new System.EventHandler(frmSplash_Load);
 			base.Shown += new System.EventHandler(frmSplash_Shown);
 			((System.ComponentModel.ISupportInitialize)this.pictureBanner).EndInit();
-			((System.ComponentModel.ISupportInitialize)this.pictureSupporter).EndInit();
 			base.ResumeLayout(false);
 			base.PerformLayout();
 		}

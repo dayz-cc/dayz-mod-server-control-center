@@ -35,7 +35,7 @@ namespace Crosire.Controlcenter.Properties
 		public string updateChannel => (string)this["updateChannel"];
 
 		[DebuggerNonUserCode]
-		[DefaultSettingValue("ftp://www.dayzcc.tk")]
+		[DefaultSettingValue("ftp://mgc-portal.dyndns.org")]
 		[ApplicationScopedSetting]
 		public string updateUrl => (string)this["updateUrl"];
 
@@ -45,7 +45,7 @@ namespace Crosire.Controlcenter.Properties
 		public string updateFolder => (string)this["updateFolder"];
 
 		[ApplicationScopedSetting]
-		[DefaultSettingValue("http://rapidshare.com/files/3403905477/{0}.{1}.{2}.{3}.tar.gz?directstart=1")]
+		[DefaultSettingValue("http://mgc-portal.dyndns.org/dayzcc/5.9.4.1.tar.gz")]
 		[DebuggerNonUserCode]
 		public string updateFull => (string)this["updateFull"];
 
@@ -94,7 +94,7 @@ namespace Crosire.Controlcenter.Properties
 		[ApplicationScopedSetting]
 		public string uiUrlDatabase => (string)this["uiUrlDatabase"];
 
-		[DefaultSettingValue("http://www.dayzcc.tk")]
+		[DefaultSettingValue("http://www.dayzcc.org")]
 		[ApplicationScopedSetting]
 		[DebuggerNonUserCode]
 		public string uiUrlHomepage => (string)this["uiUrlHomepage"];
