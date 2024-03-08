@@ -174,6 +174,89 @@ namespace Crosire.Controlcenter.Setup
 			InitializeComponent();
 		}
 
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			wizPos--;
+			subUpdateWizard();
+		}
+
+		private void btnBrowse_Click(object sender, EventArgs e)
+		{
+			using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+			{
+				folderBrowserDialog.SelectedPath = pathArma;
+				if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+				{
+					textPath.Text = folderBrowserDialog.SelectedPath;
+				}
+			}
+		}
+
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
+			base.DialogResult = DialogResult.Abort;
+			Close();
+		}
+
+		private void btnNext_Click(object sender, EventArgs e)
+		{
+			if (wizFinished)
+			{
+				base.DialogResult = DialogResult.OK;
+				Close();
+			}
+			else
+			{
+				wizPos++;
+				subUpdateWizard();
+			}
+		}
+
+		private void checkOwn_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkOwn.Checked)
+			{
+				labelHost.Visible = true;
+				labelUser.Visible = true;
+				labelPass.Visible = true;
+				labelSeperator.Visible = true;
+				textHost.Visible = true;
+				textPort.Visible = true;
+				textUser.Visible = true;
+				textPass.Visible = true;
+			}
+			else
+			{
+				labelHost.Visible = false;
+				labelUser.Visible = false;
+				labelPass.Visible = false;
+				labelSeperator.Visible = false;
+				textHost.Visible = false;
+				textPort.Visible = false;
+				textUser.Visible = false;
+				textPass.Visible = false;
+			}
+		}
+
+		private void downloader_DownloadCompleted(object sender, AsyncCompletedEventArgs e)
+		{
+			if (e.Error == null)
+			{
+				subAppendProgress("> Download finished!", LogLevel.Info);
+				workerMain.RunWorkerAsync();
+			}
+			else
+			{
+				subAppendProgress("> Error: Exception: " + e.Error.Message, LogLevel.Fatal);
+				subFinished();
+			}
+		}
+
+		private void downloader_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+		{
+			progressbar.Value = e.ProgressPercentage;
+		}
+
 		private void frmSetup_Load(object sender, EventArgs e)
 		{
 			string[] commandLineArgs = Environment.GetCommandLineArgs();
@@ -333,88 +416,34 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		private void btnNext_Click(object sender, EventArgs e)
+		private void pictureBanner_Click(object sender, EventArgs e)
 		{
-			if (wizFinished)
-			{
-				base.DialogResult = DialogResult.OK;
-				Close();
-			}
-			else
-			{
-				wizPos++;
-				subUpdateWizard();
-			}
+			Process.Start(url_dayzcc);
 		}
 
-		private void btnBack_Click(object sender, EventArgs e)
+		private void pictureBanner_MouseHover(object sender, EventArgs e)
 		{
-			wizPos--;
-			subUpdateWizard();
+			Cursor = Cursors.Hand;
 		}
 
-		private void btnCancel_Click(object sender, EventArgs e)
+		private void pictureBanner_MouseLeave(object sender, EventArgs e)
 		{
-			base.DialogResult = DialogResult.Abort;
-			Close();
+			Cursor = Cursors.Default;
 		}
 
-		private void btnBrowse_Click(object sender, EventArgs e)
+		private void pictureLogo_Click(object sender, EventArgs e)
 		{
-			using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
-			{
-				folderBrowserDialog.SelectedPath = pathArma;
-				if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-				{
-					textPath.Text = folderBrowserDialog.SelectedPath;
-				}
-			}
+			Process.Start(url_dayzpriv);
 		}
 
-		private void checkOwn_CheckedChanged(object sender, EventArgs e)
+		private void pictureLogo_MouseHover(object sender, EventArgs e)
 		{
-			if (checkOwn.Checked)
-			{
-				labelHost.Visible = true;
-				labelUser.Visible = true;
-				labelPass.Visible = true;
-				labelSeperator.Visible = true;
-				textHost.Visible = true;
-				textPort.Visible = true;
-				textUser.Visible = true;
-				textPass.Visible = true;
-			}
-			else
-			{
-				labelHost.Visible = false;
-				labelUser.Visible = false;
-				labelPass.Visible = false;
-				labelSeperator.Visible = false;
-				textHost.Visible = false;
-				textPort.Visible = false;
-				textUser.Visible = false;
-				textPass.Visible = false;
-			}
+			Cursor = Cursors.Hand;
 		}
 
-		private void textReadme_VScroll(object sender, EventArgs e)
+		private void pictureLogo_MouseLeave(object sender, EventArgs e)
 		{
-			if (Scrollinfo.CheckBottom(textReadme))
-			{
-				btnNext.Enabled = true;
-			}
-		}
-
-		private void textPath_TextChanged(object sender, EventArgs e)
-		{
-			if (string.IsNullOrEmpty(textPath.Text))
-			{
-				btnNext.Enabled = false;
-			}
-			else
-			{
-				btnNext.Enabled = true;
-			}
+			Cursor = Cursors.Default;
 		}
 
 		private void subAppendProgress(string message, LogLevel level)
@@ -438,47 +467,21 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		private void subSetProgress(int progress)
+		private void subFinished()
 		{
-			if (base.InvokeRequired)
+			if (!noWindow)
 			{
-				Invoke(new Action<int>(subSetProgress), progress);
-			}
-			else if (progress <= progressbar.Maximum && progress >= progressbar.Minimum)
-			{
-				progressbar.Value = progress;
-			}
-		}
-
-		private void subUpdateWizard()
-		{
-			switch (wizPos)
-			{
-			case 0:
-				labelStep.Text = Resources.step_1;
-				btnBack.Enabled = false;
+				subSetProgress(100);
+				subAppendProgress(Environment.NewLine + "The Setup just finished. Make sure no errors are in the log above before you continue!", null);
+				subAppendProgress("Click on '" + Resources.button_finish + "' to exit the wizard.", null);
+				wizFinished = true;
 				btnNext.Enabled = true;
-				container1.Visible = true;
-				container2.Visible = false;
-				container3.Visible = false;
-				break;
-			case 1:
-				labelStep.Text = Resources.step_2;
-				btnBack.Enabled = true;
-				btnNext.Enabled = true;
-				container1.Visible = false;
-				container2.Visible = true;
-				container3.Visible = false;
-				break;
-			case 2:
-				labelStep.Text = Resources.step_3;
-				btnBack.Enabled = false;
-				btnNext.Enabled = false;
-				container1.Visible = false;
-				container2.Visible = false;
-				container3.Visible = true;
-				subStart();
-				break;
+				btnNext.Text = Resources.button_finish;
+			}
+			else
+			{
+				base.DialogResult = DialogResult.OK;
+				Close();
 			}
 		}
 
@@ -524,6 +527,18 @@ namespace Crosire.Controlcenter.Setup
 			if (xmlElement != null)
 			{
 				instances = Convert.ToInt32(xmlElement.InnerText);
+			}
+		}
+
+		private void subSetProgress(int progress)
+		{
+			if (base.InvokeRequired)
+			{
+				Invoke(new Action<int>(subSetProgress), progress);
+			}
+			else if (progress <= progressbar.Maximum && progress >= progressbar.Minimum)
+			{
+				progressbar.Value = progress;
 			}
 		}
 
@@ -644,41 +659,106 @@ namespace Crosire.Controlcenter.Setup
 			downloader.DownloadFileAsync(new Uri(string.Format(downloadUrl, array[0], array[1], array[2], array[3])), pathThis + "\\Serverfiles.tar.gz");
 		}
 
-		private void subFinished()
+		private void subUpdateWizard()
 		{
-			if (!noWindow)
+			switch (wizPos)
 			{
-				subSetProgress(100);
-				subAppendProgress(Environment.NewLine + "The Setup just finished. Make sure no errors are in the log above before you continue!", null);
-				subAppendProgress("Click on '" + Resources.button_finish + "' to exit the wizard.", null);
-				wizFinished = true;
+			case 0:
+				labelStep.Text = Resources.step_1;
+				btnBack.Enabled = false;
 				btnNext.Enabled = true;
-				btnNext.Text = Resources.button_finish;
-			}
-			else
-			{
-				base.DialogResult = DialogResult.OK;
-				Close();
+				container1.Visible = true;
+				container2.Visible = false;
+				container3.Visible = false;
+				break;
+			case 1:
+				labelStep.Text = Resources.step_2;
+				btnBack.Enabled = true;
+				btnNext.Enabled = true;
+				container1.Visible = false;
+				container2.Visible = true;
+				container3.Visible = false;
+				break;
+			case 2:
+				labelStep.Text = Resources.step_3;
+				btnBack.Enabled = false;
+				btnNext.Enabled = false;
+				container1.Visible = false;
+				container2.Visible = false;
+				container3.Visible = true;
+				subStart();
+				break;
 			}
 		}
 
-		private void downloader_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+		private void textPath_TextChanged(object sender, EventArgs e)
 		{
-			progressbar.Value = e.ProgressPercentage;
-		}
-
-		private void downloader_DownloadCompleted(object sender, AsyncCompletedEventArgs e)
-		{
-			if (e.Error == null)
+			if (string.IsNullOrEmpty(textPath.Text))
 			{
-				subAppendProgress("> Download finished!", LogLevel.Info);
-				workerMain.RunWorkerAsync();
+				btnNext.Enabled = false;
 			}
 			else
 			{
-				subAppendProgress("> Error: Exception: " + e.Error.Message, LogLevel.Fatal);
-				subFinished();
+				btnNext.Enabled = true;
 			}
+		}
+
+		private void textReadme_VScroll(object sender, EventArgs e)
+		{
+			if (Scrollinfo.CheckBottom(textReadme))
+			{
+				btnNext.Enabled = true;
+			}
+		}
+
+		private void threadreconfig_DoWork(object sender, DoWorkEventArgs e)
+		{
+			subAppendProgress(Environment.NewLine + "Reconfigurating files ...", LogLevel.Info);
+			int num = 0;
+			subSetProgress(num);
+			if (File.Exists(Path.Combine(pathArma, "expansion", "beta", "arma2oaserver.exe")))
+			{
+				for (int i = 1; i <= instances; i++)
+				{
+					try
+					{
+						File.Copy(Path.Combine(pathArma, "expansion", "beta", "arma2oaserver.exe"), Path.Combine(pathMain + "_config", i.ToString(), "arma2oaserver_" + i + ".exe"), true);
+					}
+					catch (Exception ex)
+					{
+						subAppendProgress("> Error while copying server executable for instance " + i + "!", LogLevel.Warn);
+						subAppendProgress("> Exception: " + ex.Message, LogLevel.Error);
+					}
+				}
+			}
+			else
+			{
+				subAppendProgress("> Warning: The beta patch is not installed!", LogLevel.Warn);
+			}
+			num += 50;
+			subSetProgress(num);
+			Process process = new Process();
+			process.StartInfo.FileName = pathMain + "\\install\\install.bat";
+			process.StartInfo.WorkingDirectory = pathMain + "\\install";
+			process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+			try
+			{
+				process.Start();
+				process.WaitForExit(13000);
+				subAppendProgress("> Finished!", LogLevel.Info);
+				num += 45;
+				subSetProgress(num);
+			}
+			catch (Exception ex2)
+			{
+				subAppendProgress("> Error while running the installation script!", LogLevel.Warn);
+				subAppendProgress("> Exception: " + ex2.Message, LogLevel.Error);
+			}
+		}
+
+		private void threadreconfig_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+		{
+			subFinished();
 		}
 
 		private void threadworker_DoWork(object sender, DoWorkEventArgs e)
@@ -1040,86 +1120,6 @@ namespace Crosire.Controlcenter.Setup
 			subFinished();
 		}
 
-		private void threadreconfig_DoWork(object sender, DoWorkEventArgs e)
-		{
-			subAppendProgress(Environment.NewLine + "Reconfigurating files ...", LogLevel.Info);
-			int num = 0;
-			subSetProgress(num);
-			if (File.Exists(Path.Combine(pathArma, "expansion", "beta", "arma2oaserver.exe")))
-			{
-				for (int i = 1; i <= instances; i++)
-				{
-					try
-					{
-						File.Copy(Path.Combine(pathArma, "expansion", "beta", "arma2oaserver.exe"), Path.Combine(pathMain + "_config", i.ToString(), "arma2oaserver_" + i + ".exe"), true);
-					}
-					catch (Exception ex)
-					{
-						subAppendProgress("> Error while copying server executable for instance " + i + "!", LogLevel.Warn);
-						subAppendProgress("> Exception: " + ex.Message, LogLevel.Error);
-					}
-				}
-			}
-			else
-			{
-				subAppendProgress("> Warning: The beta patch is not installed!", LogLevel.Warn);
-			}
-			num += 50;
-			subSetProgress(num);
-			Process process = new Process();
-			process.StartInfo.FileName = pathMain + "\\install\\install.bat";
-			process.StartInfo.WorkingDirectory = pathMain + "\\install";
-			process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-			try
-			{
-				process.Start();
-				process.WaitForExit(13000);
-				subAppendProgress("> Finished!", LogLevel.Info);
-				num += 45;
-				subSetProgress(num);
-			}
-			catch (Exception ex2)
-			{
-				subAppendProgress("> Error while running the installation script!", LogLevel.Warn);
-				subAppendProgress("> Exception: " + ex2.Message, LogLevel.Error);
-			}
-		}
-
-		private void threadreconfig_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		{
-			subFinished();
-		}
-
-		private void pictureBanner_Click(object sender, EventArgs e)
-		{
-			Process.Start(url_dayzcc);
-		}
-
-		private void pictureLogo_Click(object sender, EventArgs e)
-		{
-			Process.Start(url_dayzpriv);
-		}
-
-		private void pictureBanner_MouseHover(object sender, EventArgs e)
-		{
-			Cursor = Cursors.Hand;
-		}
-
-		private void pictureLogo_MouseHover(object sender, EventArgs e)
-		{
-			Cursor = Cursors.Hand;
-		}
-
-		private void pictureLogo_MouseLeave(object sender, EventArgs e)
-		{
-			Cursor = Cursors.Default;
-		}
-
-		private void pictureBanner_MouseLeave(object sender, EventArgs e)
-		{
-			Cursor = Cursors.Default;
-		}
-
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && components != null)
@@ -1433,7 +1433,7 @@ namespace Crosire.Controlcenter.Setup
 			this.labelEnterDatabase.Name = "labelEnterDatabase";
 			this.labelEnterDatabase.Size = new System.Drawing.Size(440, 21);
 			this.labelEnterDatabase.TabIndex = 9;
-			this.labelEnterDatabase.Text = "Enter a list of databases you wish to update below. You can use commas to seperatee them:";
+			this.labelEnterDatabase.Text = "Enter a list of databases you wish to update below. You can use commas to seperate them:";
 			this.labelHost.AutoSize = true;
 			this.labelHost.Location = new System.Drawing.Point(6, 61);
 			this.labelHost.Name = "labelHost";
@@ -1445,7 +1445,7 @@ namespace Crosire.Controlcenter.Setup
 			this.textDatabase.Name = "textDatabase";
 			this.textDatabase.Size = new System.Drawing.Size(437, 20);
 			this.textDatabase.TabIndex = 6;
-			this.textDatabase.Text = "dayz_chernarus, dayz_lingor, dayz_namalsk, dayz_taviana, dayz_utes, dayz_panthera, dayz_zargabad, dayz_takistan, dayz_fallujah, dayz_celle";
+			this.textDatabase.Text = "dayz_chernarus";
 			this.labelPass.AutoSize = true;
 			this.labelPass.Location = new System.Drawing.Point(6, 113);
 			this.labelPass.Name = "labelPass";
@@ -1552,7 +1552,7 @@ namespace Crosire.Controlcenter.Setup
 			this.lblDayZModVersion.Name = "lblDayZModVersion";
 			this.lblDayZModVersion.Size = new System.Drawing.Size(40, 13);
 			this.lblDayZModVersion.TabIndex = 31;
-			this.lblDayZModVersion.Text = "1.7.6.1";
+			this.lblDayZModVersion.Text = "1.7.7.1";
 			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
 			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = Crosire.Controlcenter.Setup.Properties.Resources.background;
@@ -1563,7 +1563,6 @@ namespace Crosire.Controlcenter.Setup
 			base.Controls.Add(this.lblSupporter);
 			base.Controls.Add(this.pictureLogo);
 			base.Controls.Add(this.lblMaintainer);
-			base.Controls.Add(this.container1);
 			base.Controls.Add(this.container2);
 			base.Controls.Add(this.container3);
 			base.Controls.Add(this.labelCopyright);
@@ -1573,6 +1572,7 @@ namespace Crosire.Controlcenter.Setup
 			base.Controls.Add(this.labelVersionDescription);
 			base.Controls.Add(this.labelVersion);
 			base.Controls.Add(this.pictureBanner);
+			base.Controls.Add(this.container1);
 			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			base.Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
 			base.Name = "frmSetup";

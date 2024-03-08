@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 
 [assembly: AssemblyTitle("DayZ Server Controlcenter Library")]
 [assembly: AssemblyDescription("Library for developers containing various functions to read and write to Armed Aussaults server configuration files and a lot more!")]

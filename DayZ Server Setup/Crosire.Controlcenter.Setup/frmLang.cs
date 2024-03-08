@@ -25,12 +25,6 @@ namespace Crosire.Controlcenter.Setup
 			InitializeComponent();
 		}
 
-		private void frmLang_Load(object sender, EventArgs e)
-		{
-			labelChoose.Text = Resources.sentence_chooselanguage;
-			cbxLanguage.SelectedItem = Thread.CurrentThread.CurrentUICulture.IetfLanguageTag.Substring(0, 2).ToLower();
-		}
-
 		private void btnOk_Click(object sender, EventArgs e)
 		{
 			Close();
@@ -41,6 +35,12 @@ namespace Crosire.Controlcenter.Setup
 			language = cbxLanguage.SelectedItem.ToString();
 			Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
 			labelChoose.Text = Resources.sentence_chooselanguage;
+		}
+
+		private void frmLang_Load(object sender, EventArgs e)
+		{
+			labelChoose.Text = Resources.sentence_chooselanguage;
+			cbxLanguage.SelectedItem = Thread.CurrentThread.CurrentUICulture.IetfLanguageTag.Substring(0, 2).ToLower();
 		}
 
 		protected override void Dispose(bool disposing)
@@ -62,9 +62,9 @@ namespace Crosire.Controlcenter.Setup
 			this.labelChoose.AutoSize = true;
 			this.labelChoose.Location = new System.Drawing.Point(12, 9);
 			this.labelChoose.Name = "labelChoose";
-			this.labelChoose.Size = new System.Drawing.Size(116, 13);
+			this.labelChoose.Size = new System.Drawing.Size(161, 13);
 			this.labelChoose.TabIndex = 0;
-			this.labelChoose.Text = "Choose your language:";
+			this.labelChoose.Text = "Choose your preferred language:";
 			this.cbxLanguage.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
 			this.cbxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbxLanguage.FormattingEnabled = true;
@@ -97,7 +97,7 @@ namespace Crosire.Controlcenter.Setup
 			base.ShowIcon = false;
 			base.ShowInTaskbar = false;
 			base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = " ";
+			this.Text = " Language Selection";
 			base.TopMost = true;
 			base.Load += new System.EventHandler(frmLang_Load);
 			base.ResumeLayout(false);

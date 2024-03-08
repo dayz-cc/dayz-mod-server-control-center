@@ -942,6 +942,7 @@ namespace Crosire.Controlcenter
 						checkPersistent.Enabled = true;
 						checkDuplicate.Enabled = true;
 						checkRmod.Enabled = true;
+						checkRmod.Visible = false;
 						checkBattleye.Enabled = true;
 						checkVon.Enabled = true;
 						cbxTemplate.Enabled = true;
@@ -1542,27 +1543,6 @@ namespace Crosire.Controlcenter
 			}
 			if (checkRmod.Checked)
 			{
-				configuration.confTemplate = configuration.confTemplate.Replace("dayz", "rmod");
-				if (!configuration.confModlist.ToLower().Contains("@rmod"))
-				{
-					if (!configuration.confModlist.EndsWith(";"))
-					{
-						configuration.confModlist += ";";
-					}
-					configuration.confModlist += "@rMod;";
-				}
-			}
-			else
-			{
-				configuration.confTemplate = configuration.confTemplate.Replace("rmod", "dayz");
-				if (configuration.confModlist.ToLower().Contains("@rmod;"))
-				{
-					configuration.confModlist = configuration.confModlist.Remove(configuration.confModlist.ToLower().IndexOf("@rmod"), 6);
-				}
-				else if (configuration.confModlist.ToLower().Contains("@rmod"))
-				{
-					configuration.confModlist = configuration.confModlist.Remove(configuration.confModlist.ToLower().IndexOf("@rmod"), 5);
-				}
 			}
 			try
 			{

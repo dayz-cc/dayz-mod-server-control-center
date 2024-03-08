@@ -28,8 +28,8 @@ namespace Crosire.Library
 		public static void ExtractTarGz(string gzArchiveName, string destFolder)
 		{
 			Stream stream = File.OpenRead(gzArchiveName);
-			Stream stream2 = (Stream)(object)new GZipInputStream((Stream)(object)stream);
-			TarArchive tarArchive = TarArchive.CreateInputTarArchive((Stream)(object)stream2);
+			Stream stream2 = new GZipInputStream(stream);
+			TarArchive tarArchive = TarArchive.CreateInputTarArchive(stream2);
 			tarArchive.ExtractContents(destFolder);
 			tarArchive.Close();
 			stream2.Close();

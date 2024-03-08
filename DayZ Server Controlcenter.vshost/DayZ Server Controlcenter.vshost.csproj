@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyName>BattleNET</AssemblyName>
+    <AssemblyName>vshost</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-    <TargetFramework>net40</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net45</TargetFramework>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>6</LangVersion>
@@ -11,5 +12,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup />
-  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.HostingProcess.Utilities.Sync" />
+  </ItemGroup>
 </Project>
