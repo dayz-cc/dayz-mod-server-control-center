@@ -29,7 +29,7 @@
     <Prefer32Bit>True</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="6.7.9" />
+    <PackageReference Include="MySql.Data" Version="6.10.9" />
     <PackageReference Include="NLog" Version="5.2.8" />
   </ItemGroup>
   <ItemGroup>
