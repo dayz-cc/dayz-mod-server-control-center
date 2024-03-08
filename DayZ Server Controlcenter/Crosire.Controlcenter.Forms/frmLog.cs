@@ -291,7 +291,7 @@ namespace Crosire.Controlcenter.Forms {
             base.Controls.Add(this.textSend);
             base.Controls.Add(this.textLog);
             base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            base.Icon = (System.Drawing.Icon)resourceMan.GetObject("$this.Icon");
+            base.Icon = (System.Drawing.Icon)Resources.Images.icon;
             base.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(380, 10000000);
             base.MinimizeBox = false;

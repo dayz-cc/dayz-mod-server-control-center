@@ -428,7 +428,7 @@ namespace Crosire.Controlcenter.Forms {
             // 
             this.pictureBanner.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBanner.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBanner.Image = global::Crosire.Controlcenter.Resources.Images.pictureBanner_Image;
+            this.pictureBanner.Image = Resources.Images.banner;
             this.pictureBanner.Location = new System.Drawing.Point(12, 12);
             this.pictureBanner.Name = "pictureBanner";
             this.pictureBanner.Size = new System.Drawing.Size(472, 84);
@@ -452,7 +452,7 @@ namespace Crosire.Controlcenter.Forms {
             // 
             // progressUpdate
             // 
-            this.progressUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.progressUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressUpdate.Location = new System.Drawing.Point(12, 267);
             this.progressUpdate.Name = "progressUpdate";
@@ -461,8 +461,8 @@ namespace Crosire.Controlcenter.Forms {
             // 
             // textProgress
             // 
-            this.textProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textProgress.BackColor = System.Drawing.SystemColors.Control;
             this.textProgress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -494,7 +494,7 @@ namespace Crosire.Controlcenter.Forms {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Crosire.Controlcenter.Resources.Images.pictureBanner_Image;
+            this.BackgroundImage = Resources.Images.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(498, 340);
             this.Controls.Add(this.lblMaintainer);
@@ -508,7 +508,7 @@ namespace Crosire.Controlcenter.Forms {
             this.Controls.Add(this.pictureBanner);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = Resources.Images.icon;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(498, 305);

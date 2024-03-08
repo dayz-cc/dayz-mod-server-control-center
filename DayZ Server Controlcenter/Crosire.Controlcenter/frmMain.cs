@@ -2587,7 +2587,7 @@ namespace Crosire.Controlcenter {
             this.groupAbout.TabStop = false;
             this.groupAbout.Text = "About";
             this.pictureLicense.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.pictureLicense.Image = Resources.Localized.license;
+            this.pictureLicense.Image = Resources.Images.license;
             this.pictureLicense.Location = new System.Drawing.Point(588, 21);
             this.pictureLicense.Name = "pictureLicense";
             this.pictureLicense.Size = new System.Drawing.Size(100, 64);
@@ -2610,7 +2610,7 @@ namespace Crosire.Controlcenter {
             this.labelVersionText.Size = new System.Drawing.Size(57, 16);
             this.labelVersionText.TabIndex = 1;
             this.labelVersionText.Text = "Version:";
-            this.pictureIcon.BackgroundImage = Resources.Localized.logo;
+            this.pictureIcon.BackgroundImage = Resources.Images.logo;
             this.pictureIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureIcon.Location = new System.Drawing.Point(11, 21);
             this.pictureIcon.Name = "pictureIcon";
@@ -3612,14 +3612,14 @@ namespace Crosire.Controlcenter {
             this.labelModlist.Text = "Modlist:";
             this.cbxLoadout.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.cbxLoadout.FormattingEnabled = true;
-            this.cbxLoadout.Items.AddRange(new object[6]
+            this.cbxLoadout.Items.AddRange(new object[]
             {
                 "[]",
                 "[[\"M9SD\",\"FoodCanBakedBeans\",\"ItemMap\"],[\"15Rnd_9x19_M9SD\",\"ItemBandage\",\"15Rnd_9x19_M9SD\"]]",
                 "[[\"M9SD\",\"FoodCanBakedBeans\",\"ItemMap\",\"LeeEnfield\"],[\"15Rnd_9x19_M9SD\",\"ItemBandage\",\"15Rnd_9x19_M9SD\",\"10x_303\",\"10x_303\",\"10x_303\",\"10x_303\"]]",
                 "[[\"M9SD\",\"FoodCanBakedBeans\",\"ItemMap\",\"Mk_48_DZ\"],[\"15Rnd_9x19_M9SD\",\"ItemBandage\",\"15Rnd_9x19_M9SD\",\"100Rnd_762x51_M240\",\"100Rnd_762x51_M240\"]]",
                 "[[\"ItemMap\",\"ItemCompass\",\"ItemMatchbox\",\"FoodCanBakedBeans\",\"ItemKnife\",\"FoodCanBakedBeans\"],[\"ItemTent\",\"ItemBandage\",\"ItemBandage\"]]",
-                resourceMan.GetString("cbxLoadout.Items")
+                Settings.Default.cbxLoadoutItems
             });
             this.cbxLoadout.Location = new System.Drawing.Point(165, 49);
             this.cbxLoadout.Name = "cbxLoadout";
@@ -3818,7 +3818,7 @@ namespace Crosire.Controlcenter {
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new System.Drawing.Size(884, 612);
             base.Controls.Add(this.container1);
-            base.Icon = (System.Drawing.Icon)resourceMan.GetObject("$this.Icon");
+            base.Icon = (System.Drawing.Icon)Resources.Images.icon;
             this.MinimumSize = new System.Drawing.Size(800, 650);
             base.Name = "frmMain";
             base.FormClosing += new System.Windows.Forms.FormClosingEventHandler(frmMain_FormClosing);

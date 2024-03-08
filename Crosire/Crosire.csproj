@@ -6,7 +6,7 @@
     <UseWindowsForms>True</UseWindowsForms>
     <TargetFramework>net40</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <Platforms>AnyCPU</Platforms>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>6</LangVersion>

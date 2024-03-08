@@ -498,4 +498,7 @@
   <data name="port" xml:space="preserve">
     <value>Port</value>
   </data>
+  <data name="group_whitelist" xml:space="preserve">
+    <value>Liste blanche</value>
+  </data>
 </root>

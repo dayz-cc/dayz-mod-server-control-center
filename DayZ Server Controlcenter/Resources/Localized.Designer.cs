@@ -10,8 +10,8 @@
 
 namespace Crosire.Controlcenter.Resources {
     using System;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace Crosire.Controlcenter.Resources {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Localized {
-
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Localized() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Crosire.Controlcenter.Resources {
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +59,7 @@ namespace Crosire.Controlcenter.Resources {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Backpack.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("backpack", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Path to Backup folder.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("backupfolder", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Required Build.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("build", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Add new database.
         /// </summary>
@@ -95,7 +95,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_add_database", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Add new player.
         /// </summary>
@@ -104,7 +104,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_add_player", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Start Autobackup.
         /// </summary>
@@ -113,7 +113,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_autobackup_start", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Stop Autobackup.
         /// </summary>
@@ -122,7 +122,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_autobackup_stop", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Backup Database.
         /// </summary>
@@ -131,7 +131,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_backup", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Browse.
         /// </summary>
@@ -140,7 +140,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_browse", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
@@ -149,7 +149,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_cancel", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
@@ -158,7 +158,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_clear", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
@@ -167,7 +167,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_details", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
@@ -176,7 +176,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_exit", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Generate vehicles.
         /// </summary>
@@ -185,7 +185,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_generate", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Show Log.
         /// </summary>
@@ -194,7 +194,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_log", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to 1. Configuration.
         /// </summary>
@@ -203,7 +203,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_menu1", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to 2. Administration.
         /// </summary>
@@ -212,7 +212,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_menu2", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to 3. Database.
         /// </summary>
@@ -221,7 +221,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_menu3", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to 4. Information.
         /// </summary>
@@ -230,7 +230,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_menu4", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Start Realtime Log Monitoring.
         /// </summary>
@@ -239,7 +239,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_monitor_start", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Stop Log Monitoring.
         /// </summary>
@@ -248,7 +248,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_monitor_stop", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Change MySQL Password.
         /// </summary>
@@ -257,7 +257,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_mysql_password", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
@@ -266,7 +266,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_ok", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Randomize passwords.
         /// </summary>
@@ -275,7 +275,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_random", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reload.
         /// </summary>
@@ -284,7 +284,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_reload", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset Database.
         /// </summary>
@@ -293,7 +293,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_reset", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Restore Database.
         /// </summary>
@@ -302,7 +302,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_restore", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
@@ -311,7 +311,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_save", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save configuration.
         /// </summary>
@@ -320,7 +320,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_save_config", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save player.
         /// </summary>
@@ -329,7 +329,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("button_save_player", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Bytes.
         /// </summary>
@@ -338,7 +338,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("bytes", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to B/s.
         /// </summary>
@@ -347,7 +347,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("bytespersecond", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Only Daytime.
         /// </summary>
@@ -356,7 +356,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("check_daytime", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Kick Duplicate.
         /// </summary>
@@ -365,7 +365,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("check_duplicate", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Enabled.
         /// </summary>
@@ -374,7 +374,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("check_enabled", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Persistent Battlefield.
         /// </summary>
@@ -383,7 +383,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("check_persistent", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Enable rMod.
         /// </summary>
@@ -392,7 +392,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("check_rmod", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Whitelisted.
         /// </summary>
@@ -401,7 +401,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("check_whitelisted", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Codec Quality.
         /// </summary>
@@ -410,7 +410,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("codecquality", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to CPU Count.
         /// </summary>
@@ -419,7 +419,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("cpucount", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Database name.
         /// </summary>
@@ -428,7 +428,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("databasename", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Difficulty.
         /// </summary>
@@ -437,7 +437,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("difficulty", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
@@ -446,7 +446,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_about", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Autobackup.
         /// </summary>
@@ -455,7 +455,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_autobackup", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Backup.
         /// </summary>
@@ -464,7 +464,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_backup", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to BattlEye.
         /// </summary>
@@ -473,7 +473,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_battleye", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Message.
         /// </summary>
@@ -482,7 +482,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_message", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MySQL.
         /// </summary>
@@ -491,7 +491,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_mysql", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Login information.
         /// </summary>
@@ -500,7 +500,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_mysql_details", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Other.
         /// </summary>
@@ -509,7 +509,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_other", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Profile.
         /// </summary>
@@ -518,7 +518,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_profile", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset.
         /// </summary>
@@ -527,7 +527,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_reset", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Restore.
         /// </summary>
@@ -536,7 +536,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_restore", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Scripting.
         /// </summary>
@@ -545,7 +545,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_scripting", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
@@ -554,7 +554,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_settings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Signatures.
         /// </summary>
@@ -563,7 +563,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_signatures", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Survivor.
         /// </summary>
@@ -572,7 +572,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_survivor", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Mission.
         /// </summary>
@@ -581,7 +581,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_template", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Time.
         /// </summary>
@@ -590,7 +590,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_time", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Network Tuning.
         /// </summary>
@@ -599,7 +599,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_tuning_network", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Performance Tuning.
         /// </summary>
@@ -608,7 +608,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_tuning_performance", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Voice Over Net.
         /// </summary>
@@ -617,7 +617,16 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("group_von", resourceCulture);
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whitelist.
+        /// </summary>
+        internal static string group_whitelist {
+            get {
+                return ResourceManager.GetString("group_whitelist", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to GUID.
         /// </summary>
@@ -626,7 +635,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("guid", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Instance.
         /// </summary>
@@ -635,7 +644,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("instance", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Inventory.
         /// </summary>
@@ -644,7 +653,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("inventory", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to kB.
         /// </summary>
@@ -653,7 +662,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("kilobyte", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Global loadout.
         /// </summary>
@@ -662,7 +671,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("loadout", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Global backpack loadout.
         /// </summary>
@@ -671,7 +680,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("loadoutbackpack", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Max. Bandwidth.
         /// </summary>
@@ -680,7 +689,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("maxbandwidth", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Max. Custom File Size.
         /// </summary>
@@ -689,7 +698,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("maxcustomsize", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Max. Messages Sent.
         /// </summary>
@@ -698,7 +707,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("maxmsgsent", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Max. Ping.
         /// </summary>
@@ -707,7 +716,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("maxping", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Max. Players.
         /// </summary>
@@ -716,7 +725,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("maxplayers", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Max. Size Guaranteed.
         /// </summary>
@@ -725,7 +734,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("maxsizeguaranteed", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Max. Size Nonguaranteed.
         /// </summary>
@@ -734,7 +743,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("maxsizenonguaranteed", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Max. Vehicle Count.
         /// </summary>
@@ -743,7 +752,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("maxvehicles", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Medical.
         /// </summary>
@@ -752,7 +761,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("medical", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Message.
         /// </summary>
@@ -761,7 +770,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to add the following database:.
         /// </summary>
@@ -770,7 +779,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_confirm_database", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to delete the log file?.
         /// </summary>
@@ -779,7 +788,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_confirm_deletelog", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to add the following player to the whitelist:.
         /// </summary>
@@ -788,7 +797,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_confirm_player", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Database creation failed:.
         /// </summary>
@@ -797,7 +806,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_error_database", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Database restore failed:.
         /// </summary>
@@ -806,7 +815,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_error_restore", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Database was created!.
         /// </summary>
@@ -815,7 +824,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_finished_database", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Database was cleared!.
         /// </summary>
@@ -824,7 +833,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_finished_reset", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Database was restored!.
         /// </summary>
@@ -833,7 +842,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_finished_restore", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Do you really want to reset the whole database? All progress is deleted!.
         /// </summary>
@@ -842,7 +851,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("message_reset", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Join Message.
         /// </summary>
@@ -851,7 +860,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("messagejoin", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Seconds between messages.
         /// </summary>
@@ -860,7 +869,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("messagetime", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Min. Bandwidth.
         /// </summary>
@@ -869,7 +878,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("minbandwidth", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Min. Errors to Send.
         /// </summary>
@@ -878,7 +887,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("minerrtosend", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Min. Errors to Send Near.
         /// </summary>
@@ -887,7 +896,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("minerrtosendnear", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Modlist.
         /// </summary>
@@ -896,7 +905,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("modlist", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MySQL Credentials.
         /// </summary>
@@ -905,7 +914,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("mysql_credentials", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MySQL Host Address.
         /// </summary>
@@ -914,7 +923,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("mysql_host", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
@@ -923,7 +932,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("name", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
@@ -932,7 +941,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("password", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Admin Password.
         /// </summary>
@@ -941,7 +950,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("passwordadmin", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to BattlEye Password.
         /// </summary>
@@ -950,7 +959,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("passwordrcon", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Port.
         /// </summary>
@@ -959,7 +968,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("port", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Position.
         /// </summary>
@@ -968,7 +977,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("position", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reporting IP.
         /// </summary>
@@ -977,7 +986,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("reportingip", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Require SecureID.
         /// </summary>
@@ -986,7 +995,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("requiresecureid", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Enter the interval in minutes in which a backup should be created:.
         /// </summary>
@@ -995,7 +1004,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_backupinterval", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Choose your language:.
         /// </summary>
@@ -1004,7 +1013,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_chooselanguage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Options for server name, security switches like a password or the whitelist and which mod to start can be found here..
         /// </summary>
@@ -1013,7 +1022,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_menu1_description", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Start the server, change the mysql connection or view the server log here. The webfrontend allows easy monitoring..
         /// </summary>
@@ -1022,7 +1031,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_menu2_description", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Manage the database with chive. Edit players, add new ones to the whitelist or backup and restore your database here..
         /// </summary>
@@ -1031,7 +1040,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_menu3_description", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Change the display language or get information about this application..
         /// </summary>
@@ -1040,7 +1049,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_menu4_description", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Note: Use this pattern for your text: &quot;Message 1&quot;,&quot;Message 2&quot;,&quot;...&quot;.
         /// </summary>
@@ -1049,7 +1058,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_message", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Warning! This deletes the whole database!.
         /// </summary>
@@ -1058,7 +1067,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_reset", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Server instance to manage:.
         /// </summary>
@@ -1067,7 +1076,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("sentence_selectinstance", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Server name.
         /// </summary>
@@ -1076,7 +1085,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("servername", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Basic.
         /// </summary>
@@ -1085,7 +1094,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab1_page1", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Security.
         /// </summary>
@@ -1094,7 +1103,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab1_page2", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to More.
         /// </summary>
@@ -1103,7 +1112,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab1_page3", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Manage.
         /// </summary>
@@ -1112,7 +1121,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab2_page1", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Server.
         /// </summary>
@@ -1121,7 +1130,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab2_page2", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Logs.
         /// </summary>
@@ -1130,7 +1139,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab2_page3", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Manage.
         /// </summary>
@@ -1139,7 +1148,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab3_page1", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Players.
         /// </summary>
@@ -1148,7 +1157,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab3_page2", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Backup.
         /// </summary>
@@ -1157,7 +1166,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("tab3_page3", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Mission Template.
         /// </summary>
@@ -1166,7 +1175,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("template", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Timezone.
         /// </summary>
@@ -1175,7 +1184,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("timezone", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to UID.
         /// </summary>
@@ -1184,7 +1193,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("uid", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Verify Signatures.
         /// </summary>
@@ -1193,7 +1202,7 @@ namespace Crosire.Controlcenter.Resources {
                 return ResourceManager.GetString("verifysignatures", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Version.
         /// </summary>
