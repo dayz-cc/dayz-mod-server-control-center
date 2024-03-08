@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="mysql_credentials" xml:space="preserve">
+    <value>MySQL Credentials</value>
+  </data>
+  <data name="requiresecureid" xml:space="preserve">
+    <value>Require SecureID</value>
+  </data>
+  <data name="message_reset" xml:space="preserve">
+    <value>Vil du virkelig ønsker at nulstille hele databasen? Alle fremskridt bliver slettet!</value>
+  </data>
+  <data name="sentence_reset" xml:space="preserve">
+    <value>Advarsel! Dette sletter hele databasen!</value>
+  </data>
+  <data name="verifysignatures" xml:space="preserve">
+    <value>Bekræft Signaturer</value>
+  </data>
+  <data name="button_menu4" xml:space="preserve">
+    <value>4. Information</value>
+  </data>
+  <data name="button_menu3" xml:space="preserve">
+    <value>3. Database</value>
+  </data>
+  <data name="button_menu2" xml:space="preserve">
+    <value>2. Administration</value>
+  </data>
+  <data name="button_menu1" xml:space="preserve">
+    <value>1. Konfiguration</value>
+  </data>
+  <data name="button_add_player" xml:space="preserve">
+    <value>Tilføj ny spiller</value>
+  </data>
+  <data name="button_clear" xml:space="preserve">
+    <value>Ryd</value>
+  </data>
+  <data name="button_reset" xml:space="preserve">
+    <value>Nulstil Database</value>
+  </data>
+  <data name="maxsizenonguaranteed" xml:space="preserve">
+    <value>Max. Ikke-garanteret Størelse</value>
+  </data>
+  <data name="check_enabled" xml:space="preserve">
+    <value>Aktiveret</value>
+  </data>
+  <data name="maxsizeguaranteed" xml:space="preserve">
+    <value>Max. Garanteret Størelse</value>
+  </data>
+  <data name="group_signatures" xml:space="preserve">
+    <value>Underskrifter</value>
+  </data>
+  <data name="message_error_database" xml:space="preserve">
+    <value>Database skabelse mislykkedes:</value>
+  </data>
+  <data name="group_time" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="group_template" xml:space="preserve">
+    <value>Mission</value>
+  </data>
+  <data name="message_confirm_player" xml:space="preserve">
+    <value>Er du sikker på du vil tilføje følgende spiller til whitelist:</value>
+  </data>
+  <data name="messagejoin" xml:space="preserve">
+    <value>Join Message</value>
+  </data>
+  <data name="messagetime" xml:space="preserve">
+    <value>Sekunder mellem meddelelser</value>
+  </data>
+  <data name="codecquality" xml:space="preserve">
+    <value>Codec Kvalitet</value>
+  </data>
+  <data name="message_finished_reset" xml:space="preserve">
+    <value>Database blev nulstillede!</value>
+  </data>
+  <data name="passwordrcon" xml:space="preserve">
+    <value>BattlEye Kodeord</value>
+  </data>
+  <data name="tab1_page3" xml:space="preserve">
+    <value>Mere</value>
+  </data>
+  <data name="tab1_page2" xml:space="preserve">
+    <value>Sikkerhed</value>
+  </data>
+  <data name="tab1_page1" xml:space="preserve">
+    <value>Grundlæggende</value>
+  </data>
+  <data name="minbandwidth" xml:space="preserve">
+    <value>Min. Båndbredde</value>
+  </data>
+  <data name="maxvehicles" xml:space="preserve">
+    <value>Max. Antal Køretøjer</value>
+  </data>
+  <data name="difficulty" xml:space="preserve">
+    <value>Sværhedsgrad</value>
+  </data>
+  <data name="cpucount" xml:space="preserve">
+    <value>Antal CPU'er</value>
+  </data>
+  <data name="message_finished_database" xml:space="preserve">
+    <value>Database blev oprettet!</value>
+  </data>
+  <data name="minerrtosend" xml:space="preserve">
+    <value>Min. Fejl at sende</value>
+  </data>
+  <data name="check_whitelisted" xml:space="preserve">
+    <value>Whitelisted</value>
+  </data>
+  <data name="button_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="group_battleye" xml:space="preserve">
+    <value>BattlEye</value>
+  </data>
+  <data name="loadoutbackpack" xml:space="preserve">
+    <value>Rygsæk loadout</value>
+  </data>
+  <data name="maxbandwidth" xml:space="preserve">
+    <value>Max. Båndbredde</value>
+  </data>
+  <data name="group_scripting" xml:space="preserve">
+    <value>Scripting</value>
+  </data>
+  <data name="kilobyte" xml:space="preserve">
+    <value>kB</value>
+  </data>
+  <data name="check_daytime" xml:space="preserve">
+    <value>Kun Dagstimer</value>
+  </data>
+  <data name="button_autobackup_stop" xml:space="preserve">
+    <value>Stop Autobackup</value>
+  </data>
+  <data name="group_settings" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="button_add_database" xml:space="preserve">
+    <value>Tilføj ny database</value>
+  </data>
+  <data name="maxplayers" xml:space="preserve">
+    <value>Max. Spillere</value>
+  </data>
+  <data name="sentence_menu3_description" xml:space="preserve">
+    <value>Administrere databasen med chive. Rediger spillere, tilføje nye til whitelist eller backup og gendan din database her.</value>
+  </data>
+  <data name="backupfolder" xml:space="preserve">
+    <value>Sti til Backup mappe</value>
+  </data>
+  <data name="sentence_chooselanguage" xml:space="preserve">
+    <value>Vælg dit sprog</value>
+  </data>
+  <data name="group_tuning_performance" xml:space="preserve">
+    <value>Ydelse Tuning</value>
+  </data>
+  <data name="message_confirm_deletelog" xml:space="preserve">
+    <value>Er du sikker på du vil slette logfilen?</value>
+  </data>
+  <data name="loadout" xml:space="preserve">
+    <value>Loadout</value>
+  </data>
+  <data name="bytespersecond" xml:space="preserve">
+    <value>B/s</value>
+  </data>
+  <data name="reportingip" xml:space="preserve">
+    <value>Rapportering IP</value>
+  </data>
+  <data name="button_monitor_stop" xml:space="preserve">
+    <value>Stop Realtime Monitoring</value>
+  </data>
+  <data name="position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="button_save_player" xml:space="preserve">
+    <value>Gem Spiller</value>
+  </data>
+  <data name="sentence_backupinterval" xml:space="preserve">
+    <value>Indtast intervallet i minutter, hvor en backup skal oprettes:</value>
+  </data>
+  <data name="servername" xml:space="preserve">
+    <value>Server navn</value>
+  </data>
+  <data name="button_mysql_password" xml:space="preserve">
+    <value>Ændre MySQL Kordeord</value>
+  </data>
+  <data name="message_confirm_database" xml:space="preserve">
+    <value>Er du sikker på du vil tilføje følgende database:</value>
+  </data>
+  <data name="button_monitor_start" xml:space="preserve">
+    <value>Start Realtime Log Monitoring</value>
+  </data>
+  <data name="build" xml:space="preserve">
+    <value>Påkrævet Build</value>
+  </data>
+  <data name="bytes" xml:space="preserve">
+    <value>Bytes</value>
+  </data>
+  <data name="tab2_page1" xml:space="preserve">
+    <value>Administrer</value>
+  </data>
+  <data name="tab2_page2" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="tab2_page3" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="uid" xml:space="preserve">
+    <value>UID</value>
+  </data>
+  <data name="group_mysql_details" xml:space="preserve">
+    <value>Login information</value>
+  </data>
+  <data name="sentence_menu2_description" xml:space="preserve">
+    <value>Start server, ændre mysql forbindelse eller se server log her. webdelen tillader nem kontrol.</value>
+  </data>
+  <data name="button_log" xml:space="preserve">
+    <value>Vis Log</value>
+  </data>
+  <data name="message_finished_restore" xml:space="preserve">
+    <value>Database blev gendannet!</value>
+  </data>
+  <data name="template" xml:space="preserve">
+    <value>Mission Skabelon</value>
+  </data>
+  <data name="button_restore" xml:space="preserve">
+    <value>Gendan Database</value>
+  </data>
+  <data name="backpack" xml:space="preserve">
+    <value>Rygsæk</value>
+  </data>
+  <data name="button_exit" xml:space="preserve">
+    <value>Afslut</value>
+  </data>
+  <data name="button_save" xml:space="preserve">
+    <value>Gem</value>
+  </data>
+  <data name="group_backup" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="instance" xml:space="preserve">
+    <value>Instans</value>
+  </data>
+  <data name="button_save_config" xml:space="preserve">
+    <value>Gem konfiguration</value>
+  </data>
+  <data name="message_error_restore" xml:space="preserve">
+    <value>Database genoprette mislykkedes:</value>
+  </data>
+  <data name="sentence_menu4_description" xml:space="preserve">
+    <value>Skift displaysproget eller få oplysninger om dette program.</value>
+  </data>
+  <data name="minerrtosendnear" xml:space="preserve">
+    <value>Min. Fejl at sende i nærheden</value>
+  </data>
+  <data name="maxcustomsize" xml:space="preserve">
+    <value>Max. Brugerdefineret Filstørrelse</value>
+  </data>
+  <data name="group_autobackup" xml:space="preserve">
+    <value>Auto Backup</value>
+  </data>
+  <data name="sentence_selectinstance" xml:space="preserve">
+    <value>Server instans som styres:</value>
+  </data>
+  <data name="sentence_menu1_description" xml:space="preserve">
+    <value>Mulighederne for servernavn, kodeord og mission kan findes her.</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="timezone" xml:space="preserve">
+    <value>Tidszone</value>
+  </data>
+  <data name="databasename" xml:space="preserve">
+    <value>Database navn</value>
+  </data>
+  <data name="check_rmod" xml:space="preserve">
+    <value>Aktiver rMod</value>
+  </data>
+  <data name="group_von" xml:space="preserve">
+    <value>Lyd Over Net</value>
+  </data>
+  <data name="passwordadmin" xml:space="preserve">
+    <value>Admin Ord</value>
+  </data>
+  <data name="button_cancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="maxping" xml:space="preserve">
+    <value>Max. Ping</value>
+  </data>
+  <data name="button_backup" xml:space="preserve">
+    <value>Backup Database</value>
+  </data>
+  <data name="button_browse" xml:space="preserve">
+    <value>Gennemse</value>
+  </data>
+  <data name="modlist" xml:space="preserve">
+    <value>Modlist</value>
+  </data>
+  <data name="group_message" xml:space="preserve">
+    <value>Besked</value>
+  </data>
+  <data name="medical" xml:space="preserve">
+    <value>Medicinsk</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>Besked</value>
+  </data>
+  <data name="group_tuning_network" xml:space="preserve">
+    <value>Netværk Tuning</value>
+  </data>
+  <data name="group_restore" xml:space="preserve">
+    <value>Gendan</value>
+  </data>
+  <data name="button_autobackup_start" xml:space="preserve">
+    <value>Start Autobackup</value>
+  </data>
+  <data name="tab3_page1" xml:space="preserve">
+    <value>Administrer</value>
+  </data>
+  <data name="tab3_page3" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="tab3_page2" xml:space="preserve">
+    <value>Spillere</value>
+  </data>
+  <data name="group_survivor" xml:space="preserve">
+    <value>Survivor</value>
+  </data>
+  <data name="group_about" xml:space="preserve">
+    <value>Om</value>
+  </data>
+  <data name="group_other" xml:space="preserve">
+    <value>Andet</value>
+  </data>
+  <data name="group_mysql" xml:space="preserve">
+    <value>MySQL</value>
+  </data>
+  <data name="group_reset" xml:space="preserve">
+    <value>Gendan</value>
+  </data>
+  <data name="inventory" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="check_persistent" xml:space="preserve">
+    <value>Vedvarende Battlefield</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Kodeord</value>
+  </data>
+  <data name="maxmsgsent" xml:space="preserve">
+    <value>Max. Beskeder Sendt</value>
+  </data>
+  <data name="mysql_host" xml:space="preserve">
+    <value>MySQL Værtsadresse</value>
+  </data>
+  <data name="button_details" xml:space="preserve">
+    <value>Detaljer</value>
+  </data>
+  <data name="button_reload" xml:space="preserve">
+    <value>Genindlæs</value>
+  </data>
+  <data name="button_random" xml:space="preserve">
+    <value>Tilfældige Kodeord</value>
+  </data>
+  <data name="sentence_message" xml:space="preserve">
+    <value>Bemærk: Brug dette mønster til din tekst: "Besked 1","Besked 2","..."</value>
+  </data>
+  <data name="button_generate" xml:space="preserve">
+    <value>Generer køretøjer</value>
+  </data>
+  <data name="group_profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="check_duplicate" xml:space="preserve">
+    <value>Kick Dupletter</value>
+  </data>
+  <data name="guid" xml:space="preserve">
+    <value>GUID</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Navn</value>
+  </data>
+  <data name="port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+</root>
