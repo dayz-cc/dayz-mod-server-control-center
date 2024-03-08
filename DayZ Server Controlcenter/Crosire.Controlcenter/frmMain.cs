@@ -2284,7 +2284,7 @@ namespace Crosire.Controlcenter {
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(139, 24);
             this.btnLog.TabIndex = 16;
-            this.btnLog.Text = Crosire.Controlcenter.Properties.Resources.button_log;
+            this.btnLog.Text = Resources.button_log;
             this.btnLog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLog.UseVisualStyleBackColor = true;
             this.btnLog.CheckedChanged += new System.EventHandler(btnLog_CheckedChanged);
@@ -2294,7 +2294,7 @@ namespace Crosire.Controlcenter {
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(138, 23);
             this.btnExit.TabIndex = 2;
-            this.btnExit.Text = Crosire.Controlcenter.Properties.Resources.button_exit;
+            this.btnExit.Text = Resources.button_exit;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(btnExit_Click);
             this.cbxInstance.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2344,7 +2344,7 @@ namespace Crosire.Controlcenter {
             this.btnMenu4.Name = "btnMenu4";
             this.btnMenu4.Size = new System.Drawing.Size(138, 23);
             this.btnMenu4.TabIndex = 11;
-            this.btnMenu4.Text = Crosire.Controlcenter.Properties.Resources.button_menu4;
+            this.btnMenu4.Text = Resources.button_menu4;
             this.btnMenu4.CheckedChanged += new System.EventHandler(frmMain_ChangePanel);
             this.btnMenu2.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnMenu2.Checked = true;
@@ -2354,7 +2354,7 @@ namespace Crosire.Controlcenter {
             this.btnMenu2.Size = new System.Drawing.Size(138, 23);
             this.btnMenu2.TabIndex = 10;
             this.btnMenu2.TabStop = true;
-            this.btnMenu2.Text = Crosire.Controlcenter.Properties.Resources.button_menu2;
+            this.btnMenu2.Text = Resources.button_menu2;
             this.btnMenu2.UseVisualStyleBackColor = true;
             this.btnMenu2.CheckedChanged += new System.EventHandler(frmMain_ChangePanel);
             this.btnMenu3.Appearance = System.Windows.Forms.Appearance.Button;
@@ -2363,7 +2363,7 @@ namespace Crosire.Controlcenter {
             this.btnMenu3.Name = "btnMenu3";
             this.btnMenu3.Size = new System.Drawing.Size(138, 23);
             this.btnMenu3.TabIndex = 9;
-            this.btnMenu3.Text = Crosire.Controlcenter.Properties.Resources.button_menu3;
+            this.btnMenu3.Text = Resources.button_menu3;
             this.btnMenu3.CheckedChanged += new System.EventHandler(frmMain_ChangePanel);
             this.btnMenu1.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnMenu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Bold);
@@ -2371,7 +2371,7 @@ namespace Crosire.Controlcenter {
             this.btnMenu1.Name = "btnMenu1";
             this.btnMenu1.Size = new System.Drawing.Size(138, 23);
             this.btnMenu1.TabIndex = 8;
-            this.btnMenu1.Text = Crosire.Controlcenter.Properties.Resources.button_menu1;
+            this.btnMenu1.Text = Resources.button_menu1;
             this.btnMenu1.CheckedChanged += new System.EventHandler(frmMain_ChangePanel);
             this.container2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
@@ -2456,7 +2456,7 @@ namespace Crosire.Controlcenter {
             this.btnMysqlHost.Name = "btnMysqlHost";
             this.btnMysqlHost.Size = new System.Drawing.Size(194, 23);
             this.btnMysqlHost.TabIndex = 6;
-            this.btnMysqlHost.Text = Crosire.Controlcenter.Properties.Resources.button_save;
+            this.btnMysqlHost.Text = Resources.button_save;
             this.btnMysqlHost.UseVisualStyleBackColor = true;
             this.btnMysqlHost.Click += new System.EventHandler(btnMysqlHost_Click);
             this.textMysqlUser.Location = new System.Drawing.Point(9, 92);
@@ -2513,7 +2513,7 @@ namespace Crosire.Controlcenter {
             this.tab2Page3.Name = "tab2Page3";
             this.tab2Page3.Size = new System.Drawing.Size(713, 581);
             this.tab2Page3.TabIndex = 3;
-            this.tab2Page3.Text = Crosire.Controlcenter.Properties.Resources.tab2_page3;
+            this.tab2Page3.Text = Resources.tab2_page3;
             this.tab2Page3.UseVisualStyleBackColor = true;
             this.btnLogClear.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.btnLogClear.Location = new System.Drawing.Point(599, 5);
@@ -2587,7 +2587,7 @@ namespace Crosire.Controlcenter {
             this.groupAbout.TabStop = false;
             this.groupAbout.Text = "About";
             this.pictureLicense.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.pictureLicense.Image = Crosire.Controlcenter.Properties.Resources.license;
+            this.pictureLicense.Image = Resources.license;
             this.pictureLicense.Location = new System.Drawing.Point(588, 21);
             this.pictureLicense.Name = "pictureLicense";
             this.pictureLicense.Size = new System.Drawing.Size(100, 64);
@@ -2610,7 +2610,7 @@ namespace Crosire.Controlcenter {
             this.labelVersionText.Size = new System.Drawing.Size(57, 16);
             this.labelVersionText.TabIndex = 1;
             this.labelVersionText.Text = "Version:";
-            this.pictureIcon.BackgroundImage = Crosire.Controlcenter.Properties.Resources.logo;
+            this.pictureIcon.BackgroundImage = Resources.logo;
             this.pictureIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureIcon.Location = new System.Drawing.Point(11, 21);
             this.pictureIcon.Name = "pictureIcon";
@@ -2647,7 +2647,7 @@ namespace Crosire.Controlcenter {
             this.tab3Page1.Padding = new System.Windows.Forms.Padding(3);
             this.tab3Page1.Size = new System.Drawing.Size(713, 581);
             this.tab3Page1.TabIndex = 1;
-            this.tab3Page1.Text = Crosire.Controlcenter.Properties.Resources.tab3_page1;
+            this.tab3Page1.Text = Resources.tab3_page1;
             this.tab3Page1.UseVisualStyleBackColor = true;
             this.tab3Page2.Controls.Add(this.checkWhitelisted);
             this.tab3Page2.Controls.Add(this.groupSurvivor);
@@ -2794,7 +2794,7 @@ namespace Crosire.Controlcenter {
             this.btnPlayerAdd.Name = "btnPlayerAdd";
             this.btnPlayerAdd.Size = new System.Drawing.Size(250, 23);
             this.btnPlayerAdd.TabIndex = 20;
-            this.btnPlayerAdd.Text = Crosire.Controlcenter.Properties.Resources.button_add_player;
+            this.btnPlayerAdd.Text = Resources.button_add_player;
             this.btnPlayerAdd.UseVisualStyleBackColor = true;
             this.btnPlayerAdd.Click += new System.EventHandler(btnPlayer_Click);
             this.btnSave4.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
@@ -2837,7 +2837,7 @@ namespace Crosire.Controlcenter {
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(671, 50);
             this.btnReset.TabIndex = 4;
-            this.btnReset.Text = Crosire.Controlcenter.Properties.Resources.button_reset;
+            this.btnReset.Text = Resources.button_reset;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(btnReset_Click);
             this.groupAutoBackup.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2862,7 +2862,7 @@ namespace Crosire.Controlcenter {
             this.btnAutoBackup.Name = "btnAutoBackup";
             this.btnAutoBackup.Size = new System.Drawing.Size(671, 50);
             this.btnAutoBackup.TabIndex = 4;
-            this.btnAutoBackup.Text = Crosire.Controlcenter.Properties.Resources.button_autobackup_start;
+            this.btnAutoBackup.Text = Resources.button_autobackup_start;
             this.btnAutoBackup.UseVisualStyleBackColor = true;
             this.btnAutoBackup.Click += new System.EventHandler(btnAutoBackup_Click);
             this.numBackupInterval.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2893,7 +2893,7 @@ namespace Crosire.Controlcenter {
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(671, 50);
             this.btnRestore.TabIndex = 2;
-            this.btnRestore.Text = Crosire.Controlcenter.Properties.Resources.button_restore;
+            this.btnRestore.Text = Resources.button_restore;
             this.btnRestore.UseVisualStyleBackColor = true;
             this.btnRestore.Click += new System.EventHandler(btnRestore_Click);
             this.groupBackup.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2912,7 +2912,7 @@ namespace Crosire.Controlcenter {
             this.btnBackupBrowse.Name = "btnBackupBrowse";
             this.btnBackupBrowse.Size = new System.Drawing.Size(80, 23);
             this.btnBackupBrowse.TabIndex = 4;
-            this.btnBackupBrowse.Text = Crosire.Controlcenter.Properties.Resources.button_browse;
+            this.btnBackupBrowse.Text = Resources.button_browse;
             this.btnBackupBrowse.UseVisualStyleBackColor = true;
             this.btnBackupBrowse.Click += new System.EventHandler(btnBackupBrowse_Click);
             this.textBackupPath.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2933,7 +2933,7 @@ namespace Crosire.Controlcenter {
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(671, 50);
             this.btnBackup.TabIndex = 0;
-            this.btnBackup.Text = Crosire.Controlcenter.Properties.Resources.button_backup;
+            this.btnBackup.Text = Resources.button_backup;
             this.btnBackup.UseVisualStyleBackColor = true;
             this.btnBackup.Click += new System.EventHandler(btnBackup_Click);
             this.container2_1.Controls.Add(this.tab1);
@@ -2975,14 +2975,14 @@ namespace Crosire.Controlcenter {
             this.tab1Page1.Padding = new System.Windows.Forms.Padding(3);
             this.tab1Page1.Size = new System.Drawing.Size(712, 581);
             this.tab1Page1.TabIndex = 1;
-            this.tab1Page1.Text = Crosire.Controlcenter.Properties.Resources.tab1_page1;
+            this.tab1Page1.Text = Resources.tab1_page1;
             this.tab1Page1.UseVisualStyleBackColor = true;
             this.btnSave1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.btnSave1.Location = new System.Drawing.Point(449, 545);
             this.btnSave1.Name = "btnSave1";
             this.btnSave1.Size = new System.Drawing.Size(250, 23);
             this.btnSave1.TabIndex = 18;
-            this.btnSave1.Text = Crosire.Controlcenter.Properties.Resources.button_save_config;
+            this.btnSave1.Text = Resources.button_save_config;
             this.btnSave1.UseVisualStyleBackColor = true;
             this.btnSave1.Click += new System.EventHandler(btnSave1_Click);
             this.textBuild.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
@@ -3069,14 +3069,14 @@ namespace Crosire.Controlcenter {
             this.checkRmod.Name = "checkRmod";
             this.checkRmod.Size = new System.Drawing.Size(86, 17);
             this.checkRmod.TabIndex = 31;
-            this.checkRmod.Text = Crosire.Controlcenter.Properties.Resources.check_rmod;
+            this.checkRmod.Text = Resources.check_rmod;
             this.checkRmod.UseVisualStyleBackColor = true;
             this.btnDatabase.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.btnDatabase.Location = new System.Drawing.Point(545, 77);
             this.btnDatabase.Name = "btnDatabase";
             this.btnDatabase.Size = new System.Drawing.Size(137, 23);
             this.btnDatabase.TabIndex = 21;
-            this.btnDatabase.Text = Crosire.Controlcenter.Properties.Resources.button_add_database;
+            this.btnDatabase.Text = Resources.button_add_database;
             this.btnDatabase.UseVisualStyleBackColor = true;
             this.btnDatabase.Click += new System.EventHandler(btnDatabase_Click);
             this.cbxDatabase.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -3128,7 +3128,7 @@ namespace Crosire.Controlcenter {
             this.checkPersistent.Name = "checkPersistent";
             this.checkPersistent.Size = new System.Drawing.Size(121, 17);
             this.checkPersistent.TabIndex = 11;
-            this.checkPersistent.Text = Crosire.Controlcenter.Properties.Resources.check_persistent;
+            this.checkPersistent.Text = Resources.check_persistent;
             this.checkPersistent.UseVisualStyleBackColor = true;
             this.groupVon.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.groupVon.Controls.Add(this.numVonQuality);
@@ -3162,7 +3162,7 @@ namespace Crosire.Controlcenter {
             this.checkVon.Name = "checkVon";
             this.checkVon.Size = new System.Drawing.Size(65, 17);
             this.checkVon.TabIndex = 0;
-            this.checkVon.Text = Crosire.Controlcenter.Properties.Resources.check_enabled;
+            this.checkVon.Text = Resources.check_enabled;
             this.checkVon.UseVisualStyleBackColor = true;
             this.labelRequiredBuild.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.labelRequiredBuild.Location = new System.Drawing.Point(205, 67);
@@ -3282,7 +3282,7 @@ namespace Crosire.Controlcenter {
             this.tab1Page2.Name = "tab1Page2";
             this.tab1Page2.Size = new System.Drawing.Size(712, 581);
             this.tab1Page2.TabIndex = 2;
-            this.tab1Page2.Text = Crosire.Controlcenter.Properties.Resources.tab1_page2;
+            this.tab1Page2.Text = Resources.tab1_page2;
             this.tab1Page2.UseVisualStyleBackColor = true;
             this.groupWhitelist.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.groupWhitelist.Controls.Add(this.textWhitelistMessage);
@@ -3319,7 +3319,7 @@ namespace Crosire.Controlcenter {
             this.btnRandomPass.Name = "btnRandomPass";
             this.btnRandomPass.Size = new System.Drawing.Size(265, 23);
             this.btnRandomPass.TabIndex = 20;
-            this.btnRandomPass.Text = Crosire.Controlcenter.Properties.Resources.button_random;
+            this.btnRandomPass.Text = Resources.button_random;
             this.btnRandomPass.UseVisualStyleBackColor = true;
             this.btnRandomPass.Click += new System.EventHandler(btnRandomPass_Click);
             this.btnSave2.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
@@ -3327,7 +3327,7 @@ namespace Crosire.Controlcenter {
             this.btnSave2.Name = "btnSave2";
             this.btnSave2.Size = new System.Drawing.Size(250, 23);
             this.btnSave2.TabIndex = 14;
-            this.btnSave2.Text = Crosire.Controlcenter.Properties.Resources.button_save_config;
+            this.btnSave2.Text = Resources.button_save_config;
             this.btnSave2.UseVisualStyleBackColor = true;
             this.btnSave2.Click += new System.EventHandler(btnSave2_Click);
             this.groupSignatures.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -3399,7 +3399,7 @@ namespace Crosire.Controlcenter {
             this.checkDuplicate.Name = "checkDuplicate";
             this.checkDuplicate.Size = new System.Drawing.Size(95, 17);
             this.checkDuplicate.TabIndex = 33;
-            this.checkDuplicate.Text = Crosire.Controlcenter.Properties.Resources.check_duplicate;
+            this.checkDuplicate.Text = Resources.check_duplicate;
             this.checkDuplicate.UseVisualStyleBackColor = true;
             this.textRegularCheck.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.textRegularCheck.Location = new System.Drawing.Point(165, 199);
@@ -3521,7 +3521,7 @@ namespace Crosire.Controlcenter {
             this.checkBattleye.Name = "checkBattleye";
             this.checkBattleye.Size = new System.Drawing.Size(65, 17);
             this.checkBattleye.TabIndex = 0;
-            this.checkBattleye.Text = Crosire.Controlcenter.Properties.Resources.check_enabled;
+            this.checkBattleye.Text = Resources.check_enabled;
             this.checkBattleye.UseVisualStyleBackColor = true;
             this.checkBattleye.CheckedChanged += new System.EventHandler(checkBattleye_CheckedChanged);
             this.textPasswordRcon.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -3567,7 +3567,7 @@ namespace Crosire.Controlcenter {
             this.tab1Page3.Name = "tab1Page3";
             this.tab1Page3.Size = new System.Drawing.Size(712, 581);
             this.tab1Page3.TabIndex = 4;
-            this.tab1Page3.Text = Crosire.Controlcenter.Properties.Resources.tab1_page3;
+            this.tab1Page3.Text = Resources.tab1_page3;
             this.tab1Page3.UseVisualStyleBackColor = true;
             this.groupAdditional.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.groupAdditional.Controls.Add(this.cbxLoadoutBackpack);
@@ -3657,7 +3657,7 @@ namespace Crosire.Controlcenter {
             this.btnSave3.Name = "btnSave3";
             this.btnSave3.Size = new System.Drawing.Size(250, 23);
             this.btnSave3.TabIndex = 9;
-            this.btnSave3.Text = Crosire.Controlcenter.Properties.Resources.button_save_config;
+            this.btnSave3.Text = Resources.button_save_config;
             this.btnSave3.UseVisualStyleBackColor = true;
             this.btnSave3.Click += new System.EventHandler(btnSave3_Click);
             this.groupNetwork.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
