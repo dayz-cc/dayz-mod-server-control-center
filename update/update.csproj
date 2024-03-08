@@ -6,13 +6,19 @@
     <OutputType>WinExe</OutputType>
     <UseWindowsForms>True</UseWindowsForms>
     <TargetFramework>net20</TargetFramework>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Test />
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>6</LangVersion>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
-  <PropertyGroup />
-  <ItemGroup />
-  <ItemGroup />
+  <PropertyGroup>
+    <RootNamespace>Crosire.Controlcenter.Updater</RootNamespace>
+    <StartupObject>Crosire.Controlcenter.Updater.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
 </Project>

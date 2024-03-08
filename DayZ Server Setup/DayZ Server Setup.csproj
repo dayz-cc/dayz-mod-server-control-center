@@ -5,8 +5,9 @@
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <OutputType>WinExe</OutputType>
     <UseWindowsForms>True</UseWindowsForms>
-    <TargetFramework>net40</TargetFramework>
-    <PlatformTarget>x86</PlatformTarget>
+    <TargetFramework>net30</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>6</LangVersion>
@@ -15,20 +16,21 @@
   <PropertyGroup>
     <ApplicationIcon>app.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <RootNamespace />
+    <RootNamespace>Crosire.Controlcenter.Setup</RootNamespace>
+    <StartupObject>Crosire.Controlcenter.Setup.Program</StartupObject>
   </PropertyGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="6.7.9" />
+    <PackageReference Include="NLog" Version="5.2.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Crosire\Crosire.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="NLog">
       <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\NLog.dll</HintPath>
     </Reference>
-    <Reference Include="Crosire">
-      <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\Crosire.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml" />
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System.Data" />
   </ItemGroup>
 </Project>
