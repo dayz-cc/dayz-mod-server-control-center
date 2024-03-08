@@ -345,7 +345,7 @@ namespace Crosire.Controlcenter.Setup {
                     textPath.Text = pathArma;
                 }
                 btnBack.Enabled = false;
-                subReloadResources.Localized.);
+                subReloadResources();
             } else {
                 base.WindowState = FormWindowState.Minimized;
                 base.ShowInTaskbar = false;
@@ -396,7 +396,7 @@ namespace Crosire.Controlcenter.Setup {
             }
         }
 
-        private void subReloadResources.Localized.) {
+        private void subReloadResources() {
             labelStep.Text = Resources.Localized.step_1;
             btnBack.Text = Resources.Localized.button_back;
             btnNext.Text = Resources.Localized.button_next;
@@ -572,7 +572,7 @@ namespace Crosire.Controlcenter.Setup {
         }
 
         private void textReadme_VScroll(object sender, EventArgs e) {
-            if (Scrollinfo.CheckBottom(textReadme)) {
+            if (Classes.Scrollinfo.CheckBottom(textReadme)) {
                 btnNext.Enabled = true;
             }
         }
@@ -892,7 +892,7 @@ namespace Crosire.Controlcenter.Setup {
         }
 
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager Resources.Localized.= new System.ComponentModel.ComponentResourceManager(typeof(Crosire.Controlcenter.Setup.frmSetup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crosire.Controlcenter.Setup.frmSetup));
             this.containerButtons = new System.Windows.Forms.TableLayoutPanel();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -1010,7 +1010,7 @@ namespace Crosire.Controlcenter.Setup {
             this.labelVersion.TabIndex = 4;
             this.labelVersion.Text = "0.0.0.0";
             this.pictureBanner.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBanner.Image = Crosire.Controlcenter.Setup.Properties.Resources.Localized.banner;
+            this.pictureBanner.Image = Resources.Images.banner;
             this.pictureBanner.Location = new System.Drawing.Point(10, 12);
             this.pictureBanner.Name = "pictureBanner";
             this.pictureBanner.Size = new System.Drawing.Size(472, 92);
@@ -1027,9 +1027,9 @@ namespace Crosire.Controlcenter.Setup {
             this.downloader.BaseAddress = "";
             this.downloader.CachePolicy = null;
             this.downloader.Credentials = null;
-            this.downloader.Encoding = (System.Text.Encoding)Resources.Localized.GetObject("downloader.Encoding");
-            this.downloader.Headers = (System.Net.WebHeaderCollection)Resources.Localized.GetObject("downloader.Headers");
-            this.downloader.QueryString = (System.Collections.Specialized.NameValueCollection)Resources.Localized.GetObject("downloader.QueryString");
+            this.downloader.Encoding = Resources.Settings.downloader_Encoding;
+            this.downloader.Headers = Resources.Settings.downloader_Headers;
+            this.downloader.QueryString = Resources.Settings.downloader_QueryString;
             this.downloader.UseDefaultCredentials = false;
             this.downloader.DownloadFileCompleted += new System.ComponentModel.AsyncCompletedEventHandler(downloader_DownloadCompleted);
             this.downloader.DownloadProgressChanged += new System.Net.DownloadProgressChangedEventHandler(downloader_DownloadProgressChanged);
@@ -1291,7 +1291,7 @@ namespace Crosire.Controlcenter.Setup {
             this.lblDayZModVersion.Text = "1.8.0.3";
             base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = Crosire.Controlcenter.Setup.Properties.Resources.Localized.background;
+            this.BackgroundImage = Resources.Images.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             base.ClientSize = new System.Drawing.Size(492, 496);
             base.Controls.Add(this.lblDayzModDescription);
@@ -1308,7 +1308,7 @@ namespace Crosire.Controlcenter.Setup {
             base.Controls.Add(this.pictureBanner);
             base.Controls.Add(this.container1);
             base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            base.Icon = Resources.Localized.Images.appIcon;
+            base.Icon = Resources.Images.appIcon;
             base.Name = "frmSetup";
             base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Set Up and Update Wizard";
