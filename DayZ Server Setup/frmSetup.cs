@@ -22,13 +22,97 @@ namespace Crosire.Controlcenter.Setup
 	// Token: 0x02000006 RID: 6
 	public partial class frmSetup : Form
 	{
-		// Token: 0x0600000A RID: 10 RVA: 0x00002444 File Offset: 0x00000644
+		// Token: 0x0600000A RID: 10 RVA: 0x00002448 File Offset: 0x00000648
 		public frmSetup()
 		{
 			this.InitializeComponent();
 		}
 
-		// Token: 0x0600000B RID: 11 RVA: 0x000024B4 File Offset: 0x000006B4
+		// Token: 0x0600000B RID: 11 RVA: 0x000024B5 File Offset: 0x000006B5
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			this.wizPos--;
+			this.subUpdateWizard();
+		}
+
+		// Token: 0x0600000C RID: 12 RVA: 0x000024CC File Offset: 0x000006CC
+		private void btnBrowse_Click(object sender, EventArgs e)
+		{
+			using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+			{
+				folderBrowserDialog.SelectedPath = frmSetup.pathArma;
+				if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+				{
+					this.textPath.Text = folderBrowserDialog.SelectedPath;
+				}
+			}
+		}
+
+		// Token: 0x0600000D RID: 13 RVA: 0x00002520 File Offset: 0x00000720
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
+			base.DialogResult = DialogResult.Abort;
+			base.Close();
+		}
+
+		// Token: 0x0600000E RID: 14 RVA: 0x0000252F File Offset: 0x0000072F
+		private void btnNext_Click(object sender, EventArgs e)
+		{
+			if (this.wizFinished)
+			{
+				base.DialogResult = DialogResult.OK;
+				base.Close();
+				return;
+			}
+			this.wizPos++;
+			this.subUpdateWizard();
+		}
+
+		// Token: 0x0600000F RID: 15 RVA: 0x0000255C File Offset: 0x0000075C
+		private void checkOwn_CheckedChanged(object sender, EventArgs e)
+		{
+			if (this.checkOwn.Checked)
+			{
+				this.labelHost.Visible = true;
+				this.labelUser.Visible = true;
+				this.labelPass.Visible = true;
+				this.labelSeperator.Visible = true;
+				this.textHost.Visible = true;
+				this.textPort.Visible = true;
+				this.textUser.Visible = true;
+				this.textPass.Visible = true;
+				return;
+			}
+			this.labelHost.Visible = false;
+			this.labelUser.Visible = false;
+			this.labelPass.Visible = false;
+			this.labelSeperator.Visible = false;
+			this.textHost.Visible = false;
+			this.textPort.Visible = false;
+			this.textUser.Visible = false;
+			this.textPass.Visible = false;
+		}
+
+		// Token: 0x06000010 RID: 16 RVA: 0x00002638 File Offset: 0x00000838
+		private void downloader_DownloadCompleted(object sender, AsyncCompletedEventArgs e)
+		{
+			if (e.Error == null)
+			{
+				this.subAppendProgress("> Download finished!", LogLevel.Info);
+				this.workerMain.RunWorkerAsync();
+				return;
+			}
+			this.subAppendProgress("> Error: Exception: " + e.Error.Message, LogLevel.Fatal);
+			this.subFinished();
+		}
+
+		// Token: 0x06000011 RID: 17 RVA: 0x0000268F File Offset: 0x0000088F
+		private void downloader_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+		{
+			this.progressbar.Value = e.ProgressPercentage;
+		}
+
+		// Token: 0x06000012 RID: 18 RVA: 0x000026A4 File Offset: 0x000008A4
 		private void frmSetup_Load(object sender, EventArgs e)
 		{
 			foreach (string text in Environment.GetCommandLineArgs())
@@ -77,7 +161,7 @@ namespace Crosire.Controlcenter.Setup
 					this.instances = Convert.ToInt32(text.Remove(0, 2));
 				}
 			}
-			RegistryKey registryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey("SOFTWARE\\Bohemia Interactive Studio\\ArmA 2 OA");
+			RegistryKey registryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, 512).OpenSubKey("SOFTWARE\\Bohemia Interactive Studio\\ArmA 2 OA");
 			if (registryKey != null)
 			{
 				frmSetup.pathArma = registryKey.GetValue("MAIN").ToString();
@@ -186,92 +270,43 @@ namespace Crosire.Controlcenter.Setup
 			this.subStart();
 		}
 
-		// Token: 0x0600000C RID: 12 RVA: 0x000029D4 File Offset: 0x00000BD4
-		private void btnNext_Click(object sender, EventArgs e)
+		// Token: 0x06000013 RID: 19 RVA: 0x00002BC4 File Offset: 0x00000DC4
+		private void pictureBanner_Click(object sender, EventArgs e)
 		{
-			if (this.wizFinished)
-			{
-				base.DialogResult = DialogResult.OK;
-				base.Close();
-				return;
-			}
-			this.wizPos++;
-			this.subUpdateWizard();
+			Process.Start(this.url_dayzcc);
 		}
 
-		// Token: 0x0600000D RID: 13 RVA: 0x00002A00 File Offset: 0x00000C00
-		private void btnBack_Click(object sender, EventArgs e)
+		// Token: 0x06000014 RID: 20 RVA: 0x00002BD2 File Offset: 0x00000DD2
+		private void pictureBanner_MouseHover(object sender, EventArgs e)
 		{
-			this.wizPos--;
-			this.subUpdateWizard();
+			this.Cursor = Cursors.Hand;
 		}
 
-		// Token: 0x0600000E RID: 14 RVA: 0x00002A16 File Offset: 0x00000C16
-		private void btnCancel_Click(object sender, EventArgs e)
+		// Token: 0x06000015 RID: 21 RVA: 0x00002BDF File Offset: 0x00000DDF
+		private void pictureBanner_MouseLeave(object sender, EventArgs e)
 		{
-			base.DialogResult = DialogResult.Abort;
-			base.Close();
+			this.Cursor = Cursors.Default;
 		}
 
-		// Token: 0x0600000F RID: 15 RVA: 0x00002A28 File Offset: 0x00000C28
-		private void btnBrowse_Click(object sender, EventArgs e)
+		// Token: 0x06000016 RID: 22 RVA: 0x00002BEC File Offset: 0x00000DEC
+		private void pictureLogo_Click(object sender, EventArgs e)
 		{
-			using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
-			{
-				folderBrowserDialog.SelectedPath = frmSetup.pathArma;
-				if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-				{
-					this.textPath.Text = folderBrowserDialog.SelectedPath;
-				}
-			}
+			Process.Start(this.url_dayzpriv);
 		}
 
-		// Token: 0x06000010 RID: 16 RVA: 0x00002A7C File Offset: 0x00000C7C
-		private void checkOwn_CheckedChanged(object sender, EventArgs e)
+		// Token: 0x06000017 RID: 23 RVA: 0x00002BFA File Offset: 0x00000DFA
+		private void pictureLogo_MouseHover(object sender, EventArgs e)
 		{
-			if (this.checkOwn.Checked)
-			{
-				this.labelHost.Visible = true;
-				this.labelUser.Visible = true;
-				this.labelPass.Visible = true;
-				this.labelSeperator.Visible = true;
-				this.textHost.Visible = true;
-				this.textPort.Visible = true;
-				this.textUser.Visible = true;
-				this.textPass.Visible = true;
-				return;
-			}
-			this.labelHost.Visible = false;
-			this.labelUser.Visible = false;
-			this.labelPass.Visible = false;
-			this.labelSeperator.Visible = false;
-			this.textHost.Visible = false;
-			this.textPort.Visible = false;
-			this.textUser.Visible = false;
-			this.textPass.Visible = false;
+			this.Cursor = Cursors.Hand;
 		}
 
-		// Token: 0x06000011 RID: 17 RVA: 0x00002B57 File Offset: 0x00000D57
-		private void textReadme_VScroll(object sender, EventArgs e)
+		// Token: 0x06000018 RID: 24 RVA: 0x00002C07 File Offset: 0x00000E07
+		private void pictureLogo_MouseLeave(object sender, EventArgs e)
 		{
-			if (Scrollinfo.CheckBottom(this.textReadme))
-			{
-				this.btnNext.Enabled = true;
-			}
+			this.Cursor = Cursors.Default;
 		}
 
-		// Token: 0x06000012 RID: 18 RVA: 0x00002B72 File Offset: 0x00000D72
-		private void textPath_TextChanged(object sender, EventArgs e)
-		{
-			if (string.IsNullOrEmpty(this.textPath.Text))
-			{
-				this.btnNext.Enabled = false;
-				return;
-			}
-			this.btnNext.Enabled = true;
-		}
-
-		// Token: 0x06000013 RID: 19 RVA: 0x00002BC0 File Offset: 0x00000DC0
+		// Token: 0x06000019 RID: 25 RVA: 0x00002C38 File Offset: 0x00000E38
 		private void subAppendProgress(string message, LogLevel level)
 		{
 			if (base.InvokeRequired)
@@ -293,56 +328,24 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x06000014 RID: 20 RVA: 0x00002C98 File Offset: 0x00000E98
-		private void subSetProgress(int progress)
+		// Token: 0x0600001A RID: 26 RVA: 0x00002D10 File Offset: 0x00000F10
+		private void subFinished()
 		{
-			if (base.InvokeRequired)
+			if (!this.noWindow)
 			{
-				base.Invoke(new Action<int>(this.subSetProgress), new object[] { progress });
+				this.subSetProgress(100);
+				this.subAppendProgress(Environment.NewLine + "The Setup just finished. Make sure no errors are in the log above before you continue!", null);
+				this.subAppendProgress("Click on '" + Resources.button_finish + "' to exit the wizard.", null);
+				this.wizFinished = true;
+				this.btnNext.Enabled = true;
+				this.btnNext.Text = Resources.button_finish;
 				return;
 			}
-			if (progress <= this.progressbar.Maximum && progress >= this.progressbar.Minimum)
-			{
-				this.progressbar.Value = progress;
-			}
+			base.DialogResult = DialogResult.OK;
+			base.Close();
 		}
 
-		// Token: 0x06000015 RID: 21 RVA: 0x00002CFC File Offset: 0x00000EFC
-		private void subUpdateWizard()
-		{
-			switch (this.wizPos)
-			{
-			case 0:
-				this.labelStep.Text = Resources.step_1;
-				this.btnBack.Enabled = false;
-				this.btnNext.Enabled = true;
-				this.container1.Visible = true;
-				this.container2.Visible = false;
-				this.container3.Visible = false;
-				return;
-			case 1:
-				this.labelStep.Text = Resources.step_2;
-				this.btnBack.Enabled = true;
-				this.btnNext.Enabled = true;
-				this.container1.Visible = false;
-				this.container2.Visible = true;
-				this.container3.Visible = false;
-				return;
-			case 2:
-				this.labelStep.Text = Resources.step_3;
-				this.btnBack.Enabled = false;
-				this.btnNext.Enabled = false;
-				this.container1.Visible = false;
-				this.container2.Visible = false;
-				this.container3.Visible = true;
-				this.subStart();
-				return;
-			default:
-				return;
-			}
-		}
-
-		// Token: 0x06000016 RID: 22 RVA: 0x00002E10 File Offset: 0x00001010
+		// Token: 0x0600001B RID: 27 RVA: 0x00002D90 File Offset: 0x00000F90
 		private void subReloadResources()
 		{
 			this.labelStep.Text = Resources.step_1;
@@ -370,7 +373,7 @@ namespace Crosire.Controlcenter.Setup
 			this.radioInstall.Text = Resources.button_fresh;
 		}
 
-		// Token: 0x06000017 RID: 23 RVA: 0x00002F58 File Offset: 0x00001158
+		// Token: 0x0600001C RID: 28 RVA: 0x00002ED8 File Offset: 0x000010D8
 		private void subReloadSettings()
 		{
 			XmlDocument xmlDocument = new XmlDocument();
@@ -387,7 +390,21 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x06000018 RID: 24 RVA: 0x00002FBC File Offset: 0x000011BC
+		// Token: 0x0600001D RID: 29 RVA: 0x00002F3C File Offset: 0x0000113C
+		private void subSetProgress(int progress)
+		{
+			if (base.InvokeRequired)
+			{
+				base.Invoke(new Action<int>(this.subSetProgress), new object[] { progress });
+				return;
+			}
+			if (progress <= this.progressbar.Maximum && progress >= this.progressbar.Minimum)
+			{
+				this.progressbar.Value = progress;
+			}
+		}
+
+		// Token: 0x0600001E RID: 30 RVA: 0x00002FA0 File Offset: 0x000011A0
 		private void subStart()
 		{
 			frmSetup.logger.Log(LogLevel.Info, "Initializing DayZ Server Setup " + Application.ProductVersion);
@@ -412,7 +429,7 @@ namespace Crosire.Controlcenter.Setup
 			{
 				try
 				{
-					RegistryKey registryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey("SOFTWARE\\Bohemia Interactive Studio\\ArmA 2 OA", true);
+					RegistryKey registryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, 512).OpenSubKey("SOFTWARE\\Bohemia Interactive Studio\\ArmA 2 OA", true);
 					if (registryKey != null)
 					{
 						registryKey.SetValue("MAIN", frmSetup.pathArma);
@@ -521,43 +538,114 @@ namespace Crosire.Controlcenter.Setup
 			})), frmSetup.pathThis + "\\Serverfiles.tar.gz");
 		}
 
-		// Token: 0x06000019 RID: 25 RVA: 0x00003478 File Offset: 0x00001678
-		private void subFinished()
+		// Token: 0x0600001F RID: 31 RVA: 0x0000345C File Offset: 0x0000165C
+		private void subUpdateWizard()
 		{
-			if (!this.noWindow)
+			switch (this.wizPos)
 			{
-				this.subSetProgress(100);
-				this.subAppendProgress(Environment.NewLine + "The Setup just finished. Make sure no errors are in the log above before you continue!", null);
-				this.subAppendProgress("Click on '" + Resources.button_finish + "' to exit the wizard.", null);
-				this.wizFinished = true;
+			case 0:
+				this.labelStep.Text = Resources.step_1;
+				this.btnBack.Enabled = false;
 				this.btnNext.Enabled = true;
-				this.btnNext.Text = Resources.button_finish;
+				this.container1.Visible = true;
+				this.container2.Visible = false;
+				this.container3.Visible = false;
+				return;
+			case 1:
+				this.labelStep.Text = Resources.step_2;
+				this.btnBack.Enabled = true;
+				this.btnNext.Enabled = true;
+				this.container1.Visible = false;
+				this.container2.Visible = true;
+				this.container3.Visible = false;
+				return;
+			case 2:
+				this.labelStep.Text = Resources.step_3;
+				this.btnBack.Enabled = false;
+				this.btnNext.Enabled = false;
+				this.container1.Visible = false;
+				this.container2.Visible = false;
+				this.container3.Visible = true;
+				this.subStart();
+				return;
+			default:
 				return;
 			}
-			base.DialogResult = DialogResult.OK;
-			base.Close();
 		}
 
-		// Token: 0x0600001A RID: 26 RVA: 0x000034F7 File Offset: 0x000016F7
-		private void downloader_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+		// Token: 0x06000020 RID: 32 RVA: 0x0000356F File Offset: 0x0000176F
+		private void textPath_TextChanged(object sender, EventArgs e)
 		{
-			this.progressbar.Value = e.ProgressPercentage;
-		}
-
-		// Token: 0x0600001B RID: 27 RVA: 0x0000350C File Offset: 0x0000170C
-		private void downloader_DownloadCompleted(object sender, AsyncCompletedEventArgs e)
-		{
-			if (e.Error == null)
+			if (string.IsNullOrEmpty(this.textPath.Text))
 			{
-				this.subAppendProgress("> Download finished!", LogLevel.Info);
-				this.workerMain.RunWorkerAsync();
+				this.btnNext.Enabled = false;
 				return;
 			}
-			this.subAppendProgress("> Error: Exception: " + e.Error.Message, LogLevel.Fatal);
+			this.btnNext.Enabled = true;
+		}
+
+		// Token: 0x06000021 RID: 33 RVA: 0x0000359C File Offset: 0x0000179C
+		private void textReadme_VScroll(object sender, EventArgs e)
+		{
+			if (Scrollinfo.CheckBottom(this.textReadme))
+			{
+				this.btnNext.Enabled = true;
+			}
+		}
+
+		// Token: 0x06000022 RID: 34 RVA: 0x000035B8 File Offset: 0x000017B8
+		private void threadreconfig_DoWork(object sender, DoWorkEventArgs e)
+		{
+			this.subAppendProgress(Environment.NewLine + "Reconfigurating files ...", LogLevel.Info);
+			int num = 0;
+			this.subSetProgress(num);
+			if (File.Exists(Path.Combine(frmSetup.pathArma, "expansion", "beta", "arma2oaserver.exe")))
+			{
+				for (int i = 1; i <= this.instances; i++)
+				{
+					try
+					{
+						File.Copy(Path.Combine(frmSetup.pathArma, "expansion", "beta", "arma2oaserver.exe"), Path.Combine(frmSetup.pathMain + "_config", i.ToString(), "arma2oaserver_" + i.ToString() + ".exe"), true);
+					}
+					catch (Exception ex)
+					{
+						this.subAppendProgress("> Error while copying server executable for instance " + i.ToString() + "!", LogLevel.Warn);
+						this.subAppendProgress("> Exception: " + ex.Message, LogLevel.Error);
+					}
+				}
+			}
+			else
+			{
+				this.subAppendProgress("> Warning: The beta patch is not installed!", LogLevel.Warn);
+			}
+			num += 50;
+			this.subSetProgress(num);
+			Process process = new Process();
+			process.StartInfo.FileName = frmSetup.pathMain + "\\install\\install.bat";
+			process.StartInfo.WorkingDirectory = frmSetup.pathMain + "\\install";
+			process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+			try
+			{
+				process.Start();
+				process.WaitForExit(13000);
+				this.subAppendProgress("> Finished!", LogLevel.Info);
+				num += 45;
+				this.subSetProgress(num);
+			}
+			catch (Exception ex2)
+			{
+				this.subAppendProgress("> Error while running the installation script!", LogLevel.Warn);
+				this.subAppendProgress("> Exception: " + ex2.Message, LogLevel.Error);
+			}
+		}
+
+		// Token: 0x06000023 RID: 35 RVA: 0x00003794 File Offset: 0x00001994
+		private void threadreconfig_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+		{
 			this.subFinished();
 		}
 
-		// Token: 0x0600001C RID: 28 RVA: 0x00003564 File Offset: 0x00001764
+		// Token: 0x06000024 RID: 36 RVA: 0x0000379C File Offset: 0x0000199C
 		private void threadworker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			int num = 0;
@@ -947,98 +1035,10 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x0600001D RID: 29 RVA: 0x00004614 File Offset: 0x00002814
+		// Token: 0x06000025 RID: 37 RVA: 0x0000484C File Offset: 0x00002A4C
 		private void threadworker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			this.subFinished();
-		}
-
-		// Token: 0x0600001E RID: 30 RVA: 0x0000461C File Offset: 0x0000281C
-		private void threadreconfig_DoWork(object sender, DoWorkEventArgs e)
-		{
-			this.subAppendProgress(Environment.NewLine + "Reconfigurating files ...", LogLevel.Info);
-			int num = 0;
-			this.subSetProgress(num);
-			if (File.Exists(Path.Combine(frmSetup.pathArma, "expansion", "beta", "arma2oaserver.exe")))
-			{
-				for (int i = 1; i <= this.instances; i++)
-				{
-					try
-					{
-						File.Copy(Path.Combine(frmSetup.pathArma, "expansion", "beta", "arma2oaserver.exe"), Path.Combine(frmSetup.pathMain + "_config", i.ToString(), "arma2oaserver_" + i.ToString() + ".exe"), true);
-					}
-					catch (Exception ex)
-					{
-						this.subAppendProgress("> Error while copying server executable for instance " + i.ToString() + "!", LogLevel.Warn);
-						this.subAppendProgress("> Exception: " + ex.Message, LogLevel.Error);
-					}
-				}
-			}
-			else
-			{
-				this.subAppendProgress("> Warning: The beta patch is not installed!", LogLevel.Warn);
-			}
-			num += 50;
-			this.subSetProgress(num);
-			Process process = new Process();
-			process.StartInfo.FileName = frmSetup.pathMain + "\\install\\install.bat";
-			process.StartInfo.WorkingDirectory = frmSetup.pathMain + "\\install";
-			process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-			try
-			{
-				process.Start();
-				process.WaitForExit(13000);
-				this.subAppendProgress("> Finished!", LogLevel.Info);
-				num += 45;
-				this.subSetProgress(num);
-			}
-			catch (Exception ex2)
-			{
-				this.subAppendProgress("> Error while running the installation script!", LogLevel.Warn);
-				this.subAppendProgress("> Exception: " + ex2.Message, LogLevel.Error);
-			}
-		}
-
-		// Token: 0x0600001F RID: 31 RVA: 0x000047F8 File Offset: 0x000029F8
-		private void threadreconfig_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		{
-			this.subFinished();
-		}
-
-		// Token: 0x06000020 RID: 32 RVA: 0x00004800 File Offset: 0x00002A00
-		private void pictureBanner_Click(object sender, EventArgs e)
-		{
-			Process.Start(this.url_dayzcc);
-		}
-
-		// Token: 0x06000021 RID: 33 RVA: 0x0000480E File Offset: 0x00002A0E
-		private void pictureLogo_Click(object sender, EventArgs e)
-		{
-			Process.Start(this.url_dayzpriv);
-		}
-
-		// Token: 0x06000022 RID: 34 RVA: 0x0000481C File Offset: 0x00002A1C
-		private void pictureBanner_MouseHover(object sender, EventArgs e)
-		{
-			this.Cursor = Cursors.Hand;
-		}
-
-		// Token: 0x06000023 RID: 35 RVA: 0x00004829 File Offset: 0x00002A29
-		private void pictureLogo_MouseHover(object sender, EventArgs e)
-		{
-			this.Cursor = Cursors.Hand;
-		}
-
-		// Token: 0x06000024 RID: 36 RVA: 0x00004836 File Offset: 0x00002A36
-		private void pictureLogo_MouseLeave(object sender, EventArgs e)
-		{
-			this.Cursor = Cursors.Default;
-		}
-
-		// Token: 0x06000025 RID: 37 RVA: 0x00004843 File Offset: 0x00002A43
-		private void pictureBanner_MouseLeave(object sender, EventArgs e)
-		{
-			this.Cursor = Cursors.Default;
 		}
 
 		// Token: 0x04000012 RID: 18

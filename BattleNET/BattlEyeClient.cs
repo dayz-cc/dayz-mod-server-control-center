@@ -6,17 +6,17 @@ using System.Threading;
 
 namespace BattleNET
 {
-	// Token: 0x0200000D RID: 13
+	// Token: 0x02000004 RID: 4
 	public class BattlEyeClient : IBattleNET
 	{
-		// Token: 0x0600002D RID: 45 RVA: 0x000023FA File Offset: 0x000005FA
+		// Token: 0x06000010 RID: 16 RVA: 0x0000206E File Offset: 0x0000026E
 		public BattlEyeClient(BattlEyeLoginCredentials loginCredentials)
 		{
 			this._loginCredentials = loginCredentials;
 			this._sender = this;
 		}
 
-		// Token: 0x0600002E RID: 46 RVA: 0x00002410 File Offset: 0x00000610
+		// Token: 0x06000011 RID: 17 RVA: 0x00002084 File Offset: 0x00000284
 		private void OnMessageReceived(string message)
 		{
 			if (this.MessageReceivedEvent != null)
@@ -25,7 +25,7 @@ namespace BattleNET
 			}
 		}
 
-		// Token: 0x0600002F RID: 47 RVA: 0x00002431 File Offset: 0x00000631
+		// Token: 0x06000012 RID: 18 RVA: 0x000020A5 File Offset: 0x000002A5
 		private void OnDisconnect(BattlEyeLoginCredentials loginDetails, EBattlEyeDisconnectionType disconnectionType)
 		{
 			if (this.DisconnectEvent != null)
@@ -34,7 +34,7 @@ namespace BattleNET
 			}
 		}
 
-		// Token: 0x06000030 RID: 48 RVA: 0x00002454 File Offset: 0x00000654
+		// Token: 0x06000013 RID: 19 RVA: 0x000020C8 File Offset: 0x000002C8
 		private EBattlEyeCommandResult SendLoginPacket(string command)
 		{
 			try
@@ -62,7 +62,7 @@ namespace BattleNET
 			return EBattlEyeCommandResult.Success;
 		}
 
-		// Token: 0x06000031 RID: 49 RVA: 0x00002524 File Offset: 0x00000724
+		// Token: 0x06000014 RID: 20 RVA: 0x00002198 File Offset: 0x00000398
 		private EBattlEyeCommandResult SendAcknowledgePacket(string command)
 		{
 			try
@@ -90,7 +90,7 @@ namespace BattleNET
 			return EBattlEyeCommandResult.Success;
 		}
 
-		// Token: 0x06000032 RID: 50 RVA: 0x000025F4 File Offset: 0x000007F4
+		// Token: 0x06000015 RID: 21 RVA: 0x00002268 File Offset: 0x00000468
 		private void Disconnect(EBattlEyeDisconnectionType disconnectionType)
 		{
 			this._keepRunning = false;
@@ -103,7 +103,7 @@ namespace BattleNET
 			this.OnDisconnect(this._loginCredentials, this._disconnectionType);
 		}
 
-		// Token: 0x06000033 RID: 51 RVA: 0x00002648 File Offset: 0x00000848
+		// Token: 0x06000016 RID: 22 RVA: 0x000022BC File Offset: 0x000004BC
 		public void Disconnect()
 		{
 			this._keepRunning = false;
@@ -116,7 +116,7 @@ namespace BattleNET
 			this.OnDisconnect(this._loginCredentials, this._disconnectionType);
 		}
 
-		// Token: 0x06000034 RID: 52 RVA: 0x0000269C File Offset: 0x0000089C
+		// Token: 0x06000017 RID: 23 RVA: 0x00002310 File Offset: 0x00000510
 		public EBattlEyeConnectionResult Connect()
 		{
 			try
@@ -179,7 +179,7 @@ namespace BattleNET
 			return EBattlEyeConnectionResult.Success;
 		}
 
-		// Token: 0x06000035 RID: 53 RVA: 0x00002870 File Offset: 0x00000A70
+		// Token: 0x06000018 RID: 24 RVA: 0x000024E4 File Offset: 0x000006E4
 		public EBattlEyeCommandResult SendCommandPacket(string command)
 		{
 			try
@@ -213,7 +213,7 @@ namespace BattleNET
 			return EBattlEyeCommandResult.Success;
 		}
 
-		// Token: 0x06000036 RID: 54 RVA: 0x00002960 File Offset: 0x00000B60
+		// Token: 0x06000019 RID: 25 RVA: 0x000025D4 File Offset: 0x000007D4
 		public EBattlEyeCommandResult SendCommandPacket(EBattlEyeCommand command)
 		{
 			try
@@ -247,7 +247,7 @@ namespace BattleNET
 			return EBattlEyeCommandResult.Success;
 		}
 
-		// Token: 0x06000037 RID: 55 RVA: 0x00002A64 File Offset: 0x00000C64
+		// Token: 0x0600001A RID: 26 RVA: 0x000026D8 File Offset: 0x000008D8
 		public EBattlEyeCommandResult SendCommandPacket(EBattlEyeCommand command, string parameters)
 		{
 			try
@@ -287,14 +287,14 @@ namespace BattleNET
 			return EBattlEyeCommandResult.Success;
 		}
 
-		// Token: 0x06000038 RID: 56 RVA: 0x00002B88 File Offset: 0x00000D88
+		// Token: 0x0600001B RID: 27 RVA: 0x000027FC File Offset: 0x000009FC
 		public bool IsConnected()
 		{
 			return this._socket != null && this._socket.Connected;
 		}
 
-		// Token: 0x17000002 RID: 2
-		// (get) Token: 0x06000039 RID: 57 RVA: 0x00002B9F File Offset: 0x00000D9F
+		// Token: 0x17000001 RID: 1
+		// (get) Token: 0x0600001C RID: 28 RVA: 0x00002813 File Offset: 0x00000A13
 		public bool IsReconnectingOnPacketLoss
 		{
 			get
@@ -303,34 +303,34 @@ namespace BattleNET
 			}
 		}
 
-		// Token: 0x0600003A RID: 58 RVA: 0x00002BA7 File Offset: 0x00000DA7
+		// Token: 0x0600001D RID: 29 RVA: 0x0000281B File Offset: 0x00000A1B
 		public bool ReconnectOnPacketLoss(bool newSetting)
 		{
 			this._reconnectOnPacketLoss = newSetting;
 			return this._reconnectOnPacketLoss;
 		}
 
-		// Token: 0x0600003B RID: 59 RVA: 0x00002BB6 File Offset: 0x00000DB6
+		// Token: 0x0600001E RID: 30 RVA: 0x0000282A File Offset: 0x00000A2A
 		public object Sender()
 		{
 			return this._sender;
 		}
 
-		// Token: 0x0600003C RID: 60 RVA: 0x00002BBE File Offset: 0x00000DBE
+		// Token: 0x0600001F RID: 31 RVA: 0x00002832 File Offset: 0x00000A32
 		public object Sender(object newSetting)
 		{
 			this._sender = newSetting;
 			return this._sender;
 		}
 
-		// Token: 0x0600003D RID: 61 RVA: 0x00002BCD File Offset: 0x00000DCD
+		// Token: 0x06000020 RID: 32 RVA: 0x00002841 File Offset: 0x00000A41
 		public BattlEyeLoginCredentials Credentials(BattlEyeLoginCredentials loginCredentials)
 		{
 			this._loginCredentials = loginCredentials;
 			return this._loginCredentials;
 		}
 
-		// Token: 0x0600003E RID: 62 RVA: 0x00002BDC File Offset: 0x00000DDC
+		// Token: 0x06000021 RID: 33 RVA: 0x00002850 File Offset: 0x00000A50
 		private void DoWork()
 		{
 			byte[] array = new byte[4096];
@@ -394,7 +394,7 @@ namespace BattleNET
 			}
 		}
 
-		// Token: 0x0600003F RID: 63 RVA: 0x00002D30 File Offset: 0x00000F30
+		// Token: 0x06000022 RID: 34 RVA: 0x000029A4 File Offset: 0x00000BA4
 		private void KeepAlive()
 		{
 			while (this._socket.Connected && this._keepRunning)
@@ -422,46 +422,46 @@ namespace BattleNET
 		}
 
 		// Token: 0x14000003 RID: 3
-		// (add) Token: 0x06000040 RID: 64 RVA: 0x00002DE1 File Offset: 0x00000FE1
-		// (remove) Token: 0x06000041 RID: 65 RVA: 0x00002DFA File Offset: 0x00000FFA
+		// (add) Token: 0x06000023 RID: 35 RVA: 0x00002A58 File Offset: 0x00000C58
+		// (remove) Token: 0x06000024 RID: 36 RVA: 0x00002A90 File Offset: 0x00000C90
 		public event BattlEyeMessageEventHandler MessageReceivedEvent;
 
 		// Token: 0x14000004 RID: 4
-		// (add) Token: 0x06000042 RID: 66 RVA: 0x00002E13 File Offset: 0x00001013
-		// (remove) Token: 0x06000043 RID: 67 RVA: 0x00002E2C File Offset: 0x0000102C
+		// (add) Token: 0x06000025 RID: 37 RVA: 0x00002AC8 File Offset: 0x00000CC8
+		// (remove) Token: 0x06000026 RID: 38 RVA: 0x00002B00 File Offset: 0x00000D00
 		public event BattlEyeDisconnectEventHandler DisconnectEvent;
 
-		// Token: 0x0400002B RID: 43
+		// Token: 0x04000004 RID: 4
 		private Socket _socket;
 
-		// Token: 0x0400002C RID: 44
+		// Token: 0x04000005 RID: 5
 		private Thread _doWork;
 
-		// Token: 0x0400002D RID: 45
+		// Token: 0x04000006 RID: 6
 		private Thread _keepAlive;
 
-		// Token: 0x0400002E RID: 46
+		// Token: 0x04000007 RID: 7
 		private DateTime _commandSend;
 
-		// Token: 0x0400002F RID: 47
+		// Token: 0x04000008 RID: 8
 		private DateTime _responseReceived;
 
-		// Token: 0x04000030 RID: 48
+		// Token: 0x04000009 RID: 9
 		private BattlEyeLoginCredentials _loginCredentials;
 
-		// Token: 0x04000031 RID: 49
+		// Token: 0x0400000A RID: 10
 		private EBattlEyeDisconnectionType _disconnectionType;
 
-		// Token: 0x04000032 RID: 50
+		// Token: 0x0400000B RID: 11
 		private bool _ranBefore;
 
-		// Token: 0x04000033 RID: 51
+		// Token: 0x0400000C RID: 12
 		private bool _keepRunning;
 
-		// Token: 0x04000034 RID: 52
+		// Token: 0x0400000D RID: 13
 		private bool _reconnectOnPacketLoss;
 
-		// Token: 0x04000035 RID: 53
+		// Token: 0x0400000E RID: 14
 		private object _sender;
 	}
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{202102AE-C8BA-4C02-B55F-958B8F6A213E}</ProjectGuid>
+    <ProjectGuid>{8DFC0C3A-F700-46B1-AD91-8D34B4D6E17A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DayZ Loadout Generator</RootNamespace>
     <AssemblyName>DayZ Loadout Generator</AssemblyName>

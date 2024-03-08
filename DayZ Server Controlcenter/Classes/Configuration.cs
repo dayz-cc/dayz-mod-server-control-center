@@ -19,7 +19,7 @@ namespace Crosire.Controlcenter.Classes
 		{
 			if (string.IsNullOrEmpty(Settings.Default.workingDir))
 			{
-				RegistryKey registryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey("SOFTWARE\\Bohemia Interactive Studio\\ArmA 2 OA");
+				RegistryKey registryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, 512).OpenSubKey("SOFTWARE\\Bohemia Interactive Studio\\ArmA 2 OA");
 				if (registryKey != null)
 				{
 					this.pathArma = registryKey.GetValue("MAIN").ToString();
@@ -50,7 +50,7 @@ namespace Crosire.Controlcenter.Classes
 			this.confInstance = instance;
 			if (string.IsNullOrEmpty(Settings.Default.workingDir))
 			{
-				RegistryKey registryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey("SOFTWARE\\Bohemia Interactive Studio\\ArmA 2 OA");
+				RegistryKey registryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, 512).OpenSubKey("SOFTWARE\\Bohemia Interactive Studio\\ArmA 2 OA");
 				if (registryKey != null)
 				{
 					this.pathArma = registryKey.GetValue("MAIN").ToString();

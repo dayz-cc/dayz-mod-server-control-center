@@ -3,7 +3,7 @@
 	// Token: 0x0200000A RID: 10
 	public partial class frmSplash : global::System.Windows.Forms.Form
 	{
-		// Token: 0x06000083 RID: 131 RVA: 0x00017DCC File Offset: 0x00015FCC
+		// Token: 0x06000083 RID: 131 RVA: 0x00017C60 File Offset: 0x00015E60
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && this.components != null)
@@ -13,7 +13,7 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x06000084 RID: 132 RVA: 0x00017E04 File Offset: 0x00016004
+		// Token: 0x06000084 RID: 132 RVA: 0x00017C98 File Offset: 0x00015E98
 		private void InitializeComponent()
 		{
 			global::System.ComponentModel.ComponentResourceManager componentResourceManager = new global::System.ComponentModel.ComponentResourceManager(typeof(global::Crosire.Controlcenter.Forms.frmSplash));

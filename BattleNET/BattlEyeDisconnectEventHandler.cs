@@ -2,7 +2,7 @@
 
 namespace BattleNET
 {
-	// Token: 0x0200000A RID: 10
-	// (Invoke) Token: 0x0600001B RID: 27
+	// Token: 0x02000005 RID: 5
+	// (Invoke) Token: 0x06000028 RID: 40
 	public delegate void BattlEyeDisconnectEventHandler(object sender, BattlEyeDisconnectEventArgs args);
 }

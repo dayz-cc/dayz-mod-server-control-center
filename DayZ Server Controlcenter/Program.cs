@@ -10,7 +10,7 @@ namespace Crosire.Controlcenter
 	// Token: 0x0200000B RID: 11
 	internal static class Program
 	{
-		// Token: 0x06000087 RID: 135 RVA: 0x0001888C File Offset: 0x00016A8C
+		// Token: 0x06000087 RID: 135 RVA: 0x00018720 File Offset: 0x00016920
 		[STAThread]
 		private static void Main(string[] args)
 		{
@@ -28,39 +28,7 @@ namespace Crosire.Controlcenter
 			SingleInstance.Stop();
 		}
 
-		// Token: 0x06000088 RID: 136 RVA: 0x0001892C File Offset: 0x00016B2C
-		private static void Application_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-		{
-			try
-			{
-				Exception ex = (Exception)e.ExceptionObject;
-				Program.logger.Log(LogLevel.Fatal, ex.ToString() + " [" + ex.Message + "]");
-				if (ex.StackTrace != null)
-				{
-					Program.logger.Log(LogLevel.Trace, ex.StackTrace);
-				}
-				MessageBox.Show(string.Concat(new string[]
-				{
-					"A fatal error occured! Please report it with the following information:",
-					Environment.NewLine,
-					Environment.NewLine,
-					"Exception:",
-					Environment.NewLine,
-					ex.Message,
-					Environment.NewLine,
-					Environment.NewLine,
-					"StackTrace:",
-					Environment.NewLine,
-					ex.StackTrace
-				}), "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-			}
-			finally
-			{
-				Application.Exit();
-			}
-		}
-
-		// Token: 0x06000089 RID: 137 RVA: 0x00018A2C File Offset: 0x00016C2C
+		// Token: 0x06000088 RID: 136 RVA: 0x000187C0 File Offset: 0x000169C0
 		private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
 		{
 			if (e.Exception != null)
@@ -93,6 +61,38 @@ namespace Crosire.Controlcenter
 				{
 					Application.Exit();
 				}
+			}
+		}
+
+		// Token: 0x06000089 RID: 137 RVA: 0x00018914 File Offset: 0x00016B14
+		private static void Application_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+		{
+			try
+			{
+				Exception ex = (Exception)e.ExceptionObject;
+				Program.logger.Log(LogLevel.Fatal, ex.ToString() + " [" + ex.Message + "]");
+				if (ex.StackTrace != null)
+				{
+					Program.logger.Log(LogLevel.Trace, ex.StackTrace);
+				}
+				MessageBox.Show(string.Concat(new string[]
+				{
+					"A fatal error occured! Please report it with the following information:",
+					Environment.NewLine,
+					Environment.NewLine,
+					"Exception:",
+					Environment.NewLine,
+					ex.Message,
+					Environment.NewLine,
+					Environment.NewLine,
+					"StackTrace:",
+					Environment.NewLine,
+					ex.StackTrace
+				}), "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+			}
+			finally
+			{
+				Application.Exit();
 			}
 		}
 

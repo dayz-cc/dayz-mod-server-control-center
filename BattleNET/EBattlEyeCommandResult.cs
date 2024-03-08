@@ -2,14 +2,14 @@
 
 namespace BattleNET
 {
-	// Token: 0x02000007 RID: 7
+	// Token: 0x0200000A RID: 10
 	public enum EBattlEyeCommandResult
 	{
-		// Token: 0x0400000F RID: 15
+		// Token: 0x0400001C RID: 28
 		Success,
-		// Token: 0x04000010 RID: 16
+		// Token: 0x0400001D RID: 29
 		Error,
-		// Token: 0x04000011 RID: 17
+		// Token: 0x0400001E RID: 30
 		NotConnected
 	}
 }

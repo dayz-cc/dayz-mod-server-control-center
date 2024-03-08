@@ -2,10 +2,10 @@
 
 namespace BattleNET
 {
-	// Token: 0x0200000B RID: 11
+	// Token: 0x02000006 RID: 6
 	public class BattlEyeDisconnectEventArgs : EventArgs
 	{
-		// Token: 0x0600001E RID: 30 RVA: 0x0000237C File Offset: 0x0000057C
+		// Token: 0x0600002B RID: 43 RVA: 0x00002B38 File Offset: 0x00000D38
 		public BattlEyeDisconnectEventArgs(BattlEyeLoginCredentials loginDetails, EBattlEyeDisconnectionType disconnectionType)
 		{
 			this.LoginDetails = loginDetails;
@@ -32,13 +32,13 @@ namespace BattleNET
 			}
 		}
 
-		// Token: 0x04000028 RID: 40
+		// Token: 0x04000011 RID: 17
 		public BattlEyeLoginCredentials LoginDetails;
 
-		// Token: 0x04000029 RID: 41
+		// Token: 0x04000012 RID: 18
 		public EBattlEyeDisconnectionType DisconnectionType;
 
-		// Token: 0x0400002A RID: 42
+		// Token: 0x04000013 RID: 19
 		public string Message;
 	}
 }

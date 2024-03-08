@@ -24,9 +24,9 @@
 			this.labelChoose.AutoSize = true;
 			this.labelChoose.Location = new global::System.Drawing.Point(12, 9);
 			this.labelChoose.Name = "labelChoose";
-			this.labelChoose.Size = new global::System.Drawing.Size(116, 13);
+			this.labelChoose.Size = new global::System.Drawing.Size(161, 13);
 			this.labelChoose.TabIndex = 0;
-			this.labelChoose.Text = "Choose your language:";
+			this.labelChoose.Text = "Choose your preferred language:";
 			this.cbxLanguage.Anchor = global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Left | global::System.Windows.Forms.AnchorStyles.Right;
 			this.cbxLanguage.DropDownStyle = global::System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbxLanguage.FormattingEnabled = true;
@@ -59,7 +59,7 @@
 			base.ShowIcon = false;
 			base.ShowInTaskbar = false;
 			base.StartPosition = global::System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = " ";
+			this.Text = " Language Selection";
 			base.TopMost = true;
 			base.Load += new global::System.EventHandler(this.frmLang_Load);
 			base.ResumeLayout(false);

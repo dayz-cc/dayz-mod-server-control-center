@@ -6,10 +6,10 @@ using System.Text;
 
 namespace BattleNET
 {
-	// Token: 0x02000005 RID: 5
+	// Token: 0x0200000E RID: 14
 	internal class Helpers
 	{
-		// Token: 0x06000006 RID: 6 RVA: 0x00002060 File Offset: 0x00000260
+		// Token: 0x0600003D RID: 61 RVA: 0x00002D90 File Offset: 0x00000F90
 		public static string Hex2Ascii(string hexString)
 		{
 			int num = 0;
@@ -22,25 +22,25 @@ namespace BattleNET
 			return Helpers.Bytes2String(array);
 		}
 
-		// Token: 0x06000007 RID: 7 RVA: 0x000020B5 File Offset: 0x000002B5
+		// Token: 0x0600003E RID: 62 RVA: 0x00002DE5 File Offset: 0x00000FE5
 		public static byte[] String2Bytes(string s)
 		{
 			return Encoding.GetEncoding(1252).GetBytes(s);
 		}
 
-		// Token: 0x06000008 RID: 8 RVA: 0x000020C7 File Offset: 0x000002C7
+		// Token: 0x0600003F RID: 63 RVA: 0x00002DF7 File Offset: 0x00000FF7
 		public static string Bytes2String(byte[] bytes)
 		{
 			return Encoding.GetEncoding(1252).GetString(bytes);
 		}
 
-		// Token: 0x06000009 RID: 9 RVA: 0x000020D9 File Offset: 0x000002D9
+		// Token: 0x06000040 RID: 64 RVA: 0x00002E09 File Offset: 0x00001009
 		public static string Bytes2String(byte[] bytes, int index, int count)
 		{
 			return Encoding.UTF8.GetString(bytes, index, count);
 		}
 
-		// Token: 0x0600000A RID: 10 RVA: 0x000020E8 File Offset: 0x000002E8
+		// Token: 0x06000041 RID: 65 RVA: 0x00002E18 File Offset: 0x00001018
 		public static string StringValueOf(Enum value)
 		{
 			FieldInfo field = value.GetType().GetField(value.ToString());
@@ -52,7 +52,7 @@ namespace BattleNET
 			return value.ToString();
 		}
 
-		// Token: 0x0600000B RID: 11 RVA: 0x00002134 File Offset: 0x00000334
+		// Token: 0x06000042 RID: 66 RVA: 0x00002E64 File Offset: 0x00001064
 		public static object EnumValueOf(string value, Type enumType)
 		{
 			string[] names = Enum.GetNames(enumType);

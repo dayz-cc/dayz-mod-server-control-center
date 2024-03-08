@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="backpack" xml:space="preserve">
+    <value>Mochila</value>
+  </data>
+  <data name="backupfolder" xml:space="preserve">
+    <value>Caminho da pasta de backup</value>
+  </data>
+  <data name="build" xml:space="preserve">
+    <value>Versão requerida</value>
+  </data>
+  <data name="button_add_database" xml:space="preserve">
+    <value>Adicionar novo banco de dados</value>
+  </data>
+  <data name="button_add_player" xml:space="preserve">
+    <value>Adicionar novo jogador</value>
+  </data>
+  <data name="button_autobackup_start" xml:space="preserve">
+    <value>Iniciar autobackup</value>
+  </data>
+  <data name="button_autobackup_stop" xml:space="preserve">
+    <value>Parar Autobackup</value>
+  </data>
+  <data name="button_backup" xml:space="preserve">
+    <value>Backup do banco de dados</value>
+  </data>
+  <data name="button_browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="button_cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="button_clear" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="button_details" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="button_exit" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="button_generate" xml:space="preserve">
+    <value>Gerar veículos</value>
+  </data>
+  <data name="button_log" xml:space="preserve">
+    <value>Mostrar Log</value>
+  </data>
+  <data name="button_menu1" xml:space="preserve">
+    <value>1. Configuração</value>
+  </data>
+  <data name="button_menu2" xml:space="preserve">
+    <value>2. Administração</value>
+  </data>
+  <data name="button_menu3" xml:space="preserve">
+    <value>3. Banco de dados</value>
+  </data>
+  <data name="button_menu4" xml:space="preserve">
+    <value>4. Informação</value>
+  </data>
+  <data name="button_monitor_start" xml:space="preserve">
+    <value>Iniciar monitoramente em tempo real do log</value>
+  </data>
+  <data name="button_monitor_stop" xml:space="preserve">
+    <value>Parar o monitoramente em tempo real</value>
+  </data>
+  <data name="button_mysql_password" xml:space="preserve">
+    <value>Mudar a senha do MySQL</value>
+  </data>
+  <data name="button_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="button_random" xml:space="preserve">
+    <value>Senha aleatoria</value>
+  </data>
+  <data name="button_reload" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="button_reset" xml:space="preserve">
+    <value>Resetar banco de dados</value>
+  </data>
+  <data name="button_restore" xml:space="preserve">
+    <value>Restaurar banco de dados</value>
+  </data>
+  <data name="button_save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="button_save_config" xml:space="preserve">
+    <value>Salvar configuração</value>
+  </data>
+  <data name="button_save_player" xml:space="preserve">
+    <value>Salvar no banco de dados</value>
+  </data>
+  <data name="bytes" xml:space="preserve">
+    <value>Bytes</value>
+  </data>
+  <data name="bytespersecond" xml:space="preserve">
+    <value>B/s</value>
+  </data>
+  <data name="check_daytime" xml:space="preserve">
+    <value>Somente dia</value>
+  </data>
+  <data name="check_duplicate" xml:space="preserve">
+    <value>Kicar duplicados</value>
+  </data>
+  <data name="check_enabled" xml:space="preserve">
+    <value>Habilitar</value>
+  </data>
+  <data name="check_persistent" xml:space="preserve">
+    <value>Persistente missão</value>
+  </data>
+  <data name="check_rmod" xml:space="preserve">
+    <value>Habilitar rMod</value>
+  </data>
+  <data name="check_whitelisted" xml:space="preserve">
+    <value>Whitelisted</value>
+  </data>
+  <data name="codecquality" xml:space="preserve">
+    <value>Qualidade do áudio</value>
+  </data>
+  <data name="cpucount" xml:space="preserve">
+    <value>CPU Count</value>
+  </data>
+  <data name="databasename" xml:space="preserve">
+    <value>Nome do banco de dados</value>
+  </data>
+  <data name="difficulty" xml:space="preserve">
+    <value>Dificuldade</value>
+  </data>
+  <data name="group_about" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="group_autobackup" xml:space="preserve">
+    <value>Auto Backup</value>
+  </data>
+  <data name="group_backup" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="group_battleye" xml:space="preserve">
+    <value>BattlEye</value>
+  </data>
+  <data name="group_message" xml:space="preserve">
+    <value>Mensagem</value>
+  </data>
+  <data name="group_mysql" xml:space="preserve">
+    <value>MySQL</value>
+  </data>
+  <data name="group_mysql_details" xml:space="preserve">
+    <value>Informação de login</value>
+  </data>
+  <data name="group_other" xml:space="preserve">
+    <value>Opcções adicionais</value>
+  </data>
+  <data name="group_profile" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="group_reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="group_restore" xml:space="preserve">
+    <value>Restaurar</value>
+  </data>
+  <data name="group_scripting" xml:space="preserve">
+    <value>Scripting</value>
+  </data>
+  <data name="group_settings" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="group_signatures" xml:space="preserve">
+    <value>Assinaturas</value>
+  </data>
+  <data name="group_survivor" xml:space="preserve">
+    <value>Survivor</value>
+  </data>
+  <data name="group_template" xml:space="preserve">
+    <value>Missão</value>
+  </data>
+  <data name="group_time" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="group_tuning_network" xml:space="preserve">
+    <value>Network Tuning</value>
+  </data>
+  <data name="group_tuning_performance" xml:space="preserve">
+    <value>Performance Tuning</value>
+  </data>
+  <data name="group_von" xml:space="preserve">
+    <value>Comunicação via audio</value>
+  </data>
+  <data name="group_whitelist" xml:space="preserve">
+    <value>Whitelist</value>
+  </data>
+  <data name="guid" xml:space="preserve">
+    <value>GUID</value>
+  </data>
+  <data name="instance" xml:space="preserve">
+    <value>Instance</value>
+  </data>
+  <data name="inventory" xml:space="preserve">
+    <value>Inventario</value>
+  </data>
+  <data name="kilobyte" xml:space="preserve">
+    <value>kB</value>
+  </data>
+  <data name="loadout" xml:space="preserve">
+    <value>Loadout</value>
+  </data>
+  <data name="loadoutbackpack" xml:space="preserve">
+    <value>Loadout mochila</value>
+  </data>
+  <data name="maxbandwidth" xml:space="preserve">
+    <value>Maximo de banda</value>
+  </data>
+  <data name="maxcustomsize" xml:space="preserve">
+    <value>Máx. de arquivo personalizado</value>
+  </data>
+  <data name="maxmsgsent" xml:space="preserve">
+    <value>Máx. de mensagens enviadas</value>
+  </data>
+  <data name="maxping" xml:space="preserve">
+    <value>Max. Ping</value>
+  </data>
+  <data name="maxplayers" xml:space="preserve">
+    <value>Máx. Jogadores</value>
+  </data>
+  <data name="maxsizeguaranteed" xml:space="preserve">
+    <value>Tamanho maximo garantido</value>
+  </data>
+  <data name="maxsizenonguaranteed" xml:space="preserve">
+    <value>Tamanho maximo não garantido</value>
+  </data>
+  <data name="maxvehicles" xml:space="preserve">
+    <value>Máximo de veiculos</value>
+  </data>
+  <data name="medical" xml:space="preserve">
+    <value>Medico</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>Mensagem</value>
+  </data>
+  <data name="message_confirm_database" xml:space="preserve">
+    <value>Tem certeza de que deseja adicionar base de dados:</value>
+  </data>
+  <data name="message_confirm_deletelog" xml:space="preserve">
+    <value>Você tem certeza que deseja apagar os logs?</value>
+  </data>
+  <data name="message_confirm_player" xml:space="preserve">
+    <value>Você tem certeza que deseja adicionar o jogador a sua Whitelist:</value>
+  </data>
+  <data name="message_error_database" xml:space="preserve">
+    <value>Criação de banco de dados falhou:</value>
+  </data>
+  <data name="message_error_restore" xml:space="preserve">
+    <value>Banco de dados restaurar falhou:</value>
+  </data>
+  <data name="message_finished_database" xml:space="preserve">
+    <value>Banco de dados foi criado!</value>
+  </data>
+  <data name="message_finished_reset" xml:space="preserve">
+    <value>Banco de dados foi apagado!</value>
+  </data>
+  <data name="message_finished_restore" xml:space="preserve">
+    <value>Banco de dados foi restaurado!</value>
+  </data>
+  <data name="message_reset" xml:space="preserve">
+    <value>Você realmente desejar resetar seu banco de dados? TODOS OS SEUS DADOS SERÃO PERDIDOS!</value>
+  </data>
+  <data name="messagejoin" xml:space="preserve">
+    <value>Join Message</value>
+  </data>
+  <data name="messagetime" xml:space="preserve">
+    <value>Segundos entre as mensagens</value>
+  </data>
+  <data name="minbandwidth" xml:space="preserve">
+    <value>Banda mínima</value>
+  </data>
+  <data name="minerrtosend" xml:space="preserve">
+    <value>Minimo de erros a enviar</value>
+  </data>
+  <data name="minerrtosendnear" xml:space="preserve">
+    <value>Minimo de erros a enviar</value>
+  </data>
+  <data name="modlist" xml:space="preserve">
+    <value>Modlist</value>
+  </data>
+  <data name="mysql_credentials" xml:space="preserve">
+    <value>MySQL Credentials</value>
+  </data>
+  <data name="mysql_host" xml:space="preserve">
+    <value>Endereço do servidor MySQL</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="passwordadmin" xml:space="preserve">
+    <value>Senha do admin</value>
+  </data>
+  <data name="passwordrcon" xml:space="preserve">
+    <value>Senha BattlEye</value>
+  </data>
+  <data name="port" xml:space="preserve">
+    <value>Porta</value>
+  </data>
+  <data name="position" xml:space="preserve">
+    <value>Posição</value>
+  </data>
+  <data name="reportingip" xml:space="preserve">
+    <value>IP de reporte</value>
+  </data>
+  <data name="requiresecureid" xml:space="preserve">
+    <value>Require SecureID</value>
+  </data>
+  <data name="sentence_backupinterval" xml:space="preserve">
+    <value>Coloque o tempo em minutos que você deseja que os backups sejam criados</value>
+  </data>
+  <data name="sentence_chooselanguage" xml:space="preserve">
+    <value>Escolha sua linguagem</value>
+  </data>
+  <data name="sentence_menu1_description" xml:space="preserve">
+    <value>Opções para o nome do servidor, senha, missão, e mais.</value>
+  </data>
+  <data name="sentence_menu2_description" xml:space="preserve">
+    <value>Inicie seu servidor, gerencie todos os seus arquivos e veja os logs. Uma interface simples e moderna irá ajudá-lo.</value>
+  </data>
+  <data name="sentence_menu3_description" xml:space="preserve">
+    <value>Gerencie seu banco de dados facilmente com o Chive. Criação de loadout personalizado, edição de inventários e criação de spaw points. Backups automaticos podem ser feitos e restaurados aqui também.</value>
+  </data>
+  <data name="sentence_menu4_description" xml:space="preserve">
+    <value>Altere sua linguagem e veja a descrição sobre o controlcenter.</value>
+  </data>
+  <data name="sentence_message" xml:space="preserve">
+    <value>Nota: Use esse padrão para o seu texto: "Mensagem 1", "Mensagem 2", "..."</value>
+  </data>
+  <data name="sentence_reset" xml:space="preserve">
+    <value>ATENÇÃO: Isso excluir seu banco de dados inteiro!</value>
+  </data>
+  <data name="sentence_selectinstance" xml:space="preserve">
+    <value>Instancia a ser gerenciada:</value>
+  </data>
+  <data name="servername" xml:space="preserve">
+    <value>Nome do servidor</value>
+  </data>
+  <data name="tab1_page1" xml:space="preserve">
+    <value>Basico</value>
+  </data>
+  <data name="tab1_page2" xml:space="preserve">
+    <value>Segurança</value>
+  </data>
+  <data name="tab1_page3" xml:space="preserve">
+    <value>Mais</value>
+  </data>
+  <data name="tab2_page1" xml:space="preserve">
+    <value>Gerenciar</value>
+  </data>
+  <data name="tab2_page2" xml:space="preserve">
+    <value>Servidor</value>
+  </data>
+  <data name="tab2_page3" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="tab3_page1" xml:space="preserve">
+    <value>Gerenciar</value>
+  </data>
+  <data name="tab3_page2" xml:space="preserve">
+    <value>Jogadores</value>
+  </data>
+  <data name="tab3_page3" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="template" xml:space="preserve">
+    <value>Modelo da missão</value>
+  </data>
+  <data name="timezone" xml:space="preserve">
+    <value>Fuso Horário</value>
+  </data>
+  <data name="uid" xml:space="preserve">
+    <value>UID</value>
+  </data>
+  <data name="verifysignatures" xml:space="preserve">
+    <value>Verificar</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Versão</value>
+  </data>
+</root>

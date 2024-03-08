@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="backpack" xml:space="preserve">
+    <value>Рюкзак</value>
+  </data>
+  <data name="backupfolder" xml:space="preserve">
+    <value>Путь к папке с резервной копией</value>
+  </data>
+  <data name="build" xml:space="preserve">
+    <value>Используемый бета-патч</value>
+  </data>
+  <data name="button_add_database" xml:space="preserve">
+    <value>Добавить Базу данных</value>
+  </data>
+  <data name="button_add_player" xml:space="preserve">
+    <value>Добавить нового игрока</value>
+  </data>
+  <data name="button_autobackup_start" xml:space="preserve">
+    <value>Запустить автосохранение Базы данных</value>
+  </data>
+  <data name="button_autobackup_stop" xml:space="preserve">
+    <value>Остановить автосохранение Базы данных</value>
+  </data>
+  <data name="button_backup" xml:space="preserve">
+    <value>Сохранить Базу данных</value>
+  </data>
+  <data name="button_browse" xml:space="preserve">
+    <value>Обзор</value>
+  </data>
+  <data name="button_cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="button_clear" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="button_details" xml:space="preserve">
+    <value>Детали</value>
+  </data>
+  <data name="button_exit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="button_generate" xml:space="preserve">
+    <value>Сгенерировать технику</value>
+  </data>
+  <data name="button_log" xml:space="preserve">
+    <value>Показать журнал</value>
+  </data>
+  <data name="button_menu1" xml:space="preserve">
+    <value>1. Настройки</value>
+  </data>
+  <data name="button_menu2" xml:space="preserve">
+    <value>2. Администрация</value>
+  </data>
+  <data name="button_menu3" xml:space="preserve">
+    <value>3. База данных</value>
+  </data>
+  <data name="button_menu4" xml:space="preserve">
+    <value>4. Информация</value>
+  </data>
+  <data name="button_monitor_start" xml:space="preserve">
+    <value>Запустить мониторинг сервера</value>
+  </data>
+  <data name="button_monitor_stop" xml:space="preserve">
+    <value>Остановить мониторинг сервера</value>
+  </data>
+  <data name="button_mysql_password" xml:space="preserve">
+    <value>Сменить MySQL пароль</value>
+  </data>
+  <data name="button_ok" xml:space="preserve">
+    <value>Ок</value>
+  </data>
+  <data name="button_random" xml:space="preserve">
+    <value>Случайный пароль</value>
+  </data>
+  <data name="button_reload" xml:space="preserve">
+    <value>Перезапустить</value>
+  </data>
+  <data name="button_reset" xml:space="preserve">
+    <value>Сбросить Базу данных</value>
+  </data>
+  <data name="button_restore" xml:space="preserve">
+    <value>Восстановить Базу данных</value>
+  </data>
+  <data name="button_save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="button_save_config" xml:space="preserve">
+    <value>Сохранить настройки</value>
+  </data>
+  <data name="button_save_player" xml:space="preserve">
+    <value>Сохранить Базу данных</value>
+  </data>
+  <data name="bytes" xml:space="preserve">
+    <value>Б</value>
+  </data>
+  <data name="bytespersecond" xml:space="preserve">
+    <value>B/c</value>
+  </data>
+  <data name="check_daytime" xml:space="preserve">
+    <value>Дневное время</value>
+  </data>
+  <data name="check_duplicate" xml:space="preserve">
+    <value>пнуть дубликат</value>
+  </data>
+  <data name="check_enabled" xml:space="preserve">
+    <value>Включить</value>
+  </data>
+  <data name="check_persistent" xml:space="preserve">
+    <value>Сообщение об убийстве</value>
+  </data>
+  <data name="check_rmod" xml:space="preserve">
+    <value>Включить rMod</value>
+  </data>
+  <data name="check_whitelisted" xml:space="preserve">
+    <value>Белый лист</value>
+  </data>
+  <data name="codecquality" xml:space="preserve">
+    <value>Качество</value>
+  </data>
+  <data name="cpucount" xml:space="preserve">
+    <value>Количество ядер CPU</value>
+  </data>
+  <data name="databasename" xml:space="preserve">
+    <value>Название Базы данных</value>
+  </data>
+  <data name="difficulty" xml:space="preserve">
+    <value>Сложность</value>
+  </data>
+  <data name="group_about" xml:space="preserve">
+    <value>Об программе</value>
+  </data>
+  <data name="group_autobackup" xml:space="preserve">
+    <value>Автосохранение Базы данных</value>
+  </data>
+  <data name="group_backup" xml:space="preserve">
+    <value>Резервная копия</value>
+  </data>
+  <data name="group_battleye" xml:space="preserve">
+    <value>BattlEye</value>
+  </data>
+  <data name="group_message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="group_mysql" xml:space="preserve">
+    <value>MySQL</value>
+  </data>
+  <data name="group_mysql_details" xml:space="preserve">
+    <value>Учётные данные</value>
+  </data>
+  <data name="group_other" xml:space="preserve">
+    <value>Дополнительные опции</value>
+  </data>
+  <data name="group_profile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="group_reset" xml:space="preserve">
+    <value>Сбросить</value>
+  </data>
+  <data name="group_restore" xml:space="preserve">
+    <value>Восстановить</value>
+  </data>
+  <data name="group_scripting" xml:space="preserve">
+    <value>сценарии</value>
+  </data>
+  <data name="group_settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="group_signatures" xml:space="preserve">
+    <value>Подпись</value>
+  </data>
+  <data name="group_survivor" xml:space="preserve">
+    <value>Выживший</value>
+  </data>
+  <data name="group_template" xml:space="preserve">
+    <value>Миссия</value>
+  </data>
+  <data name="group_time" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="group_tuning_network" xml:space="preserve">
+    <value>Настройка сети</value>
+  </data>
+  <data name="group_tuning_performance" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="group_von" xml:space="preserve">
+    <value>Голосовой чат</value>
+  </data>
+  <data name="group_whitelist" xml:space="preserve">
+    <value>Белый лист</value>
+  </data>
+  <data name="guid" xml:space="preserve">
+    <value>GUID</value>
+  </data>
+  <data name="instance" xml:space="preserve">
+    <value>Пример</value>
+  </data>
+  <data name="inventory" xml:space="preserve">
+    <value>Инвентарь</value>
+  </data>
+  <data name="kilobyte" xml:space="preserve">
+    <value>kB</value>
+  </data>
+  <data name="loadout" xml:space="preserve">
+    <value>Снаряжение</value>
+  </data>
+  <data name="loadoutbackpack" xml:space="preserve">
+    <value>Снаряжение рюкзак</value>
+  </data>
+  <data name="maxbandwidth" xml:space="preserve">
+    <value>Пропускная способность</value>
+  </data>
+  <data name="maxcustomsize" xml:space="preserve">
+    <value>Макс. размер файла</value>
+  </data>
+  <data name="maxmsgsent" xml:space="preserve">
+    <value>Макс. отправляемых сообщений</value>
+  </data>
+  <data name="maxping" xml:space="preserve">
+    <value>Макс. Пинг</value>
+  </data>
+  <data name="maxplayers" xml:space="preserve">
+    <value>Макс. игроков</value>
+  </data>
+  <data name="maxsizeguaranteed" xml:space="preserve">
+    <value>Гарантированный объём</value>
+  </data>
+  <data name="maxsizenonguaranteed" xml:space="preserve">
+    <value>Негарантированный объём</value>
+  </data>
+  <data name="maxvehicles" xml:space="preserve">
+    <value>Макс. кол-во техники</value>
+  </data>
+  <data name="medical" xml:space="preserve">
+    <value>Медицына</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="message_confirm_database" xml:space="preserve">
+    <value>Вы действительно хотите добавить в Базу данных:</value>
+  </data>
+  <data name="message_confirm_deletelog" xml:space="preserve">
+    <value>Вы действительно желаете очистить журнал сервера?</value>
+  </data>
+  <data name="message_confirm_player" xml:space="preserve">
+    <value>Вы уверены, что хотите добавить следуюшего игрока в "Белый список":</value>
+  </data>
+  <data name="message_error_database" xml:space="preserve">
+    <value>Создание базы данных не удалось:</value>
+  </data>
+  <data name="message_error_restore" xml:space="preserve">
+    <value>Восстановление базы данных не удалось:</value>
+  </data>
+  <data name="message_finished_database" xml:space="preserve">
+    <value>База данных была создана!</value>
+  </data>
+  <data name="message_finished_reset" xml:space="preserve">
+    <value>База данных была очищена!</value>
+  </data>
+  <data name="message_finished_restore" xml:space="preserve">
+    <value>База данных была восстановлена​​!</value>
+  </data>
+  <data name="message_reset" xml:space="preserve">
+    <value>Вы действительно хотите сбросить Базу данных? Весь прогресс не будет сохранен.</value>
+  </data>
+  <data name="messagejoin" xml:space="preserve">
+    <value>присоединиться Message</value>
+  </data>
+  <data name="messagetime" xml:space="preserve">
+    <value>Сек. между сообщениями</value>
+  </data>
+  <data name="minbandwidth" xml:space="preserve">
+    <value>Мин. пропускная способность</value>
+  </data>
+  <data name="minerrtosend" xml:space="preserve">
+    <value>Мин. отправляемых ошибок</value>
+  </data>
+  <data name="minerrtosendnear" xml:space="preserve">
+    <value>Мин. кол отправляемых ошибок</value>
+  </data>
+  <data name="modlist" xml:space="preserve">
+    <value>Мод-лист</value>
+  </data>
+  <data name="mysql_credentials" xml:space="preserve">
+    <value>MySQL полномочия</value>
+  </data>
+  <data name="mysql_host" xml:space="preserve">
+    <value>MySQL хост-адресс</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Игровое имя</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="passwordadmin" xml:space="preserve">
+    <value>Admin пароль</value>
+  </data>
+  <data name="passwordrcon" xml:space="preserve">
+    <value>Пароль BattlEye</value>
+  </data>
+  <data name="port" xml:space="preserve">
+    <value>Порт</value>
+  </data>
+  <data name="position" xml:space="preserve">
+    <value>Позиция</value>
+  </data>
+  <data name="reportingip" xml:space="preserve">
+    <value>IP мастер-сервера</value>
+  </data>
+  <data name="requiresecureid" xml:space="preserve">
+    <value>требуют SecureID</value>
+  </data>
+  <data name="sentence_backupinterval" xml:space="preserve">
+    <value>Введите интервал сохранения резервных копий:</value>
+  </data>
+  <data name="sentence_chooselanguage" xml:space="preserve">
+    <value>Выбор языка:</value>
+  </data>
+  <data name="sentence_menu1_description" xml:space="preserve">
+    <value>Опция для настройки сервера: Название, пароля, мисси и тд.</value>
+  </data>
+  <data name="sentence_menu2_description" xml:space="preserve">
+    <value>Запуск сервер. Пользовательский интерфейс позволяет смотреть за сервером и игроками.</value>
+  </data>
+  <data name="sentence_menu3_description" xml:space="preserve">
+    <value>Простое управление Базой данных. Настройка снаряжения игрока, редактирования инвентаря. Автоматическое резервное копирование Баз данных могут быть созданы и восстановлены здесь.</value>
+  </data>
+  <data name="sentence_menu4_description" xml:space="preserve">
+    <value>Измените язык, для просмотра информации о программе.</value>
+  </data>
+  <data name="sentence_message" xml:space="preserve">
+    <value>Заметка: Используйте шаблон: "Сообщение 1", "Сообщение 2", "..."</value>
+  </data>
+  <data name="sentence_reset" xml:space="preserve">
+    <value>Внимание! Удаляет полностью Базу данных!</value>
+  </data>
+  <data name="sentence_selectinstance" xml:space="preserve">
+    <value>Управление сервером:</value>
+  </data>
+  <data name="servername" xml:space="preserve">
+    <value>Название сервера</value>
+  </data>
+  <data name="tab1_page1" xml:space="preserve">
+    <value>Основные</value>
+  </data>
+  <data name="tab1_page2" xml:space="preserve">
+    <value>Безопасность</value>
+  </data>
+  <data name="tab1_page3" xml:space="preserve">
+    <value>Дополнительные</value>
+  </data>
+  <data name="tab2_page1" xml:space="preserve">
+    <value>Управление</value>
+  </data>
+  <data name="tab2_page2" xml:space="preserve">
+    <value>Сервер</value>
+  </data>
+  <data name="tab2_page3" xml:space="preserve">
+    <value>Журнал</value>
+  </data>
+  <data name="tab3_page1" xml:space="preserve">
+    <value>Управление</value>
+  </data>
+  <data name="tab3_page2" xml:space="preserve">
+    <value>Игроки</value>
+  </data>
+  <data name="tab3_page3" xml:space="preserve">
+    <value>Бэкап</value>
+  </data>
+  <data name="template" xml:space="preserve">
+    <value>Шаблон миссии</value>
+  </data>
+  <data name="timezone" xml:space="preserve">
+    <value>Временная зона</value>
+  </data>
+  <data name="uid" xml:space="preserve">
+    <value>UID</value>
+  </data>
+  <data name="verifysignatures" xml:space="preserve">
+    <value>Проверка</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+</root>

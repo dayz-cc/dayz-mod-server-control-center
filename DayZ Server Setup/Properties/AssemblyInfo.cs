@@ -5,14 +5,14 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 
-[assembly: AssemblyVersion("5.9.2.0")]
-[assembly: AssemblyDescription("Setup wizard to install a private server for the mod DayZ.")]
+[assembly: AssemblyVersion("5.9.3.0")]
+[assembly: AssemblyDescription("Setup for DayZ Control Center")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Crosire")]
+[assembly: AssemblyCompany("Crosire & DayZ Priv")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyTitle("DayZ Server Setup")]
-[assembly: AssemblyProduct("DayZ Server Controlcenter")]
-[assembly: AssemblyCopyright("Copyright © 2013")]
+[assembly: AssemblyTitle("DayZ Server Control Center Setup")]
+[assembly: AssemblyProduct("DayZ Server Control Center Setup")]
+[assembly: AssemblyCopyright("Copyright ©2012-2013 Crosire & DayZ Priv")]
 [assembly: ComVisible(false)]
 [assembly: Guid("a187dc13-2200-4bb4-a44c-2a9fb95c831c")]
-[assembly: AssemblyFileVersion("5.9.2.0")]
+[assembly: AssemblyFileVersion("5.9.3.0")]

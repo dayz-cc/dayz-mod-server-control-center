@@ -4,12 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{202102AE-C8BA-4C02-B55F-958B8F6A213F}</ProjectGuid>
+    <ProjectGuid>{8DFC0C3A-F700-46B1-AD91-8D34B4D6E17B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Crosire.Controlcenter</RootNamespace>
     <AssemblyName>DayZ Server Controlcenter</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>DayZ Server Controlcenter.ico</ApplicationIcon>
@@ -100,18 +99,26 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.en.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-br.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BattleNET\BattleNET.csproj">
-      <Project>{202102ae-c8ba-4c02-b55f-958b8f6a213c}</Project>
+      <Project>{8dfc0c3a-f700-46b1-ad91-8d34b4d6e178}</Project>
       <Name>BattleNET</Name>
     </ProjectReference>
     <ProjectReference Include="..\Crosire\Crosire.csproj">
-      <Project>{202102ae-c8ba-4c02-b55f-958b8f6a213d}</Project>
+      <Project>{8dfc0c3a-f700-46b1-ad91-8d34b4d6e179}</Project>
       <Name>Crosire</Name>
     </ProjectReference>
   </ItemGroup>

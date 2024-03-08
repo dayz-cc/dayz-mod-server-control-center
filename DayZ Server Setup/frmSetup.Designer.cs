@@ -3,7 +3,7 @@
 	// Token: 0x02000006 RID: 6
 	public partial class frmSetup : global::System.Windows.Forms.Form
 	{
-		// Token: 0x06000026 RID: 38 RVA: 0x00004850 File Offset: 0x00002A50
+		// Token: 0x06000026 RID: 38 RVA: 0x00004854 File Offset: 0x00002A54
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && this.components != null)
@@ -13,7 +13,7 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x06000027 RID: 39 RVA: 0x00004870 File Offset: 0x00002A70
+		// Token: 0x06000027 RID: 39 RVA: 0x00004874 File Offset: 0x00002A74
 		private void InitializeComponent()
 		{
 			global::System.ComponentModel.ComponentResourceManager componentResourceManager = new global::System.ComponentModel.ComponentResourceManager(typeof(global::Crosire.Controlcenter.Setup.frmSetup));
@@ -318,7 +318,7 @@
 			this.labelEnterDatabase.Name = "labelEnterDatabase";
 			this.labelEnterDatabase.Size = new global::System.Drawing.Size(440, 21);
 			this.labelEnterDatabase.TabIndex = 9;
-			this.labelEnterDatabase.Text = "Enter a list of databases you wish to update below. You can use commas to seperatee them:";
+			this.labelEnterDatabase.Text = "Enter a list of databases you wish to update below. You can use commas to seperate them:";
 			this.labelHost.AutoSize = true;
 			this.labelHost.Location = new global::System.Drawing.Point(6, 61);
 			this.labelHost.Name = "labelHost";
@@ -330,7 +330,7 @@
 			this.textDatabase.Name = "textDatabase";
 			this.textDatabase.Size = new global::System.Drawing.Size(437, 20);
 			this.textDatabase.TabIndex = 6;
-			this.textDatabase.Text = "dayz_chernarus, dayz_lingor, dayz_namalsk, dayz_taviana, dayz_utes, dayz_panthera, dayz_zargabad, dayz_takistan, dayz_fallujah, dayz_celle";
+			this.textDatabase.Text = "dayz_chernarus";
 			this.labelPass.AutoSize = true;
 			this.labelPass.Location = new global::System.Drawing.Point(6, 113);
 			this.labelPass.Name = "labelPass";
@@ -437,7 +437,7 @@
 			this.lblDayZModVersion.Name = "lblDayZModVersion";
 			this.lblDayZModVersion.Size = new global::System.Drawing.Size(40, 13);
 			this.lblDayZModVersion.TabIndex = 31;
-			this.lblDayZModVersion.Text = "1.7.6.1";
+			this.lblDayZModVersion.Text = "1.7.7.1";
 			base.AutoScaleDimensions = new global::System.Drawing.SizeF(6f, 13f);
 			base.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Crosire.Controlcenter.Setup.Properties.Resources.background;
@@ -448,7 +448,6 @@
 			base.Controls.Add(this.lblSupporter);
 			base.Controls.Add(this.pictureLogo);
 			base.Controls.Add(this.lblMaintainer);
-			base.Controls.Add(this.container1);
 			base.Controls.Add(this.container2);
 			base.Controls.Add(this.container3);
 			base.Controls.Add(this.labelCopyright);
@@ -458,6 +457,7 @@
 			base.Controls.Add(this.labelVersionDescription);
 			base.Controls.Add(this.labelVersion);
 			base.Controls.Add(this.pictureBanner);
+			base.Controls.Add(this.container1);
 			base.FormBorderStyle = global::System.Windows.Forms.FormBorderStyle.None;
 			base.Icon = (global::System.Drawing.Icon)componentResourceManager.GetObject("$this.Icon");
 			base.Name = "frmSetup";

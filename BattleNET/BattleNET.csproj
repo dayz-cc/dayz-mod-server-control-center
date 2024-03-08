@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{202102AE-C8BA-4C02-B55F-958B8F6A213C}</ProjectGuid>
+    <ProjectGuid>{8DFC0C3A-F700-46B1-AD91-8D34B4D6E178}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>BattleNET</RootNamespace>
     <AssemblyName>BattleNET</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

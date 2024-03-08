@@ -15,13 +15,13 @@ namespace Crosire.Controlcenter.Setup.Properties
 	[CompilerGenerated]
 	internal class Resources
 	{
-		// Token: 0x0600002D RID: 45 RVA: 0x000068BE File Offset: 0x00004ABE
+		// Token: 0x0600002D RID: 45 RVA: 0x000068C4 File Offset: 0x00004AC4
 		internal Resources()
 		{
 		}
 
 		// Token: 0x17000001 RID: 1
-		// (get) Token: 0x0600002E RID: 46 RVA: 0x000068C8 File Offset: 0x00004AC8
+		// (get) Token: 0x0600002E RID: 46 RVA: 0x000068CC File Offset: 0x00004ACC
 		[EditorBrowsable(EditorBrowsableState.Advanced)]
 		internal static ResourceManager ResourceManager
 		{
@@ -37,8 +37,8 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000002 RID: 2
-		// (get) Token: 0x0600002F RID: 47 RVA: 0x00006907 File Offset: 0x00004B07
-		// (set) Token: 0x06000030 RID: 48 RVA: 0x0000690E File Offset: 0x00004B0E
+		// (get) Token: 0x0600002F RID: 47 RVA: 0x0000690B File Offset: 0x00004B0B
+		// (set) Token: 0x06000030 RID: 48 RVA: 0x00006912 File Offset: 0x00004B12
 		[EditorBrowsable(EditorBrowsableState.Advanced)]
 		internal static CultureInfo Culture
 		{
@@ -53,7 +53,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000003 RID: 3
-		// (get) Token: 0x06000031 RID: 49 RVA: 0x00006918 File Offset: 0x00004B18
+		// (get) Token: 0x06000031 RID: 49 RVA: 0x0000691C File Offset: 0x00004B1C
 		internal static Bitmap background
 		{
 			get
@@ -64,7 +64,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000004 RID: 4
-		// (get) Token: 0x06000032 RID: 50 RVA: 0x00006940 File Offset: 0x00004B40
+		// (get) Token: 0x06000032 RID: 50 RVA: 0x00006944 File Offset: 0x00004B44
 		internal static Bitmap banner
 		{
 			get
@@ -75,7 +75,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000005 RID: 5
-		// (get) Token: 0x06000033 RID: 51 RVA: 0x00006968 File Offset: 0x00004B68
+		// (get) Token: 0x06000033 RID: 51 RVA: 0x0000696C File Offset: 0x00004B6C
 		internal static string button_back
 		{
 			get
@@ -85,7 +85,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000006 RID: 6
-		// (get) Token: 0x06000034 RID: 52 RVA: 0x0000697E File Offset: 0x00004B7E
+		// (get) Token: 0x06000034 RID: 52 RVA: 0x00006982 File Offset: 0x00004B82
 		internal static string button_browse
 		{
 			get
@@ -95,7 +95,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000007 RID: 7
-		// (get) Token: 0x06000035 RID: 53 RVA: 0x00006994 File Offset: 0x00004B94
+		// (get) Token: 0x06000035 RID: 53 RVA: 0x00006998 File Offset: 0x00004B98
 		internal static string button_cancel
 		{
 			get
@@ -105,7 +105,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000008 RID: 8
-		// (get) Token: 0x06000036 RID: 54 RVA: 0x000069AA File Offset: 0x00004BAA
+		// (get) Token: 0x06000036 RID: 54 RVA: 0x000069AE File Offset: 0x00004BAE
 		internal static string button_finish
 		{
 			get
@@ -115,7 +115,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000009 RID: 9
-		// (get) Token: 0x06000037 RID: 55 RVA: 0x000069C0 File Offset: 0x00004BC0
+		// (get) Token: 0x06000037 RID: 55 RVA: 0x000069C4 File Offset: 0x00004BC4
 		internal static string button_fresh
 		{
 			get
@@ -125,7 +125,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700000A RID: 10
-		// (get) Token: 0x06000038 RID: 56 RVA: 0x000069D6 File Offset: 0x00004BD6
+		// (get) Token: 0x06000038 RID: 56 RVA: 0x000069DA File Offset: 0x00004BDA
 		internal static string button_next
 		{
 			get
@@ -135,7 +135,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700000B RID: 11
-		// (get) Token: 0x06000039 RID: 57 RVA: 0x000069EC File Offset: 0x00004BEC
+		// (get) Token: 0x06000039 RID: 57 RVA: 0x000069F0 File Offset: 0x00004BF0
 		internal static string button_own
 		{
 			get
@@ -145,7 +145,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700000C RID: 12
-		// (get) Token: 0x0600003A RID: 58 RVA: 0x00006A02 File Offset: 0x00004C02
+		// (get) Token: 0x0600003A RID: 58 RVA: 0x00006A06 File Offset: 0x00004C06
 		internal static string button_reconfigurate
 		{
 			get
@@ -155,7 +155,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700000D RID: 13
-		// (get) Token: 0x0600003B RID: 59 RVA: 0x00006A18 File Offset: 0x00004C18
+		// (get) Token: 0x0600003B RID: 59 RVA: 0x00006A1C File Offset: 0x00004C1C
 		internal static string button_update
 		{
 			get
@@ -165,7 +165,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700000E RID: 14
-		// (get) Token: 0x0600003C RID: 60 RVA: 0x00006A2E File Offset: 0x00004C2E
+		// (get) Token: 0x0600003C RID: 60 RVA: 0x00006A32 File Offset: 0x00004C32
 		internal static string error
 		{
 			get
@@ -175,7 +175,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700000F RID: 15
-		// (get) Token: 0x0600003D RID: 61 RVA: 0x00006A44 File Offset: 0x00004C44
+		// (get) Token: 0x0600003D RID: 61 RVA: 0x00006A48 File Offset: 0x00004C48
 		internal static string group_database
 		{
 			get
@@ -185,7 +185,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000010 RID: 16
-		// (get) Token: 0x0600003E RID: 62 RVA: 0x00006A5A File Offset: 0x00004C5A
+		// (get) Token: 0x0600003E RID: 62 RVA: 0x00006A5E File Offset: 0x00004C5E
 		internal static string group_options
 		{
 			get
@@ -195,7 +195,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000011 RID: 17
-		// (get) Token: 0x0600003F RID: 63 RVA: 0x00006A70 File Offset: 0x00004C70
+		// (get) Token: 0x0600003F RID: 63 RVA: 0x00006A74 File Offset: 0x00004C74
 		internal static string host
 		{
 			get
@@ -205,7 +205,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000012 RID: 18
-		// (get) Token: 0x06000040 RID: 64 RVA: 0x00006A88 File Offset: 0x00004C88
+		// (get) Token: 0x06000040 RID: 64 RVA: 0x00006A8C File Offset: 0x00004C8C
 		internal static Icon Icon
 		{
 			get
@@ -216,7 +216,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000013 RID: 19
-		// (get) Token: 0x06000041 RID: 65 RVA: 0x00006AB0 File Offset: 0x00004CB0
+		// (get) Token: 0x06000041 RID: 65 RVA: 0x00006AB4 File Offset: 0x00004CB4
 		internal static Bitmap logo
 		{
 			get
@@ -227,7 +227,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000014 RID: 20
-		// (get) Token: 0x06000042 RID: 66 RVA: 0x00006AD8 File Offset: 0x00004CD8
+		// (get) Token: 0x06000042 RID: 66 RVA: 0x00006ADC File Offset: 0x00004CDC
 		internal static string password
 		{
 			get
@@ -237,7 +237,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000015 RID: 21
-		// (get) Token: 0x06000043 RID: 67 RVA: 0x00006AEE File Offset: 0x00004CEE
+		// (get) Token: 0x06000043 RID: 67 RVA: 0x00006AF2 File Offset: 0x00004CF2
 		internal static string sentence_chooselanguage
 		{
 			get
@@ -247,7 +247,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000016 RID: 22
-		// (get) Token: 0x06000044 RID: 68 RVA: 0x00006B04 File Offset: 0x00004D04
+		// (get) Token: 0x06000044 RID: 68 RVA: 0x00006B08 File Offset: 0x00004D08
 		internal static string sentence_enterdatabase
 		{
 			get
@@ -257,7 +257,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000017 RID: 23
-		// (get) Token: 0x06000045 RID: 69 RVA: 0x00006B1A File Offset: 0x00004D1A
+		// (get) Token: 0x06000045 RID: 69 RVA: 0x00006B1E File Offset: 0x00004D1E
 		internal static string sentence_entermysql
 		{
 			get
@@ -267,7 +267,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000018 RID: 24
-		// (get) Token: 0x06000046 RID: 70 RVA: 0x00006B30 File Offset: 0x00004D30
+		// (get) Token: 0x06000046 RID: 70 RVA: 0x00006B34 File Offset: 0x00004D34
 		internal static string sentence_enterpath
 		{
 			get
@@ -277,7 +277,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x17000019 RID: 25
-		// (get) Token: 0x06000047 RID: 71 RVA: 0x00006B46 File Offset: 0x00004D46
+		// (get) Token: 0x06000047 RID: 71 RVA: 0x00006B4A File Offset: 0x00004D4A
 		internal static string sentence_installpatch
 		{
 			get
@@ -287,7 +287,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700001A RID: 26
-		// (get) Token: 0x06000048 RID: 72 RVA: 0x00006B5C File Offset: 0x00004D5C
+		// (get) Token: 0x06000048 RID: 72 RVA: 0x00006B60 File Offset: 0x00004D60
 		internal static string sentence_installredis
 		{
 			get
@@ -297,7 +297,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700001B RID: 27
-		// (get) Token: 0x06000049 RID: 73 RVA: 0x00006B72 File Offset: 0x00004D72
+		// (get) Token: 0x06000049 RID: 73 RVA: 0x00006B76 File Offset: 0x00004D76
 		internal static string step_1
 		{
 			get
@@ -307,7 +307,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700001C RID: 28
-		// (get) Token: 0x0600004A RID: 74 RVA: 0x00006B88 File Offset: 0x00004D88
+		// (get) Token: 0x0600004A RID: 74 RVA: 0x00006B8C File Offset: 0x00004D8C
 		internal static string step_2
 		{
 			get
@@ -317,7 +317,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700001D RID: 29
-		// (get) Token: 0x0600004B RID: 75 RVA: 0x00006B9E File Offset: 0x00004D9E
+		// (get) Token: 0x0600004B RID: 75 RVA: 0x00006BA2 File Offset: 0x00004DA2
 		internal static string step_3
 		{
 			get
@@ -327,7 +327,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700001E RID: 30
-		// (get) Token: 0x0600004C RID: 76 RVA: 0x00006BB4 File Offset: 0x00004DB4
+		// (get) Token: 0x0600004C RID: 76 RVA: 0x00006BB8 File Offset: 0x00004DB8
 		internal static string user
 		{
 			get
@@ -337,7 +337,7 @@ namespace Crosire.Controlcenter.Setup.Properties
 		}
 
 		// Token: 0x1700001F RID: 31
-		// (get) Token: 0x0600004D RID: 77 RVA: 0x00006BCA File Offset: 0x00004DCA
+		// (get) Token: 0x0600004D RID: 77 RVA: 0x00006BCE File Offset: 0x00004DCE
 		internal static string version
 		{
 			get

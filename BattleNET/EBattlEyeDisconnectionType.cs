@@ -2,18 +2,18 @@
 
 namespace BattleNET
 {
-	// Token: 0x02000002 RID: 2
+	// Token: 0x0200000D RID: 13
 	public enum EBattlEyeDisconnectionType
 	{
-		// Token: 0x04000002 RID: 2
+		// Token: 0x04000037 RID: 55
 		Manual,
-		// Token: 0x04000003 RID: 3
+		// Token: 0x04000038 RID: 56
 		ConnectionLost,
-		// Token: 0x04000004 RID: 4
+		// Token: 0x04000039 RID: 57
 		SocketException,
-		// Token: 0x04000005 RID: 5
+		// Token: 0x0400003A RID: 58
 		LoginFailed,
-		// Token: 0x04000006 RID: 6
+		// Token: 0x0400003B RID: 59
 		ConnectionFailed
 	}
 }

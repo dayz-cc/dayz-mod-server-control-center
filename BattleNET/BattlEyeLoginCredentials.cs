@@ -2,10 +2,10 @@
 
 namespace BattleNET
 {
-	// Token: 0x02000009 RID: 9
+	// Token: 0x02000002 RID: 2
 	public struct BattlEyeLoginCredentials
 	{
-		// Token: 0x06000019 RID: 25 RVA: 0x0000235D File Offset: 0x0000055D
+		// Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
 		public BattlEyeLoginCredentials(string host, int port, string password)
 		{
 			this = default(BattlEyeLoginCredentials);
@@ -14,13 +14,13 @@ namespace BattleNET
 			this.Password = password;
 		}
 
-		// Token: 0x04000025 RID: 37
+		// Token: 0x04000001 RID: 1
 		public string Host;
 
-		// Token: 0x04000026 RID: 38
+		// Token: 0x04000002 RID: 2
 		public int Port;
 
-		// Token: 0x04000027 RID: 39
+		// Token: 0x04000003 RID: 3
 		public string Password;
 	}
 }

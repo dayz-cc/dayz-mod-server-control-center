@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="button_back" xml:space="preserve">
+    <value>Atrás</value>
+  </data>
+  <data name="button_browse" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="button_cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="button_finish" xml:space="preserve">
+    <value>Finalizar</value>
+  </data>
+  <data name="button_fresh" xml:space="preserve">
+    <value>Refrescar</value>
+  </data>
+  <data name="button_next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="button_own" xml:space="preserve">
+    <value>Quiero usar un servidor MySQL ya existente</value>
+  </data>
+  <data name="button_reconfigurate" xml:space="preserve">
+    <value>Reconfigurar</value>
+  </data>
+  <data name="button_update" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="group_database" xml:space="preserve">
+    <value>Opciones de Base de Datos</value>
+  </data>
+  <data name="group_options" xml:space="preserve">
+    <value>Opciones de Instalación</value>
+  </data>
+  <data name="host" xml:space="preserve">
+    <value>Servidor</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="sentence_chooselanguage" xml:space="preserve">
+    <value>Elige tu lenguaje:</value>
+  </data>
+  <data name="sentence_enterdatabase" xml:space="preserve">
+    <value>Inserta la lista de bases de datos que quieres actualizar debajo. Puedes usar comas para separarlas:</value>
+  </data>
+  <data name="sentence_entermysql" xml:space="preserve">
+    <value>Inserta debajo tus credenciales MySQL. Si no tienes un servidor MySQL instalado puedes dejarlas por defecto.</value>
+  </data>
+  <data name="sentence_enterpath" xml:space="preserve">
+    <value>Introduzca la ruta completa a la instalación de ArmA:</value>
+  </data>
+  <data name="sentence_installpatch" xml:space="preserve">
+    <value>Instalar beta-patch requerido</value>
+  </data>
+  <data name="sentence_installredis" xml:space="preserve">
+    <value>Instalar complementos requeridos</value>
+  </data>
+  <data name="step_1" xml:space="preserve">
+    <value>Bienvenido a la configuración del servidor!</value>
+  </data>
+  <data name="step_2" xml:space="preserve">
+    <value>Elige tus opciones</value>
+  </data>
+  <data name="step_3" xml:space="preserve">
+    <value>Progreso</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Versión de ControlCenter:</value>
+  </data>
+</root>

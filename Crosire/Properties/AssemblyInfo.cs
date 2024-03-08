@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 
 [assembly: AssemblyVersion("4.0.0.0")]
 [assembly: AssemblyTitle("DayZ Server Controlcenter Library")]

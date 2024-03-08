@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{202102AE-C8BA-4C02-B55F-958B8F6A213D}</ProjectGuid>
+    <ProjectGuid>{8DFC0C3A-F700-46B1-AD91-8D34B4D6E179}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Crosire</RootNamespace>
     <AssemblyName>Crosire</AssemblyName>

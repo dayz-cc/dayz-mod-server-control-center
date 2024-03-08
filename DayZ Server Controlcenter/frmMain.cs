@@ -660,6 +660,7 @@ namespace Crosire.Controlcenter
 						this.checkPersistent.Enabled = true;
 						this.checkDuplicate.Enabled = true;
 						this.checkRmod.Enabled = true;
+						this.checkRmod.Visible = false;
 						this.checkBattleye.Enabled = true;
 						this.checkVon.Enabled = true;
 						this.cbxTemplate.Enabled = true;
@@ -927,7 +928,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x0600004D RID: 77 RVA: 0x0000A844 File Offset: 0x00008A44
+		// Token: 0x0600004D RID: 77 RVA: 0x0000A854 File Offset: 0x00008A54
 		private void subReloadPanel2()
 		{
 			this.btnMenu1.Checked = false;
@@ -954,7 +955,7 @@ namespace Crosire.Controlcenter
 			this.tab2.SelectTab(0);
 		}
 
-		// Token: 0x0600004E RID: 78 RVA: 0x0000A9B8 File Offset: 0x00008BB8
+		// Token: 0x0600004E RID: 78 RVA: 0x0000A9C8 File Offset: 0x00008BC8
 		private void subReloadPanel3()
 		{
 			this.btnMenu1.Checked = false;
@@ -1060,7 +1061,7 @@ namespace Crosire.Controlcenter
 			this.tab3.SelectTab(0);
 		}
 
-		// Token: 0x0600004F RID: 79 RVA: 0x0000AE6C File Offset: 0x0000906C
+		// Token: 0x0600004F RID: 79 RVA: 0x0000AE7C File Offset: 0x0000907C
 		private void subReloadResources()
 		{
 			this.labelAdminPassword.Text = Resources.passwordadmin + ":";
@@ -1186,7 +1187,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000050 RID: 80 RVA: 0x0000B7D0 File Offset: 0x000099D0
+		// Token: 0x06000050 RID: 80 RVA: 0x0000B7E0 File Offset: 0x000099E0
 		private void btnSave1_Click(object sender, EventArgs e)
 		{
 			this.subAppendLog("Configuration: Saving [Panel \"" + Resources.tab1_page1 + "\"]", LogLevel.Info);
@@ -1273,29 +1274,6 @@ namespace Crosire.Controlcenter
 			}
 			if (this.checkRmod.Checked)
 			{
-				this.configuration.confTemplate = this.configuration.confTemplate.Replace("dayz", "rmod");
-				if (!this.configuration.confModlist.ToLower().Contains("@rmod"))
-				{
-					if (!this.configuration.confModlist.EndsWith(";"))
-					{
-						Configuration configuration3 = this.configuration;
-						configuration3.confModlist += ";";
-					}
-					Configuration configuration4 = this.configuration;
-					configuration4.confModlist += "@rMod;";
-				}
-			}
-			else
-			{
-				this.configuration.confTemplate = this.configuration.confTemplate.Replace("rmod", "dayz");
-				if (this.configuration.confModlist.ToLower().Contains("@rmod;"))
-				{
-					this.configuration.confModlist = this.configuration.confModlist.Remove(this.configuration.confModlist.ToLower().IndexOf("@rmod"), 6);
-				}
-				else if (this.configuration.confModlist.ToLower().Contains("@rmod"))
-				{
-					this.configuration.confModlist = this.configuration.confModlist.Remove(this.configuration.confModlist.ToLower().IndexOf("@rmod"), 5);
-				}
 			}
 			try
 			{
@@ -1345,7 +1323,7 @@ namespace Crosire.Controlcenter
 			this.textModlist.Text = this.configuration.confModlist;
 		}
 
-		// Token: 0x06000051 RID: 81 RVA: 0x0000BFAC File Offset: 0x0000A1AC
+		// Token: 0x06000051 RID: 81 RVA: 0x0000BE40 File Offset: 0x0000A040
 		private void btnSave2_Click(object sender, EventArgs e)
 		{
 			this.subAppendLog("Configuration: Saving [Panel \"" + Resources.tab1_page2 + "\"]", LogLevel.Info);
@@ -1392,7 +1370,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000052 RID: 82 RVA: 0x0000C24C File Offset: 0x0000A44C
+		// Token: 0x06000052 RID: 82 RVA: 0x0000C0E0 File Offset: 0x0000A2E0
 		private void btnSave3_Click(object sender, EventArgs e)
 		{
 			this.subAppendLog("Configuration: Saving [Panel \"" + Resources.tab1_page3 + "\"]", LogLevel.Info);
@@ -1462,7 +1440,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000053 RID: 83 RVA: 0x0000C59C File Offset: 0x0000A79C
+		// Token: 0x06000053 RID: 83 RVA: 0x0000C430 File Offset: 0x0000A630
 		private void btnSave4_Click(object sender, EventArgs e)
 		{
 			this.subAppendLog(string.Concat(new string[]
@@ -1612,7 +1590,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000054 RID: 84 RVA: 0x0000CD18 File Offset: 0x0000AF18
+		// Token: 0x06000054 RID: 84 RVA: 0x0000CBAC File Offset: 0x0000ADAC
 		private void btnAutoBackup_Click(object sender, EventArgs e)
 		{
 			if (frmMain.listAutoBackupEnabled[frmMain.serverInstance - 1])
@@ -1641,7 +1619,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000055 RID: 85 RVA: 0x0000CE80 File Offset: 0x0000B080
+		// Token: 0x06000055 RID: 85 RVA: 0x0000CD14 File Offset: 0x0000AF14
 		private void btnBackup_Click(object sender, EventArgs e)
 		{
 			new Thread(new ThreadStart(this.threadBackup))
@@ -1650,7 +1628,7 @@ namespace Crosire.Controlcenter
 			}.Start();
 		}
 
-		// Token: 0x06000056 RID: 86 RVA: 0x0000CEB0 File Offset: 0x0000B0B0
+		// Token: 0x06000056 RID: 86 RVA: 0x0000CD44 File Offset: 0x0000AF44
 		private void btnBackupBrowse_Click(object sender, EventArgs e)
 		{
 			using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
@@ -1672,7 +1650,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000057 RID: 87 RVA: 0x0000CFBC File Offset: 0x0000B1BC
+		// Token: 0x06000057 RID: 87 RVA: 0x0000CE50 File Offset: 0x0000B050
 		private void btnDatabase_Click(object sender, EventArgs e)
 		{
 			string name = this.cbxDatabase.Text.Replace(" ", "");
@@ -1691,13 +1669,13 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000058 RID: 88 RVA: 0x0000D082 File Offset: 0x0000B282
+		// Token: 0x06000058 RID: 88 RVA: 0x0000CF16 File Offset: 0x0000B116
 		private void btnExit_Click(object sender, EventArgs e)
 		{
 			base.Close();
 		}
 
-		// Token: 0x06000059 RID: 89 RVA: 0x0000D08C File Offset: 0x0000B28C
+		// Token: 0x06000059 RID: 89 RVA: 0x0000CF20 File Offset: 0x0000B120
 		private void btnLog_CheckedChanged(object sender, EventArgs e)
 		{
 			if (this.btnLog.Checked)
@@ -1710,7 +1688,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x0600005A RID: 90 RVA: 0x0000D0CC File Offset: 0x0000B2CC
+		// Token: 0x0600005A RID: 90 RVA: 0x0000CF60 File Offset: 0x0000B160
 		private void btnLogMonitor_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			if (this.timerMonitor.Enabled)
@@ -1734,7 +1712,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x0600005B RID: 91 RVA: 0x0000D1F8 File Offset: 0x0000B3F8
+		// Token: 0x0600005B RID: 91 RVA: 0x0000D08C File Offset: 0x0000B28C
 		private void btnLogClear_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			if (File.Exists(Path.Combine(this.configuration.pathConfig, "arma2oaserver_" + frmMain.serverInstance.ToString() + ".rpt")))
@@ -1762,7 +1740,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x0600005C RID: 92 RVA: 0x0000D334 File Offset: 0x0000B534
+		// Token: 0x0600005C RID: 92 RVA: 0x0000D1C8 File Offset: 0x0000B3C8
 		private void btnMysqlHost_Click(object sender, EventArgs e)
 		{
 			this.subAppendLog(string.Concat(new string[]
@@ -1793,7 +1771,7 @@ namespace Crosire.Controlcenter
 			}));
 		}
 
-		// Token: 0x0600005D RID: 93 RVA: 0x0000D470 File Offset: 0x0000B670
+		// Token: 0x0600005D RID: 93 RVA: 0x0000D304 File Offset: 0x0000B504
 		private void btnMysqlUser_Click(object sender, EventArgs e)
 		{
 			this.subAppendLog(string.Concat(new string[]
@@ -1889,7 +1867,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x0600005E RID: 94 RVA: 0x0000D80C File Offset: 0x0000BA0C
+		// Token: 0x0600005E RID: 94 RVA: 0x0000D6A0 File Offset: 0x0000B8A0
 		private void btnPlayer_Click(object sender, EventArgs e)
 		{
 			string text = this.textPlayerName.Text;
@@ -1964,7 +1942,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x0600005F RID: 95 RVA: 0x0000DAF0 File Offset: 0x0000BCF0
+		// Token: 0x0600005F RID: 95 RVA: 0x0000D984 File Offset: 0x0000BB84
 		private void btnRandomPass_Click(object sender, EventArgs e)
 		{
 			if (this.textPasswordAdmin.Enabled)
@@ -1977,7 +1955,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000060 RID: 96 RVA: 0x0000DB64 File Offset: 0x0000BD64
+		// Token: 0x06000060 RID: 96 RVA: 0x0000D9F8 File Offset: 0x0000BBF8
 		private void btnReset_Click(object sender, EventArgs e)
 		{
 			if (MessageBox.Show(Resources.message_reset, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -2010,7 +1988,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000061 RID: 97 RVA: 0x0000DC98 File Offset: 0x0000BE98
+		// Token: 0x06000061 RID: 97 RVA: 0x0000DB2C File Offset: 0x0000BD2C
 		private void btnRestore_Click(object sender, EventArgs e)
 		{
 			using (OpenFileDialog dlg = new OpenFileDialog())
@@ -2030,7 +2008,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000062 RID: 98 RVA: 0x0000DD7C File Offset: 0x0000BF7C
+		// Token: 0x06000062 RID: 98 RVA: 0x0000DC10 File Offset: 0x0000BE10
 		private void cbxDatabase_TextChanged(object sender, EventArgs e)
 		{
 			this.cbxDatabase.Text = this.cbxDatabase.Text.Replace(" ", "");
@@ -2044,7 +2022,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000063 RID: 99 RVA: 0x0000DE08 File Offset: 0x0000C008
+		// Token: 0x06000063 RID: 99 RVA: 0x0000DC9C File Offset: 0x0000BE9C
 		private void cbxLanguage_DropDownClosed(object sender, EventArgs e)
 		{
 			string text = this.cbxLanguage.SelectedItem.ToString();
@@ -2066,7 +2044,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000064 RID: 100 RVA: 0x0000DEC0 File Offset: 0x0000C0C0
+		// Token: 0x06000064 RID: 100 RVA: 0x0000DD54 File Offset: 0x0000BF54
 		private void cbxTemplate_DropDownClosed(object sender, EventArgs e)
 		{
 			if (this.cbxDatabase.Items.Contains("dayz_" + this.cbxTemplate.SelectedItem.ToString().Remove(0, 5)))
@@ -2075,12 +2053,12 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000065 RID: 101 RVA: 0x0000DF35 File Offset: 0x0000C135
+		// Token: 0x06000065 RID: 101 RVA: 0x0000DDC9 File Offset: 0x0000BFC9
 		private void checkBattleye_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		// Token: 0x06000066 RID: 102 RVA: 0x0000DF38 File Offset: 0x0000C138
+		// Token: 0x06000066 RID: 102 RVA: 0x0000DDCC File Offset: 0x0000BFCC
 		private void checkWhitelist_CheckedChanged(object sender, EventArgs e)
 		{
 			if (this.checkWhitelist.Checked)
@@ -2093,7 +2071,7 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000067 RID: 103 RVA: 0x0000DF78 File Offset: 0x0000C178
+		// Token: 0x06000067 RID: 103 RVA: 0x0000DE0C File Offset: 0x0000C00C
 		private void listPlayers_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (this.listPlayers.SelectedItem != null)
@@ -2261,19 +2239,19 @@ namespace Crosire.Controlcenter
 			}
 		}
 
-		// Token: 0x06000068 RID: 104 RVA: 0x0000E60C File Offset: 0x0000C80C
+		// Token: 0x06000068 RID: 104 RVA: 0x0000E4A0 File Offset: 0x0000C6A0
 		private void pictureIcon_Click(object sender, EventArgs e)
 		{
 			Process.Start(Settings.Default.uiUrlHomepage);
 		}
 
-		// Token: 0x06000069 RID: 105 RVA: 0x0000E61F File Offset: 0x0000C81F
+		// Token: 0x06000069 RID: 105 RVA: 0x0000E4B3 File Offset: 0x0000C6B3
 		private void pictureLicense_Click(object sender, EventArgs e)
 		{
 			Process.Start("http://creativecommons.org/licenses/by-nd/3.0/");
 		}
 
-		// Token: 0x0600006A RID: 106 RVA: 0x0000E630 File Offset: 0x0000C830
+		// Token: 0x0600006A RID: 106 RVA: 0x0000E4C4 File Offset: 0x0000C6C4
 		private void trackTimezone_Scroll(object sender, EventArgs e)
 		{
 			if (this.trackTimezone.Value <= 0)

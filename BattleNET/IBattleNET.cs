@@ -2,47 +2,47 @@
 
 namespace BattleNET
 {
-	// Token: 0x0200000C RID: 12
+	// Token: 0x02000003 RID: 3
 	public interface IBattleNET
 	{
-		// Token: 0x0600001F RID: 31
+		// Token: 0x06000002 RID: 2
 		EBattlEyeCommandResult SendCommandPacket(string command);
 
-		// Token: 0x06000020 RID: 32
+		// Token: 0x06000003 RID: 3
 		EBattlEyeCommandResult SendCommandPacket(EBattlEyeCommand command);
 
-		// Token: 0x06000021 RID: 33
+		// Token: 0x06000004 RID: 4
 		EBattlEyeCommandResult SendCommandPacket(EBattlEyeCommand command, string parameters);
 
-		// Token: 0x06000022 RID: 34
+		// Token: 0x06000005 RID: 5
 		EBattlEyeConnectionResult Connect();
 
-		// Token: 0x06000023 RID: 35
+		// Token: 0x06000006 RID: 6
 		BattlEyeLoginCredentials Credentials(BattlEyeLoginCredentials loginCredentials);
 
-		// Token: 0x06000024 RID: 36
+		// Token: 0x06000007 RID: 7
 		void Disconnect();
 
-		// Token: 0x06000025 RID: 37
+		// Token: 0x06000008 RID: 8
 		bool IsConnected();
 
-		// Token: 0x06000026 RID: 38
+		// Token: 0x06000009 RID: 9
 		bool ReconnectOnPacketLoss(bool newSetting);
 
-		// Token: 0x06000027 RID: 39
+		// Token: 0x0600000A RID: 10
 		object Sender();
 
-		// Token: 0x06000028 RID: 40
+		// Token: 0x0600000B RID: 11
 		object Sender(object newSetting);
 
 		// Token: 0x14000001 RID: 1
-		// (add) Token: 0x06000029 RID: 41
-		// (remove) Token: 0x0600002A RID: 42
+		// (add) Token: 0x0600000C RID: 12
+		// (remove) Token: 0x0600000D RID: 13
 		event BattlEyeMessageEventHandler MessageReceivedEvent;
 
 		// Token: 0x14000002 RID: 2
-		// (add) Token: 0x0600002B RID: 43
-		// (remove) Token: 0x0600002C RID: 44
+		// (add) Token: 0x0600000E RID: 14
+		// (remove) Token: 0x0600000F RID: 15
 		event BattlEyeDisconnectEventHandler DisconnectEvent;
 	}
 }

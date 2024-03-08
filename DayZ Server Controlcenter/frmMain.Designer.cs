@@ -3,7 +3,7 @@
 	// Token: 0x02000009 RID: 9
 	public partial class frmMain : global::System.Windows.Forms.Form
 	{
-		// Token: 0x0600006B RID: 107 RVA: 0x0000E764 File Offset: 0x0000C964
+		// Token: 0x0600006B RID: 107 RVA: 0x0000E5F8 File Offset: 0x0000C7F8
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && this.components != null)
@@ -13,7 +13,7 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x0600006C RID: 108 RVA: 0x0000E79C File Offset: 0x0000C99C
+		// Token: 0x0600006C RID: 108 RVA: 0x0000E630 File Offset: 0x0000C830
 		private void InitializeComponent()
 		{
 			this.components = new global::System.ComponentModel.Container();

@@ -3,10 +3,10 @@ using System.Security.Cryptography;
 
 namespace BattleNET
 {
-	// Token: 0x02000006 RID: 6
+	// Token: 0x02000009 RID: 9
 	internal class CRC32 : HashAlgorithm
 	{
-		// Token: 0x0600000D RID: 13 RVA: 0x00002198 File Offset: 0x00000398
+		// Token: 0x06000031 RID: 49 RVA: 0x00002BC5 File Offset: 0x00000DC5
 		public CRC32()
 		{
 			this._table = CRC32.InitializeTable(3988292384U);
@@ -14,7 +14,7 @@ namespace BattleNET
 			this.Initialize();
 		}
 
-		// Token: 0x0600000E RID: 14 RVA: 0x000021BD File Offset: 0x000003BD
+		// Token: 0x06000032 RID: 50 RVA: 0x00002BEA File Offset: 0x00000DEA
 		public CRC32(uint polynomial, uint seed)
 		{
 			this._table = CRC32.InitializeTable(polynomial);
@@ -22,8 +22,8 @@ namespace BattleNET
 			this.Initialize();
 		}
 
-		// Token: 0x17000001 RID: 1
-		// (get) Token: 0x0600000F RID: 15 RVA: 0x000021DE File Offset: 0x000003DE
+		// Token: 0x17000002 RID: 2
+		// (get) Token: 0x06000033 RID: 51 RVA: 0x00002C0B File Offset: 0x00000E0B
 		public override int HashSize
 		{
 			get
@@ -32,19 +32,19 @@ namespace BattleNET
 			}
 		}
 
-		// Token: 0x06000010 RID: 16 RVA: 0x000021E2 File Offset: 0x000003E2
+		// Token: 0x06000034 RID: 52 RVA: 0x00002C0F File Offset: 0x00000E0F
 		public sealed override void Initialize()
 		{
 			this._hash = this._seed;
 		}
 
-		// Token: 0x06000011 RID: 17 RVA: 0x000021F0 File Offset: 0x000003F0
+		// Token: 0x06000035 RID: 53 RVA: 0x00002C1D File Offset: 0x00000E1D
 		protected override void HashCore(byte[] buffer, int start, int length)
 		{
 			this._hash = CRC32.CalculateHash(this._table, this._hash, buffer, start, length);
 		}
 
-		// Token: 0x06000012 RID: 18 RVA: 0x0000220C File Offset: 0x0000040C
+		// Token: 0x06000036 RID: 54 RVA: 0x00002C3C File Offset: 0x00000E3C
 		protected override byte[] HashFinal()
 		{
 			byte[] array = this.UInt32ToBigEndianBytes(~this._hash);
@@ -52,25 +52,25 @@ namespace BattleNET
 			return array;
 		}
 
-		// Token: 0x06000013 RID: 19 RVA: 0x0000222F File Offset: 0x0000042F
+		// Token: 0x06000037 RID: 55 RVA: 0x00002C5F File Offset: 0x00000E5F
 		public static uint Compute(byte[] buffer)
 		{
 			return ~CRC32.CalculateHash(CRC32.InitializeTable(3988292384U), uint.MaxValue, buffer, 0, buffer.Length);
 		}
 
-		// Token: 0x06000014 RID: 20 RVA: 0x00002247 File Offset: 0x00000447
+		// Token: 0x06000038 RID: 56 RVA: 0x00002C77 File Offset: 0x00000E77
 		public static uint Compute(uint seed, byte[] buffer)
 		{
 			return ~CRC32.CalculateHash(CRC32.InitializeTable(3988292384U), seed, buffer, 0, buffer.Length);
 		}
 
-		// Token: 0x06000015 RID: 21 RVA: 0x0000225F File Offset: 0x0000045F
+		// Token: 0x06000039 RID: 57 RVA: 0x00002C8F File Offset: 0x00000E8F
 		public static uint Compute(uint polynomial, uint seed, byte[] buffer)
 		{
 			return ~CRC32.CalculateHash(CRC32.InitializeTable(polynomial), seed, buffer, 0, buffer.Length);
 		}
 
-		// Token: 0x06000016 RID: 22 RVA: 0x00002274 File Offset: 0x00000474
+		// Token: 0x0600003A RID: 58 RVA: 0x00002CA4 File Offset: 0x00000EA4
 		private static uint[] InitializeTable(uint polynomial)
 		{
 			if (polynomial == 3988292384U && CRC32._defaultTable != null)
@@ -101,7 +101,7 @@ namespace BattleNET
 			return array;
 		}
 
-		// Token: 0x06000017 RID: 23 RVA: 0x000022E4 File Offset: 0x000004E4
+		// Token: 0x0600003B RID: 59 RVA: 0x00002D14 File Offset: 0x00000F14
 		private static uint CalculateHash(uint[] table, uint seed, byte[] buffer, int start, int size)
 		{
 			uint num = seed;
@@ -112,7 +112,7 @@ namespace BattleNET
 			return num;
 		}
 
-		// Token: 0x06000018 RID: 24 RVA: 0x00002314 File Offset: 0x00000514
+		// Token: 0x0600003C RID: 60 RVA: 0x00002D44 File Offset: 0x00000F44
 		private byte[] UInt32ToBigEndianBytes(uint x)
 		{
 			return new byte[]
@@ -124,22 +124,22 @@ namespace BattleNET
 			};
 		}
 
-		// Token: 0x04000008 RID: 8
+		// Token: 0x04000015 RID: 21
 		public const uint DefaultPolynomial = 3988292384U;
 
-		// Token: 0x04000009 RID: 9
+		// Token: 0x04000016 RID: 22
 		public const uint DefaultSeed = 4294967295U;
 
-		// Token: 0x0400000A RID: 10
+		// Token: 0x04000017 RID: 23
 		private static uint[] _defaultTable;
 
-		// Token: 0x0400000B RID: 11
+		// Token: 0x04000018 RID: 24
 		private readonly uint _seed;
 
-		// Token: 0x0400000C RID: 12
+		// Token: 0x04000019 RID: 25
 		private readonly uint[] _table;
 
-		// Token: 0x0400000D RID: 13
+		// Token: 0x0400001A RID: 26
 		private uint _hash;
 	}
 }
