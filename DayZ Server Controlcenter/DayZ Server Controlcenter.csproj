@@ -5,9 +5,10 @@
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <OutputType>WinExe</OutputType>
     <UseWindowsForms>True</UseWindowsForms>
-    <TargetFramework>net40</TargetFramework>
+    <TargetFramework>net462</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Platforms>AnyCPU</Platforms>
+    <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>6</LangVersion>
@@ -21,39 +22,26 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>embedded</DebugType>
-    <IsPublishable>False</IsPublishable>
     <Prefer32Bit>True</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>embedded</DebugType>
-    <IsPublishable>False</IsPublishable>
-    <Prefer32Bit>True</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Prefer32Bit>True</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <Prefer32Bit>True</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Prefer32Bit>True</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <Prefer32Bit>True</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Crosire.Controlcenter.Properties\Resources.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Crosire.Controlcenter.Properties.Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CefSharp.WinForms" Version="121.3.130" />
     <PackageReference Include="MySql.Data" Version="6.7.9" />
     <PackageReference Include="NLog" Version="5.2.8" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BattleNET">
       <HintPath>..\lib\BattleNET.dll</HintPath>
-    </Reference>
-    <Reference Include="CefSharp.WinForms">
-      <HintPath>..\lib\CefSharp.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="CefSharp.Wpf">
-      <HintPath>..\lib\CefSharp.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
       <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\NLog.dll</HintPath>
@@ -66,5 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Crosire\Crosire.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Crosire.Controlcenter.Properties.Resources.resx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
   </ItemGroup>
 </Project>
