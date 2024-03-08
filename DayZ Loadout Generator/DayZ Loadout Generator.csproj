@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{202102AE-C8BA-4C02-B55F-958B8F6A213E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DayZ Loadout Generator</RootNamespace>
+    <AssemblyName>DayZ Loadout Generator</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>DayZ Loadout Generator.ico</ApplicationIcon>
+    <StartupObject>Loadout.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-.cs" />
+    <Compile Include="-Module-.cs" />
+    <Compile Include="-PrivateImplementationDetails-.cs" />
+    <Compile Include="Loadout\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loadout\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loadout\My\MyApplication.cs" />
+    <Compile Include="Loadout\My\MyComputer.cs" />
+    <Compile Include="Loadout\My\MyProject.cs" />
+    <Compile Include="Loadout\My\Resources\Resources.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmartAssembly\AssemblyResolver\AssemblyResolver.cs" />
+    <Compile Include="SmartAssembly\AssemblyResolver\AssemblyResolverHelper.cs" />
+    <Compile Include="SmartAssembly\Attributes\ObfuscateControlFlowAttribute.cs" />
+    <Compile Include="SmartAssembly\Attributes\PoweredByAttribute.cs" />
+    <Compile Include="SmartAssembly\MemoryManagement\MemoryManager.cs" />
+    <Compile Include="SmartAssembly\ResourceResolver\ResourceResolver.cs" />
+    <Compile Include="SmartAssembly\Zip\AESCryptoIndirector.cs" />
+    <Compile Include="SmartAssembly\Zip\DESCryptoIndirector.cs" />
+    <Compile Include="SmartAssembly\Zip\DoNotEncodeStringsAttribute.cs" />
+    <Compile Include="SmartAssembly\Zip\SimpleZip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="{73bac200-655c-4090-a2c6-89a80d2150b2}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
