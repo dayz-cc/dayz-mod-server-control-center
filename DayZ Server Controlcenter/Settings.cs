@@ -4,22 +4,27 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
-namespace Crosire.Controlcenter.Properties {
+namespace Crosire.Controlcenter
+{
     [CompilerGenerated]
     [GeneratedCode("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed class Settings : ApplicationSettingsBase {
-        private static Settings defaultInstance = (Settings)SettingsBase.Synchronized(new Settings());
+    internal sealed class Settings : ApplicationSettingsBase
+    {
+        private static Settings defaultInstance = (Settings)Synchronized(new Settings());
 
         public static Settings Default => defaultInstance;
 
         [UserScopedSetting]
         [DebuggerNonUserCode]
         [DefaultSettingValue("")]
-        public string workingDir {
-            get {
+        public string workingDir
+        {
+            get
+            {
                 return (string)this["workingDir"];
             }
-            set {
+            set
+            {
                 this["workingDir"] = value;
             }
         }
@@ -47,11 +52,14 @@ namespace Crosire.Controlcenter.Properties {
         [UserScopedSetting]
         [DebuggerNonUserCode]
         [DefaultSettingValue("Normal")]
-        public FormWindowState uiState {
-            get {
+        public FormWindowState uiState
+        {
+            get
+            {
                 return (FormWindowState)this["uiState"];
             }
-            set {
+            set
+            {
                 this["uiState"] = value;
             }
         }
@@ -59,11 +67,14 @@ namespace Crosire.Controlcenter.Properties {
         [DebuggerNonUserCode]
         [DefaultSettingValue("en")]
         [UserScopedSetting]
-        public string uiLanguage {
-            get {
+        public string uiLanguage
+        {
+            get
+            {
                 return (string)this["uiLanguage"];
             }
-            set {
+            set
+            {
                 this["uiLanguage"] = value;
             }
         }

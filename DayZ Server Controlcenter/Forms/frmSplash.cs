@@ -8,13 +8,13 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 using Crosire.Controlcenter.Classes;
-using Crosire.Controlcenter.Properties;
 using Crosire.Controlcenter.Resources;
 using Crosire.Library;
 using Crosire.Library.Forms;
 using NLog;
 
-namespace Crosire.Controlcenter.Forms {
+namespace Crosire.Controlcenter.Forms
+{
     public class frmSplash : Form {
         private string pathApp = frmMain.pathApp;
 

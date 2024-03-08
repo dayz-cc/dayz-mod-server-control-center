@@ -12,12 +12,12 @@ using System.Windows.Forms;
 using CefSharp.WinForms;
 using Crosire.Controlcenter.Classes;
 using Crosire.Controlcenter.Forms;
-using Crosire.Controlcenter.Properties;
 using Crosire.Library;
 using MySql.Data.MySqlClient;
 using NLog;
 
-namespace Crosire.Controlcenter {
+namespace Crosire.Controlcenter
+{
     internal partial class frmMain : Form {
         private ChromiumWebBrowser browserAdmin;
 

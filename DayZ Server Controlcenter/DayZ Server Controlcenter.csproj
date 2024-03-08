@@ -20,6 +20,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <RootNamespace>Crosire.Controlcenter</RootNamespace>
     <StartupObject>Crosire.Controlcenter.Program</StartupObject>
+    <BaseOutputPath>..\bin\</BaseOutputPath>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>embedded</DebugType>
@@ -37,9 +40,6 @@
     <DebugType>embedded</DebugType>
     <Prefer32Bit>True</Prefer32Bit>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="Crosire.Controlcenter.Properties\Resources.cs" />
-  </ItemGroup>
   <ItemGroup>
     <Content Include="app.ico" />
   </ItemGroup>

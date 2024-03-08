@@ -3,7 +3,6 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Xml;
-using Crosire.Controlcenter.Properties;
 using Crosire.Library;
 using Microsoft.Win32;
 using MySql.Data.MySqlClient;
@@ -11,7 +10,7 @@ using NLog;
 
 namespace Crosire.Controlcenter.Classes
 {
-	public class Configuration
+    public class Configuration
 	{
 		public int confInstance = 0;
 
