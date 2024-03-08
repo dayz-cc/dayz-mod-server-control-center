@@ -1,96 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
+		Microsoft ResX Schema
 
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,34 +89,34 @@
     <value>text/microsoft-resx</value>
   </resheader>
   <resheader name="version">
-    <value>2.0</value>
+    <value>1.3</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="mysql_credentials" xml:space="preserve">
-    <value>MySQL Crédits</value>
+    <value>MySQL Credentials</value>
   </data>
   <data name="requiresecureid" xml:space="preserve">
-    <value>Requéri SecureID</value>
+    <value>Require SecureID</value>
   </data>
   <data name="message_reset" xml:space="preserve">
-    <value>Voulez-vous vraiment réinitialiser la base de données dans son ensemble? Tout progrès sera supprimé!</value>
+    <value>Do you really want to reset the whole database? All progress is deleted!</value>
   </data>
   <data name="sentence_reset" xml:space="preserve">
-    <value>Attention! Cela supprime entièrement la base de données!</value>
+    <value>Warning! This deletes the whole database!</value>
   </data>
   <data name="verifysignatures" xml:space="preserve">
-    <value>Authentifier les signatures</value>
+    <value>Verify Signatures</value>
   </data>
   <data name="button_menu4" xml:space="preserve">
     <value>4. Information</value>
   </data>
   <data name="button_menu3" xml:space="preserve">
-    <value>3. Base de données</value>
+    <value>3. Database</value>
   </data>
   <data name="button_menu2" xml:space="preserve">
     <value>2. Administration</value>
@@ -145,79 +125,79 @@
     <value>1. Configuration</value>
   </data>
   <data name="button_add_player" xml:space="preserve">
-    <value>Ajouter un nouveau joueur</value>
+    <value>Add new player</value>
   </data>
   <data name="button_clear" xml:space="preserve">
-    <value>Effacer</value>
+    <value>Clear</value>
   </data>
   <data name="button_reset" xml:space="preserve">
-    <value>Effacer la base de données</value>
+    <value>Reset Database</value>
   </data>
   <data name="maxsizenonguaranteed" xml:space="preserve">
-    <value>Max. Taille non garantie</value>
+    <value>Max. Size Nonguaranteed</value>
   </data>
   <data name="check_enabled" xml:space="preserve">
-    <value>Activé</value>
+    <value>Enabled</value>
   </data>
   <data name="maxsizeguaranteed" xml:space="preserve">
-    <value>Max. Taille garantie</value>
+    <value>Max. Size Guaranteed</value>
   </data>
   <data name="group_signatures" xml:space="preserve">
     <value>Signatures</value>
   </data>
   <data name="message_error_database" xml:space="preserve">
-    <value>Création de base de données a échoué:</value>
+    <value>Database creation failed:</value>
   </data>
   <data name="group_time" xml:space="preserve">
-    <value>Temps</value>
+    <value>Time</value>
   </data>
   <data name="group_template" xml:space="preserve">
     <value>Mission</value>
   </data>
   <data name="message_confirm_player" xml:space="preserve">
-    <value>Etes-vous sûr que vous voulez ajouter le joueur suivant à la whitelist:</value>
+    <value>Are you sure you want to add the following player to the whitelist:</value>
   </data>
   <data name="messagejoin" xml:space="preserve">
-    <value>Joindre Message</value>
+    <value>Join Message</value>
   </data>
   <data name="messagetime" xml:space="preserve">
-    <value>Secondes entre les messages</value>
+    <value>Seconds between messages</value>
   </data>
   <data name="codecquality" xml:space="preserve">
-    <value>Qualité du codec</value>
+    <value>Codec Quality</value>
   </data>
   <data name="message_finished_reset" xml:space="preserve">
-    <value>Base de données a été effacée!</value>
+    <value>Database was cleared!</value>
   </data>
   <data name="passwordrcon" xml:space="preserve">
-    <value>Mot de passe BattlEye</value>
+    <value>BattlEye Password</value>
   </data>
   <data name="tab1_page3" xml:space="preserve">
-    <value>Plus</value>
+    <value>More</value>
   </data>
   <data name="tab1_page2" xml:space="preserve">
-    <value>Securité</value>
+    <value>Security</value>
   </data>
   <data name="tab1_page1" xml:space="preserve">
-    <value>De base</value>
+    <value>Basic</value>
   </data>
   <data name="minbandwidth" xml:space="preserve">
-    <value>Min. Bande passante</value>
+    <value>Min. Bandwidth</value>
   </data>
   <data name="maxvehicles" xml:space="preserve">
-    <value>Max. Nombre de véhicules</value>
+    <value>Max. Vehicle Count</value>
   </data>
   <data name="difficulty" xml:space="preserve">
-    <value>Difficulté</value>
+    <value>Difficulty</value>
   </data>
   <data name="cpucount" xml:space="preserve">
-    <value>Nombre de Processeurs</value>
+    <value>CPU Count</value>
   </data>
   <data name="message_finished_database" xml:space="preserve">
-    <value>Base de données a été créée!</value>
+    <value>Database was created!</value>
   </data>
   <data name="minerrtosend" xml:space="preserve">
-    <value>Min. Erreurs à envoyer</value>
+    <value>Min. Errors to Send</value>
   </data>
   <data name="check_whitelisted" xml:space="preserve">
     <value>Whitelisted</value>
@@ -229,10 +209,10 @@
     <value>BattlEye</value>
   </data>
   <data name="loadoutbackpack" xml:space="preserve">
-    <value>Loadout de sac à dos</value>
+    <value>Global backpack loadout</value>
   </data>
   <data name="maxbandwidth" xml:space="preserve">
-    <value>Max. Bande passante</value>
+    <value>Max. Bandwidth</value>
   </data>
   <data name="group_scripting" xml:space="preserve">
     <value>Scripting</value>
@@ -241,79 +221,79 @@
     <value>kB</value>
   </data>
   <data name="check_daytime" xml:space="preserve">
-    <value>Seulement de jour</value>
+    <value>Only Daytime</value>
   </data>
   <data name="button_autobackup_stop" xml:space="preserve">
-    <value>Arrêter la sauvegarde automatique</value>
+    <value>Stop Autobackup</value>
   </data>
   <data name="group_settings" xml:space="preserve">
-    <value>Réglages</value>
+    <value>Settings</value>
   </data>
   <data name="button_add_database" xml:space="preserve">
-    <value>Ajouter une nouvelle base de données</value>
+    <value>Add new database</value>
   </data>
   <data name="maxplayers" xml:space="preserve">
-    <value>Max. Joueurs</value>
+    <value>Max. Players</value>
   </data>
   <data name="sentence_menu3_description" xml:space="preserve">
-    <value>Gérer la base de données avec chive. Modifier les joueurs, en ajouter de nouveaux à la whitelist ou sauvegarder et restaurer votre base de données ici.</value>
+    <value>Manage the database with chive. Edit players, add new ones to the whitelist or backup and restore your database here.</value>
   </data>
   <data name="backupfolder" xml:space="preserve">
-    <value>Chemin d'accès au dossier de sauvegarde</value>
+    <value>Path to Backup folder</value>
   </data>
   <data name="sentence_chooselanguage" xml:space="preserve">
-    <value>Choisissez votre langue</value>
+    <value>Choose your language:</value>
   </data>
   <data name="group_tuning_performance" xml:space="preserve">
-    <value>Réglages performance</value>
+    <value>Performance Tuning</value>
   </data>
   <data name="message_confirm_deletelog" xml:space="preserve">
-    <value>Êtes-vous sûr de vouloir supprimer le fichier journal?</value>
+    <value>Are you sure you want to delete the log file?</value>
   </data>
   <data name="loadout" xml:space="preserve">
-    <value>Loadout</value>
+    <value>Global loadout</value>
   </data>
   <data name="bytespersecond" xml:space="preserve">
     <value>B/s</value>
   </data>
   <data name="reportingip" xml:space="preserve">
-    <value>Reporter IP</value>
+    <value>Reporting IP</value>
   </data>
   <data name="button_monitor_stop" xml:space="preserve">
-    <value>Arrêter la surveillance en temps réel</value>
+    <value>Stop Log Monitoring</value>
   </data>
   <data name="position" xml:space="preserve">
     <value>Position</value>
   </data>
   <data name="button_save_player" xml:space="preserve">
-    <value>Sauvegarder le joueur</value>
+    <value>Save player</value>
   </data>
   <data name="sentence_backupinterval" xml:space="preserve">
-    <value>Entrez l'intervalle en minutes pendant laquelle une sauvegarde doit être créée:</value>
+    <value>Enter the interval in minutes in which a backup should be created:</value>
   </data>
   <data name="servername" xml:space="preserve">
-    <value>Nom du serveur</value>
+    <value>Server name</value>
   </data>
   <data name="button_mysql_password" xml:space="preserve">
-    <value>Changer mot de passe MySQL</value>
+    <value>Change MySQL Password</value>
   </data>
   <data name="message_confirm_database" xml:space="preserve">
-    <value>Etes-vous sûr que vous voulez ajouter la base de données suivante:</value>
+    <value>Are you sure you want to add the following database:</value>
   </data>
   <data name="button_monitor_start" xml:space="preserve">
-    <value>Démarrer la surveillance en temps réel</value>
+    <value>Start Realtime Log Monitoring</value>
   </data>
   <data name="build" xml:space="preserve">
-    <value>Build requis</value>
+    <value>Required Build</value>
   </data>
   <data name="bytes" xml:space="preserve">
     <value>Bytes</value>
   </data>
   <data name="tab2_page1" xml:space="preserve">
-    <value>Gérer</value>
+    <value>Manage</value>
   </data>
   <data name="tab2_page2" xml:space="preserve">
-    <value>Serveur</value>
+    <value>Server</value>
   </data>
   <data name="tab2_page3" xml:space="preserve">
     <value>Logs</value>
@@ -322,91 +302,91 @@
     <value>UID</value>
   </data>
   <data name="group_mysql_details" xml:space="preserve">
-    <value>Informations de connexion</value>
+    <value>Login information</value>
   </data>
   <data name="sentence_menu2_description" xml:space="preserve">
-    <value>Démarrez le serveur, modifier la connexion mysql ou consulter le journal du serveur ici. L'interface web permet une surveillance facile.</value>
+    <value>Start the server, change the mysql connection or view the server log here. The webfrontend allows easy monitoring.</value>
   </data>
   <data name="button_log" xml:space="preserve">
-    <value>Voir le journal</value>
+    <value>Show Log</value>
   </data>
   <data name="message_finished_restore" xml:space="preserve">
-    <value>Base de données a été restaurée!</value>
+    <value>Database was restored!</value>
   </data>
   <data name="template" xml:space="preserve">
-    <value>Modèle de Mission</value>
+    <value>Mission Template</value>
   </data>
   <data name="button_restore" xml:space="preserve">
-    <value>Restaurer la base de données</value>
+    <value>Restore Database</value>
   </data>
   <data name="backpack" xml:space="preserve">
-    <value>Sac à dos</value>
+    <value>Backpack</value>
   </data>
   <data name="button_exit" xml:space="preserve">
-    <value>Sortie</value>
+    <value>Exit</value>
   </data>
   <data name="button_save" xml:space="preserve">
-    <value>Sauvegarder</value>
+    <value>Save</value>
   </data>
   <data name="group_backup" xml:space="preserve">
-    <value>Sauvegarde</value>
+    <value>Backup</value>
   </data>
   <data name="instance" xml:space="preserve">
     <value>Instance</value>
   </data>
   <data name="button_save_config" xml:space="preserve">
-    <value>Sauvegarder la configuration</value>
+    <value>Save configuration</value>
   </data>
   <data name="message_error_restore" xml:space="preserve">
-    <value>Restauration de base de données a échoué:</value>
+    <value>Database restore failed:</value>
   </data>
   <data name="sentence_menu4_description" xml:space="preserve">
-    <value>Changer la langue d'affichage ou obtenir des informations sur cette application.</value>
+    <value>Change the display language or get information about this application.</value>
   </data>
   <data name="minerrtosendnear" xml:space="preserve">
-    <value>Min. Erreurs rapprochées à envoyer</value>
+    <value>Min. Errors to Send Near</value>
   </data>
   <data name="maxcustomsize" xml:space="preserve">
-    <value>Max. Taille du fichier personnalisé</value>
+    <value>Max. Custom File Size</value>
   </data>
   <data name="group_autobackup" xml:space="preserve">
-    <value>Sauvegarde automatique</value>
+    <value>Autobackup</value>
   </data>
   <data name="sentence_selectinstance" xml:space="preserve">
-    <value>Instance de serveur à gérer:</value>
+    <value>Server instance to manage:</value>
   </data>
   <data name="sentence_menu1_description" xml:space="preserve">
-    <value>Options pour le nom du serveur, mot de passe et la mission peuvent être trouvés ici.</value>
+    <value>Options for server name, security switches like a password or the whitelist and which mod to start can be found here.</value>
   </data>
   <data name="version" xml:space="preserve">
     <value>Version</value>
   </data>
   <data name="timezone" xml:space="preserve">
-    <value>Fuseau horaire</value>
+    <value>Timezone</value>
   </data>
   <data name="databasename" xml:space="preserve">
-    <value>Nom de la base de données</value>
+    <value>Database name</value>
   </data>
   <data name="check_rmod" xml:space="preserve">
-    <value>Activer rMod</value>
+    <value>Enable rMod</value>
   </data>
   <data name="group_von" xml:space="preserve">
-    <value>Voix sur le VON</value>
+    <value>Voice Over Net</value>
   </data>
   <data name="passwordadmin" xml:space="preserve">
-    <value>Mot de passe Admin</value>
+    <value>Admin Password</value>
   </data>
   <data name="button_cancel" xml:space="preserve">
-    <value>Annuler</value>
+    <value>Cancel</value>
   </data>
   <data name="maxping" xml:space="preserve">
     <value>Max. Ping</value>
   </data>
   <data name="button_backup" xml:space="preserve">
-    <value>Sauvegarder la base de données</value>
+    <value>Backup Database</value>
   </data>
   <data name="button_browse" xml:space="preserve">
-    <value>Voir</value>
+    <value>Browse</value>
   </data>
   <data name="modlist" xml:space="preserve">
     <value>Modlist</value>
@@ -415,76 +395,76 @@
     <value>Message</value>
   </data>
   <data name="medical" xml:space="preserve">
-    <value>Médical</value>
+    <value>Medical</value>
   </data>
   <data name="message" xml:space="preserve">
     <value>Message</value>
   </data>
   <data name="group_tuning_network" xml:space="preserve">
-    <value>Réglages réseau</value>
+    <value>Network Tuning</value>
   </data>
   <data name="group_restore" xml:space="preserve">
-    <value>Restaurer</value>
+    <value>Restore</value>
   </data>
   <data name="button_autobackup_start" xml:space="preserve">
-    <value>Démarrer la sauvegarde automatique</value>
+    <value>Start Autobackup</value>
   </data>
   <data name="tab3_page1" xml:space="preserve">
-    <value>Gérer</value>
+    <value>Manage</value>
   </data>
   <data name="tab3_page3" xml:space="preserve">
-    <value>Sauvegarde</value>
+    <value>Backup</value>
   </data>
   <data name="tab3_page2" xml:space="preserve">
-    <value>Joueurs</value>
+    <value>Players</value>
   </data>
   <data name="group_survivor" xml:space="preserve">
     <value>Survivor</value>
   </data>
   <data name="group_about" xml:space="preserve">
-    <value>A propos de</value>
+    <value>About</value>
   </data>
   <data name="group_other" xml:space="preserve">
-    <value>Autre</value>
+    <value>Other</value>
   </data>
   <data name="group_mysql" xml:space="preserve">
     <value>MySQL</value>
   </data>
   <data name="group_reset" xml:space="preserve">
-    <value>Effacer</value>
+    <value>Reset</value>
   </data>
   <data name="inventory" xml:space="preserve">
-    <value>Inventaire</value>
+    <value>Inventory</value>
   </data>
   <data name="check_persistent" xml:space="preserve">
     <value>Persistent Battlefield</value>
   </data>
   <data name="password" xml:space="preserve">
-    <value>Mot de passe</value>
+    <value>Password</value>
   </data>
   <data name="maxmsgsent" xml:space="preserve">
-    <value>Max. Messages Envoyés</value>
+    <value>Max. Messages Sent</value>
   </data>
   <data name="mysql_host" xml:space="preserve">
-    <value>MySQL Address de l'hôte</value>
+    <value>MySQL Host Address</value>
   </data>
   <data name="button_details" xml:space="preserve">
     <value>Details</value>
   </data>
   <data name="button_reload" xml:space="preserve">
-    <value>Recharger</value>
+    <value>Reload</value>
   </data>
   <data name="button_random" xml:space="preserve">
-    <value>Randomiser les mots de passe</value>
+    <value>Randomize passwords</value>
   </data>
   <data name="sentence_message" xml:space="preserve">
-    <value>Remarque: Utilisez ce modèle pour votre texte: "Message 1", "Message 2", "..."</value>
+    <value>Note: Use this pattern for your text: "Message 1","Message 2","..."</value>
   </data>
   <data name="button_generate" xml:space="preserve">
-    <value>Générer des véhicules</value>
+    <value>Generate vehicles</value>
   </data>
   <data name="group_profile" xml:space="preserve">
-    <value>Profil</value>
+    <value>Profile</value>
   </data>
   <data name="check_duplicate" xml:space="preserve">
     <value>Kick Duplicate</value>
@@ -493,7 +473,7 @@
     <value>GUID</value>
   </data>
   <data name="name" xml:space="preserve">
-    <value>Nom</value>
+    <value>Name</value>
   </data>
   <data name="port" xml:space="preserve">
     <value>Port</value>

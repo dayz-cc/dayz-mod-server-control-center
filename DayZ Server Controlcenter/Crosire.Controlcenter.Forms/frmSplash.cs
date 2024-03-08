@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Xml;
 using Crosire.Controlcenter.Classes;
 using Crosire.Controlcenter.Properties;
+using Crosire.Controlcenter.Resources;
 using Crosire.Library;
 using Crosire.Library.Forms;
 using NLog;
@@ -355,7 +356,7 @@ namespace Crosire.Controlcenter.Forms {
         }
 
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crosire.Controlcenter.Forms.frmSplash));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
             this.workerMain = new System.ComponentModel.BackgroundWorker();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelCompany = new System.Windows.Forms.Label();
@@ -366,13 +367,19 @@ namespace Crosire.Controlcenter.Forms {
             this.progressUpdate = new System.Windows.Forms.ProgressBar();
             this.textProgress = new System.Windows.Forms.RichTextBox();
             this.lblMaintainer = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)this.pictureBanner).BeginInit();
-            base.SuspendLayout();
-            this.workerMain.DoWork += new System.ComponentModel.DoWorkEventHandler(workerMain_DoWork);
-            this.workerMain.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(workerMain_RunWorkerCompleted);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBanner)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // workerMain
+            // 
+            this.workerMain.DoWork += new System.ComponentModel.DoWorkEventHandler(this.workerMain_DoWork);
+            this.workerMain.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.workerMain_RunWorkerCompleted);
+            // 
+            // labelTitle
+            // 
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
             this.labelTitle.Location = new System.Drawing.Point(9, 91);
             this.labelTitle.Name = "labelTitle";
@@ -380,26 +387,35 @@ namespace Crosire.Controlcenter.Forms {
             this.labelTitle.TabIndex = 19;
             this.labelTitle.Text = "Title";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelCompany
+            // 
             this.labelCompany.AutoSize = true;
             this.labelCompany.BackColor = System.Drawing.Color.Transparent;
-            this.labelCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.labelCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCompany.ForeColor = System.Drawing.Color.White;
             this.labelCompany.Location = new System.Drawing.Point(13, 293);
             this.labelCompany.Name = "labelCompany";
             this.labelCompany.Size = new System.Drawing.Size(105, 15);
             this.labelCompany.TabIndex = 18;
             this.labelCompany.Text = "Written by: Crosire";
+            // 
+            // labelVersion
+            // 
             this.labelVersion.AutoSize = true;
             this.labelVersion.BackColor = System.Drawing.Color.Transparent;
-            this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersion.ForeColor = System.Drawing.Color.Gray;
             this.labelVersion.Location = new System.Drawing.Point(396, 76);
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(88, 15);
             this.labelVersion.TabIndex = 17;
             this.labelVersion.Text = "Version 0.0.0.0";
+            // 
+            // labelCopyright
+            // 
             this.labelCopyright.BackColor = System.Drawing.Color.Transparent;
-            this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCopyright.ForeColor = System.Drawing.Color.Gray;
             this.labelCopyright.Location = new System.Drawing.Point(13, 320);
             this.labelCopyright.Name = "labelCopyright";
@@ -407,19 +423,25 @@ namespace Crosire.Controlcenter.Forms {
             this.labelCopyright.TabIndex = 16;
             this.labelCopyright.Text = "Copyright ©2012 - 2013 Crosire. All rights reserved.";
             this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBanner
+            // 
             this.pictureBanner.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBanner.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBanner.Image = (System.Drawing.Image)resources.GetObject("pictureBanner.Image");
+            this.pictureBanner.Image = global::Crosire.Controlcenter.Resources.Images.pictureBanner_Image;
             this.pictureBanner.Location = new System.Drawing.Point(12, 12);
             this.pictureBanner.Name = "pictureBanner";
             this.pictureBanner.Size = new System.Drawing.Size(472, 84);
             this.pictureBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBanner.TabIndex = 12;
             this.pictureBanner.TabStop = false;
-            this.pictureBanner.Click += new System.EventHandler(pictureBanner_Click);
-            this.pictureBanner.MouseLeave += new System.EventHandler(pictureBanner_MouseLeave);
-            this.pictureBanner.MouseHover += new System.EventHandler(pictureBanner_MouseHover);
-            this.labelProgress.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBanner.Click += new System.EventHandler(this.pictureBanner_Click);
+            this.pictureBanner.MouseLeave += new System.EventHandler(this.pictureBanner_MouseLeave);
+            this.pictureBanner.MouseHover += new System.EventHandler(this.pictureBanner_MouseHover);
+            // 
+            // labelProgress
+            // 
+            this.labelProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelProgress.AutoSize = true;
             this.labelProgress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelProgress.Location = new System.Drawing.Point(16, 271);
@@ -427,12 +449,21 @@ namespace Crosire.Controlcenter.Forms {
             this.labelProgress.Size = new System.Drawing.Size(66, 15);
             this.labelProgress.TabIndex = 24;
             this.labelProgress.Text = "Initializing ...";
-            this.progressUpdate.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            // 
+            // progressUpdate
+            // 
+            this.progressUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressUpdate.Location = new System.Drawing.Point(12, 267);
             this.progressUpdate.Name = "progressUpdate";
             this.progressUpdate.Size = new System.Drawing.Size(474, 23);
             this.progressUpdate.TabIndex = 23;
-            this.textProgress.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            // 
+            // textProgress
+            // 
+            this.textProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textProgress.BackColor = System.Drawing.SystemColors.Control;
             this.textProgress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textProgress.Cursor = System.Windows.Forms.Cursors.Default;
@@ -446,45 +477,53 @@ namespace Crosire.Controlcenter.Forms {
             this.textProgress.TabIndex = 22;
             this.textProgress.TabStop = false;
             this.textProgress.Text = "Initializing ...";
+            // 
+            // lblMaintainer
+            // 
             this.lblMaintainer.AutoSize = true;
             this.lblMaintainer.BackColor = System.Drawing.Color.Transparent;
-            this.lblMaintainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.lblMaintainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaintainer.ForeColor = System.Drawing.Color.White;
             this.lblMaintainer.Location = new System.Drawing.Point(339, 293);
             this.lblMaintainer.Name = "lblMaintainer";
             this.lblMaintainer.Size = new System.Drawing.Size(144, 15);
             this.lblMaintainer.TabIndex = 31;
             this.lblMaintainer.Text = "Maintained by: Squadron";
-            base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = Resources.background;
+            // 
+            // frmSplash
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Crosire.Controlcenter.Resources.Images.pictureBanner_Image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            base.ClientSize = new System.Drawing.Size(498, 340);
-            base.Controls.Add(this.lblMaintainer);
-            base.Controls.Add(this.labelProgress);
-            base.Controls.Add(this.progressUpdate);
-            base.Controls.Add(this.textProgress);
-            base.Controls.Add(this.labelCopyright);
-            base.Controls.Add(this.labelVersion);
-            base.Controls.Add(this.labelCompany);
-            base.Controls.Add(this.labelTitle);
-            base.Controls.Add(this.pictureBanner);
-            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            base.Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
-            base.MaximizeBox = false;
-            base.MinimizeBox = false;
+            this.ClientSize = new System.Drawing.Size(498, 340);
+            this.Controls.Add(this.lblMaintainer);
+            this.Controls.Add(this.labelProgress);
+            this.Controls.Add(this.progressUpdate);
+            this.Controls.Add(this.textProgress);
+            this.Controls.Add(this.labelCopyright);
+            this.Controls.Add(this.labelVersion);
+            this.Controls.Add(this.labelCompany);
+            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.pictureBanner);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(498, 305);
-            base.Name = "frmSplash";
-            base.ShowIcon = false;
-            base.ShowInTaskbar = false;
-            base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Name = "frmSplash";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DayZ Server Controlcenter";
-            base.TopMost = true;
-            base.Load += new System.EventHandler(frmSplash_Load);
-            base.Shown += new System.EventHandler(frmSplash_Shown);
-            ((System.ComponentModel.ISupportInitialize)this.pictureBanner).EndInit();
-            base.ResumeLayout(false);
-            base.PerformLayout();
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmSplash_Load);
+            this.Shown += new System.EventHandler(this.frmSplash_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBanner)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
     }
 }

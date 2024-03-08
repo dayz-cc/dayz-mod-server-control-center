@@ -32,9 +32,6 @@
     <Compile Remove="Crosire.Controlcenter.Properties\Resources.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Remove="Resources.resx" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="CefSharp.WinForms" Version="121.3.130" />
     <PackageReference Include="MySql.Data" Version="6.7.9" />
     <PackageReference Include="NLog" Version="5.2.8" />
@@ -56,18 +53,16 @@
     <ProjectReference Include="..\Crosire\Crosire.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources.resx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <CustomToolNamespace></CustomToolNamespace>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Resources.Designer.cs">
+    <Compile Update="Resources\Localized.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>Localized.resx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Localized.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Localized.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

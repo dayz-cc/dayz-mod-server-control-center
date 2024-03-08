@@ -18,7 +18,7 @@ using MySql.Data.MySqlClient;
 using NLog;
 
 namespace Crosire.Controlcenter {
-    public class frmMain : Form {
+    internal partial class frmMain : Form {
         private ChromiumWebBrowser browserAdmin;
 
         private ChromiumWebBrowser browserDatabase;
@@ -570,11 +570,11 @@ namespace Crosire.Controlcenter {
                 process.WaitForExit(15000);
                 if (process.ExitCode == 0) {
                     subAppendLog("Backup: Success!", LogLevel.Info);
-                    MessageBox.Show(Resources.message_finished_restore, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show(Resources.Localized.message_finished_restore, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
                 }
                 subAppendLog("Error: MySQL Exit Code " + process.ExitCode + ", User " + configuration.dbUser + ", Password: " + configuration.dbPass + ", File: \"" + path + "\"", LogLevel.Error);
-                MessageBox.Show(Resources.message_error_restore + " MySQL Exit Code: " + process.ExitCode, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(Resources.Localized.message_error_restore + " MySQL Exit Code: " + process.ExitCode, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             } catch (Exception ex) {
                 subAppendLog(ex);
             }
@@ -596,19 +596,19 @@ namespace Crosire.Controlcenter {
                 if (process.ExitCode == 0) {
                     subAppendLog("Configuration: Success!", LogLevel.Info);
                     if (reset) {
-                        MessageBox.Show(Resources.message_finished_reset, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show(Resources.Localized.message_finished_reset, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     } else {
-                        MessageBox.Show(Resources.message_finished_database, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show(Resources.Localized.message_finished_database, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                     return;
                 }
                 subAppendLog("Error: Exit Code: " + process.ExitCode + ", User: " + configuration.dbUser + ", Password: " + configuration.dbPass, LogLevel.Error);
                 if (process.ExitCode == 1) {
-                    MessageBox.Show(Resources.message_error_database + " Connection failed", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(Resources.Localized.message_error_database + " Connection failed", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 } else if (process.ExitCode == 2) {
-                    MessageBox.Show(Resources.message_error_database + " Missing permissions", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(Resources.Localized.message_error_database + " Missing permissions", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 } else {
-                    MessageBox.Show(Resources.message_error_database + " Exit Code " + process.ExitCode, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(Resources.Localized.message_error_database + " Exit Code " + process.ExitCode, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             } catch (Exception ex) {
                 subAppendLog(ex);
@@ -1095,9 +1095,9 @@ namespace Crosire.Controlcenter {
             textBackupPath.Text = configuration.confAutoBackupPath;
             numBackupInterval.Value = configuration.confAutoBackupInterval;
             if (listAutoBackupEnabled[serverInstance - 1]) {
-                btnAutoBackup.Text = Resources.button_autobackup_stop;
+                btnAutoBackup.Text = Resources.Localized.button_autobackup_stop;
             } else {
-                btnAutoBackup.Text = Resources.button_autobackup_start;
+                btnAutoBackup.Text = Resources.Localized.button_autobackup_start;
             }
             try {
                 try {
@@ -1149,128 +1149,128 @@ namespace Crosire.Controlcenter {
         }
 
         private void subReloadResources() {
-            labelAdminPassword.Text = Resources.passwordadmin + ":";
+            labelAdminPassword.Text = Resources.Localized.passwordadmin + ":";
             labelAppName.Text = Application.ProductName;
-            labelChooseLanguage.Text = Resources.sentence_chooselanguage;
-            labelCodecQuality.Text = Resources.codecquality + ":";
-            labelDifficulty.Text = Resources.difficulty + ":";
-            labelEnterBackupInterval.Text = Resources.sentence_backupinterval;
-            labelLoadout.Text = Resources.loadout + ":";
-            labelLoadoutBackpack.Text = Resources.loadoutbackpack + ":";
-            labelDescription1.Text = Resources.sentence_menu1_description;
-            labelDescription2.Text = Resources.sentence_menu2_description;
-            labelDescription3.Text = Resources.sentence_menu3_description;
-            labelDescription4.Text = Resources.sentence_menu4_description;
-            labelMaxBandwidth.Text = Resources.maxbandwidth + ":";
-            labelMaxBandwidthUnit.Text = Resources.bytespersecond;
-            labelMaxCustomSize.Text = Resources.maxcustomsize + ":";
-            labelMaxCustomSizeUnit.Text = Resources.kilobyte;
-            labelMaxMsgSent.Text = Resources.maxmsgsent + ":";
-            labelMaxPing.Text = Resources.maxping + ":";
-            labelMaxPlayers.Text = Resources.maxplayers + ":";
-            labelMaxSizeGuaranteed.Text = Resources.maxsizeguaranteed + ":";
-            labelMaxSizeGuaranteedUnit.Text = Resources.bytes;
-            labelMaxSizeNonguaranteed.Text = Resources.maxsizenonguaranteed + ":";
-            labelMaxSizeNonguaranteedUnit.Text = Resources.bytes;
-            labelModlist.Text = Resources.modlist + ":";
-            labelMinBandwidth.Text = Resources.minbandwidth + ":";
-            labelMinBandwidthUnit.Text = Resources.bytespersecond;
-            labelMinErrtoSend.Text = Resources.minerrtosend + ":";
-            labelMinErrtoSendNear.Text = Resources.minerrtosendnear + ":";
-            labelNoticeMessage.Text = Resources.sentence_message;
-            labelNoticeReset.Text = Resources.sentence_reset;
-            labelMySqlHost.Text = Resources.mysql_host + ":";
-            labelMySqlCredentials.Text = Resources.mysql_credentials + ":";
-            labelPassword.Text = Resources.password + ":";
-            labelPathBackupFolder.Text = Resources.backupfolder + ":";
-            labelPort.Text = Resources.port + ":";
-            labelRconPassword.Text = Resources.passwordrcon + ":";
-            labelReportingIp.Text = Resources.reportingip + ":";
-            labelRequiredBuild.Text = Resources.build + ":";
-            labelRequireSecureId.Text = Resources.requiresecureid + ":";
-            labelWelcomeMessage.Text = Resources.messagejoin + ":";
-            labelSelectInstance.Text = Resources.sentence_selectinstance;
-            labelSelectDatabase.Text = Resources.databasename + ":";
-            labelServerName.Text = Resources.servername + ":";
-            labelTemplate.Text = Resources.template + ":";
-            labelTimeBetweenMessage.Text = Resources.messagetime + ":";
-            labelTimezone.Text = Resources.timezone + ":";
-            labelVerifySignatures.Text = Resources.verifysignatures + ":";
-            labelVersionText.Text = Resources.version + ":";
-            labelWhitelistMessage.Text = Resources.message + ":";
-            labelPlayerName.Text = Resources.name + ":";
-            labelPlayerUid.Text = Resources.uid + ":";
-            labelPlayerGuid.Text = Resources.guid + ":";
-            labelBackpack.Text = Resources.backpack + ":";
-            labelInventory.Text = Resources.inventory + ":";
-            labelMedical.Text = Resources.medical + ":";
-            labelPosition.Text = Resources.position + ":";
-            btnBackup.Text = Resources.button_backup;
-            btnBackupBrowse.Text = Resources.button_browse;
-            btnDatabase.Text = Resources.button_add_database;
-            btnExit.Text = Resources.button_exit;
-            btnLog.Text = Resources.button_log;
-            btnLogClear.Text = Resources.button_clear;
-            btnLogMonitor.Text = Resources.button_monitor_start;
-            btnPlayerAdd.Text = Resources.button_add_player;
-            btnMenu1.Text = Resources.button_menu1;
-            btnMenu2.Text = Resources.button_menu2;
-            btnMenu3.Text = Resources.button_menu3;
-            btnMenu4.Text = Resources.button_menu4;
-            btnMysqlUser.Text = Resources.button_save;
-            btnMysqlHost.Text = Resources.button_save;
-            btnRandomPass.Text = Resources.button_random;
-            btnReset.Text = Resources.button_reset;
-            btnRestore.Text = Resources.button_restore;
-            btnSave1.Text = Resources.button_save_config;
-            btnSave2.Text = Resources.button_save_config;
-            btnSave3.Text = Resources.button_save_config;
-            btnSave4.Text = Resources.button_save_player;
-            checkBattleye.Text = Resources.check_enabled;
-            checkDuplicate.Text = Resources.check_duplicate;
-            checkPersistent.Text = Resources.check_persistent;
-            checkRmod.Text = Resources.check_rmod;
-            checkVon.Text = Resources.check_enabled;
-            checkWhitelist.Text = Resources.check_enabled;
-            checkWhitelisted.Text = Resources.check_whitelisted;
-            checkDaytime.Text = Resources.check_daytime;
-            tab1Page1.Text = Resources.tab1_page1;
-            tab1Page2.Text = Resources.tab1_page2;
-            tab1Page3.Text = Resources.tab1_page3;
-            tab2Page1.Text = Resources.tab2_page1;
-            tab2Page2.Text = Resources.tab2_page2;
-            tab2Page3.Text = Resources.tab2_page3;
-            tab3Page1.Text = Resources.tab3_page1;
-            tab3Page2.Text = Resources.tab3_page2;
-            tab3Page3.Text = Resources.tab3_page3;
-            groupAbout.Text = Resources.group_about;
-            groupBackup.Text = Resources.group_backup;
-            groupAutoBackup.Text = Resources.group_autobackup;
-            groupBattleye.Text = Resources.group_battleye;
-            groupLogin.Text = Resources.group_mysql_details;
-            groupMessage.Text = Resources.group_message;
-            groupTemplate.Text = Resources.group_template;
-            groupProfile.Text = Resources.group_profile;
-            groupSurvivor.Text = Resources.group_survivor;
-            groupReset.Text = Resources.group_reset;
-            groupRestore.Text = Resources.group_restore;
-            groupScripting.Text = Resources.group_scripting;
-            groupSettings.Text = Resources.group_settings;
-            groupSignatures.Text = Resources.group_signatures;
-            groupTime.Text = Resources.group_time;
-            groupNetwork.Text = Resources.group_tuning_network;
-            groupAdditional.Text = Resources.group_other;
-            groupVon.Text = Resources.group_von;
-            groupWhitelist.Text = Resources.group_whitelist;
+            labelChooseLanguage.Text = Resources.Localized.sentence_chooselanguage;
+            labelCodecQuality.Text = Resources.Localized.codecquality + ":";
+            labelDifficulty.Text = Resources.Localized.difficulty + ":";
+            labelEnterBackupInterval.Text = Resources.Localized.sentence_backupinterval;
+            labelLoadout.Text = Resources.Localized.loadout + ":";
+            labelLoadoutBackpack.Text = Resources.Localized.loadoutbackpack + ":";
+            labelDescription1.Text = Resources.Localized.sentence_menu1_description;
+            labelDescription2.Text = Resources.Localized.sentence_menu2_description;
+            labelDescription3.Text = Resources.Localized.sentence_menu3_description;
+            labelDescription4.Text = Resources.Localized.sentence_menu4_description;
+            labelMaxBandwidth.Text = Resources.Localized.maxbandwidth + ":";
+            labelMaxBandwidthUnit.Text = Resources.Localized.bytespersecond;
+            labelMaxCustomSize.Text = Resources.Localized.maxcustomsize + ":";
+            labelMaxCustomSizeUnit.Text = Resources.Localized.kilobyte;
+            labelMaxMsgSent.Text = Resources.Localized.maxmsgsent + ":";
+            labelMaxPing.Text = Resources.Localized.maxping + ":";
+            labelMaxPlayers.Text = Resources.Localized.maxplayers + ":";
+            labelMaxSizeGuaranteed.Text = Resources.Localized.maxsizeguaranteed + ":";
+            labelMaxSizeGuaranteedUnit.Text = Resources.Localized.bytes;
+            labelMaxSizeNonguaranteed.Text = Resources.Localized.maxsizenonguaranteed + ":";
+            labelMaxSizeNonguaranteedUnit.Text = Resources.Localized.bytes;
+            labelModlist.Text = Resources.Localized.modlist + ":";
+            labelMinBandwidth.Text = Resources.Localized.minbandwidth + ":";
+            labelMinBandwidthUnit.Text = Resources.Localized.bytespersecond;
+            labelMinErrtoSend.Text = Resources.Localized.minerrtosend + ":";
+            labelMinErrtoSendNear.Text = Resources.Localized.minerrtosendnear + ":";
+            labelNoticeMessage.Text = Resources.Localized.sentence_message;
+            labelNoticeReset.Text = Resources.Localized.sentence_reset;
+            labelMySqlHost.Text = Resources.Localized.mysql_host + ":";
+            labelMySqlCredentials.Text = Resources.Localized.mysql_credentials + ":";
+            labelPassword.Text = Resources.Localized.password + ":";
+            labelPathBackupFolder.Text = Resources.Localized.backupfolder + ":";
+            labelPort.Text = Resources.Localized.port + ":";
+            labelRconPassword.Text = Resources.Localized.passwordrcon + ":";
+            labelReportingIp.Text = Resources.Localized.reportingip + ":";
+            labelRequiredBuild.Text = Resources.Localized.build + ":";
+            labelRequireSecureId.Text = Resources.Localized.requiresecureid + ":";
+            labelWelcomeMessage.Text = Resources.Localized.messagejoin + ":";
+            labelSelectInstance.Text = Resources.Localized.sentence_selectinstance;
+            labelSelectDatabase.Text = Resources.Localized.databasename + ":";
+            labelServerName.Text = Resources.Localized.servername + ":";
+            labelTemplate.Text = Resources.Localized.template + ":";
+            labelTimeBetweenMessage.Text = Resources.Localized.messagetime + ":";
+            labelTimezone.Text = Resources.Localized.timezone + ":";
+            labelVerifySignatures.Text = Resources.Localized.verifysignatures + ":";
+            labelVersionText.Text = Resources.Localized.version + ":";
+            labelWhitelistMessage.Text = Resources.Localized.message + ":";
+            labelPlayerName.Text = Resources.Localized.name + ":";
+            labelPlayerUid.Text = Resources.Localized.uid + ":";
+            labelPlayerGuid.Text = Resources.Localized.guid + ":";
+            labelBackpack.Text = Resources.Localized.backpack + ":";
+            labelInventory.Text = Resources.Localized.inventory + ":";
+            labelMedical.Text = Resources.Localized.medical + ":";
+            labelPosition.Text = Resources.Localized.position + ":";
+            btnBackup.Text = Resources.Localized.button_backup;
+            btnBackupBrowse.Text = Resources.Localized.button_browse;
+            btnDatabase.Text = Resources.Localized.button_add_database;
+            btnExit.Text = Resources.Localized.button_exit;
+            btnLog.Text = Resources.Localized.button_log;
+            btnLogClear.Text = Resources.Localized.button_clear;
+            btnLogMonitor.Text = Resources.Localized.button_monitor_start;
+            btnPlayerAdd.Text = Resources.Localized.button_add_player;
+            btnMenu1.Text = Resources.Localized.button_menu1;
+            btnMenu2.Text = Resources.Localized.button_menu2;
+            btnMenu3.Text = Resources.Localized.button_menu3;
+            btnMenu4.Text = Resources.Localized.button_menu4;
+            btnMysqlUser.Text = Resources.Localized.button_save;
+            btnMysqlHost.Text = Resources.Localized.button_save;
+            btnRandomPass.Text = Resources.Localized.button_random;
+            btnReset.Text = Resources.Localized.button_reset;
+            btnRestore.Text = Resources.Localized.button_restore;
+            btnSave1.Text = Resources.Localized.button_save_config;
+            btnSave2.Text = Resources.Localized.button_save_config;
+            btnSave3.Text = Resources.Localized.button_save_config;
+            btnSave4.Text = Resources.Localized.button_save_player;
+            checkBattleye.Text = Resources.Localized.check_enabled;
+            checkDuplicate.Text = Resources.Localized.check_duplicate;
+            checkPersistent.Text = Resources.Localized.check_persistent;
+            checkRmod.Text = Resources.Localized.check_rmod;
+            checkVon.Text = Resources.Localized.check_enabled;
+            checkWhitelist.Text = Resources.Localized.check_enabled;
+            checkWhitelisted.Text = Resources.Localized.check_whitelisted;
+            checkDaytime.Text = Resources.Localized.check_daytime;
+            tab1Page1.Text = Resources.Localized.tab1_page1;
+            tab1Page2.Text = Resources.Localized.tab1_page2;
+            tab1Page3.Text = Resources.Localized.tab1_page3;
+            tab2Page1.Text = Resources.Localized.tab2_page1;
+            tab2Page2.Text = Resources.Localized.tab2_page2;
+            tab2Page3.Text = Resources.Localized.tab2_page3;
+            tab3Page1.Text = Resources.Localized.tab3_page1;
+            tab3Page2.Text = Resources.Localized.tab3_page2;
+            tab3Page3.Text = Resources.Localized.tab3_page3;
+            groupAbout.Text = Resources.Localized.group_about;
+            groupBackup.Text = Resources.Localized.group_backup;
+            groupAutoBackup.Text = Resources.Localized.group_autobackup;
+            groupBattleye.Text = Resources.Localized.group_battleye;
+            groupLogin.Text = Resources.Localized.group_mysql_details;
+            groupMessage.Text = Resources.Localized.group_message;
+            groupTemplate.Text = Resources.Localized.group_template;
+            groupProfile.Text = Resources.Localized.group_profile;
+            groupSurvivor.Text = Resources.Localized.group_survivor;
+            groupReset.Text = Resources.Localized.group_reset;
+            groupRestore.Text = Resources.Localized.group_restore;
+            groupScripting.Text = Resources.Localized.group_scripting;
+            groupSettings.Text = Resources.Localized.group_settings;
+            groupSignatures.Text = Resources.Localized.group_signatures;
+            groupTime.Text = Resources.Localized.group_time;
+            groupNetwork.Text = Resources.Localized.group_tuning_network;
+            groupAdditional.Text = Resources.Localized.group_other;
+            groupVon.Text = Resources.Localized.group_von;
+            groupWhitelist.Text = Resources.Localized.group_whitelist;
             if (configuration.confAutoBackupEnabled) {
-                btnAutoBackup.Text = Resources.button_autobackup_stop;
+                btnAutoBackup.Text = Resources.Localized.button_autobackup_stop;
             } else {
-                btnAutoBackup.Text = Resources.button_autobackup_start;
+                btnAutoBackup.Text = Resources.Localized.button_autobackup_start;
             }
         }
 
         private void btnSave1_Click(object sender, EventArgs e) {
-            subAppendLog("Configuration: Saving [Panel \"" + Resources.tab1_page1 + "\"]", LogLevel.Info);
+            subAppendLog("Configuration: Saving [Panel \"" + Resources.Localized.tab1_page1 + "\"]", LogLevel.Info);
             string confWorld = configuration.confWorld;
             configuration.confDaytime = checkDaytime.Checked;
             configuration.confDifficulty = cbxDifficulty.SelectedItem.ToString();
@@ -1365,7 +1365,7 @@ namespace Crosire.Controlcenter {
         }
 
         private void btnSave2_Click(object sender, EventArgs e) {
-            subAppendLog("Configuration: Saving [Panel \"" + Resources.tab1_page2 + "\"]", LogLevel.Info);
+            subAppendLog("Configuration: Saving [Panel \"" + Resources.Localized.tab1_page2 + "\"]", LogLevel.Info);
             configuration.beMaxPing = Convert.ToInt32(numMaxPing.Value);
             configuration.bePass = textPasswordRcon.Text;
             configuration.beWhitelistEnabled = checkWhitelist.Checked;
@@ -1401,7 +1401,7 @@ namespace Crosire.Controlcenter {
         }
 
         private void btnSave3_Click(object sender, EventArgs e) {
-            subAppendLog("Configuration: Saving [Panel \"" + Resources.tab1_page3 + "\"]", LogLevel.Info);
+            subAppendLog("Configuration: Saving [Panel \"" + Resources.Localized.tab1_page3 + "\"]", LogLevel.Info);
             configuration.confMaxCustomFileSize = Convert.ToInt32(numMaxCustomsize.Value);
             configuration.confMinBandwidth = numMinBandwidth.Value;
             configuration.confMaxBandwidth = numMaxBandwidth.Value;
@@ -1551,11 +1551,11 @@ namespace Crosire.Controlcenter {
         private void btnAutoBackup_Click(object sender, EventArgs e) {
             if (listAutoBackupEnabled[serverInstance - 1]) {
                 subAppendLog("Backup: Auto Backup stopped [Instance " + serverInstance + "]", LogLevel.Info);
-                btnAutoBackup.Text = Resources.button_autobackup_start;
+                btnAutoBackup.Text = Resources.Localized.button_autobackup_start;
                 listAutoBackupEnabled[serverInstance - 1] = false;
             } else {
                 subAppendLog("Backup: Auto Backup started [Instance " + serverInstance + "]", LogLevel.Info);
-                btnAutoBackup.Text = Resources.button_autobackup_stop;
+                btnAutoBackup.Text = Resources.Localized.button_autobackup_stop;
                 listAutoBackupInterval[serverInstance - 1] = Convert.ToInt32(numBackupInterval.Value);
                 listAutoBackupEnabled[serverInstance - 1] = true;
                 progressBackup.Maximum = listAutoBackupInterval[serverInstance - 1] * 60;
@@ -1592,7 +1592,7 @@ namespace Crosire.Controlcenter {
 
         private void btnDatabase_Click(object sender, EventArgs e) {
             string name = cbxDatabase.Text.Replace(" ", "");
-            if (!string.IsNullOrEmpty(name) && !cbxDatabase.Items.Contains(name) && MessageBox.Show(Resources.message_confirm_database + " \"" + name + "\"?", string.Empty, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+            if (!string.IsNullOrEmpty(name) && !cbxDatabase.Items.Contains(name) && MessageBox.Show(Resources.Localized.message_confirm_database + " \"" + name + "\"?", string.Empty, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                 Thread thread = new Thread((ThreadStart)delegate {
                     threadDatabase(name);
                 });
@@ -1617,25 +1617,25 @@ namespace Crosire.Controlcenter {
             if (timerMonitor.Enabled) {
                 subAppendLog("Monitor: Log Monitoring stopped [Instance " + serverInstance + "]", LogLevel.Info);
                 timerMonitor.Stop();
-                btnLogMonitor.Text = Resources.button_monitor_start;
+                btnLogMonitor.Text = Resources.Localized.button_monitor_start;
                 return;
             }
             subAppendLog("Monitor: Log Monitoring started [Instance " + serverInstance + "]", LogLevel.Info);
             if (File.Exists(Path.Combine(configuration.pathConfig, "arma2oaserver_" + serverInstance + ".rpt"))) {
                 timerMonitor.Start();
-                btnLogMonitor.Text = Resources.button_monitor_stop;
+                btnLogMonitor.Text = Resources.Localized.button_monitor_stop;
             } else {
                 subAppendLog("Error: File not found: \"" + Path.Combine(configuration.pathConfig, "arma2oaserver_" + serverInstance + ".rpt") + "\"", LogLevel.Error);
             }
         }
 
         private void btnLogClear_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            if (File.Exists(Path.Combine(configuration.pathConfig, "arma2oaserver_" + serverInstance + ".rpt")) && MessageBox.Show(Resources.message_confirm_deletelog, string.Empty, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes) {
+            if (File.Exists(Path.Combine(configuration.pathConfig, "arma2oaserver_" + serverInstance + ".rpt")) && MessageBox.Show(Resources.Localized.message_confirm_deletelog, string.Empty, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes) {
                 subAppendLog("Monitor: Deleting Log [Instance " + serverInstance + "]", LogLevel.Info);
                 if (timerMonitor.Enabled) {
                     timerMonitor.Stop();
                 }
-                btnLogMonitor.Text = Resources.button_monitor_start;
+                btnLogMonitor.Text = Resources.Localized.button_monitor_start;
                 try {
                     File.Delete(Path.Combine(configuration.pathConfig, "arma2oaserver_" + serverInstance + ".rpt"));
                     textLogRpt.Clear();
@@ -1718,7 +1718,7 @@ namespace Crosire.Controlcenter {
             string text = textPlayerName.Text;
             string text2 = textPlayerGuid.Text;
             if (textPlayerGuid.Text.Length == 32) {
-                if (MessageBox.Show(Resources.message_confirm_player + " \"" + text + "\", \"" + text2 + "\"?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) {
+                if (MessageBox.Show(Resources.Localized.message_confirm_player + " \"" + text + "\", \"" + text2 + "\"?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) {
                     return;
                 }
                 MySqlConnection mySqlConnection = mysql.Connection;
@@ -1767,7 +1767,7 @@ namespace Crosire.Controlcenter {
         }
 
         private void btnReset_Click(object sender, EventArgs e) {
-            if (MessageBox.Show(Resources.message_reset, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) {
+            if (MessageBox.Show(Resources.Localized.message_reset, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) {
                 return;
             }
             try {
@@ -2284,7 +2284,7 @@ namespace Crosire.Controlcenter {
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(139, 24);
             this.btnLog.TabIndex = 16;
-            this.btnLog.Text = Resources.button_log;
+            this.btnLog.Text = Resources.Localized.button_log;
             this.btnLog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLog.UseVisualStyleBackColor = true;
             this.btnLog.CheckedChanged += new System.EventHandler(btnLog_CheckedChanged);
@@ -2294,7 +2294,7 @@ namespace Crosire.Controlcenter {
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(138, 23);
             this.btnExit.TabIndex = 2;
-            this.btnExit.Text = Resources.button_exit;
+            this.btnExit.Text = Resources.Localized.button_exit;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(btnExit_Click);
             this.cbxInstance.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2344,7 +2344,7 @@ namespace Crosire.Controlcenter {
             this.btnMenu4.Name = "btnMenu4";
             this.btnMenu4.Size = new System.Drawing.Size(138, 23);
             this.btnMenu4.TabIndex = 11;
-            this.btnMenu4.Text = Resources.button_menu4;
+            this.btnMenu4.Text = Resources.Localized.button_menu4;
             this.btnMenu4.CheckedChanged += new System.EventHandler(frmMain_ChangePanel);
             this.btnMenu2.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnMenu2.Checked = true;
@@ -2354,7 +2354,7 @@ namespace Crosire.Controlcenter {
             this.btnMenu2.Size = new System.Drawing.Size(138, 23);
             this.btnMenu2.TabIndex = 10;
             this.btnMenu2.TabStop = true;
-            this.btnMenu2.Text = Resources.button_menu2;
+            this.btnMenu2.Text = Resources.Localized.button_menu2;
             this.btnMenu2.UseVisualStyleBackColor = true;
             this.btnMenu2.CheckedChanged += new System.EventHandler(frmMain_ChangePanel);
             this.btnMenu3.Appearance = System.Windows.Forms.Appearance.Button;
@@ -2363,7 +2363,7 @@ namespace Crosire.Controlcenter {
             this.btnMenu3.Name = "btnMenu3";
             this.btnMenu3.Size = new System.Drawing.Size(138, 23);
             this.btnMenu3.TabIndex = 9;
-            this.btnMenu3.Text = Resources.button_menu3;
+            this.btnMenu3.Text = Resources.Localized.button_menu3;
             this.btnMenu3.CheckedChanged += new System.EventHandler(frmMain_ChangePanel);
             this.btnMenu1.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnMenu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Bold);
@@ -2371,7 +2371,7 @@ namespace Crosire.Controlcenter {
             this.btnMenu1.Name = "btnMenu1";
             this.btnMenu1.Size = new System.Drawing.Size(138, 23);
             this.btnMenu1.TabIndex = 8;
-            this.btnMenu1.Text = Resources.button_menu1;
+            this.btnMenu1.Text = Resources.Localized.button_menu1;
             this.btnMenu1.CheckedChanged += new System.EventHandler(frmMain_ChangePanel);
             this.container2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
@@ -2456,7 +2456,7 @@ namespace Crosire.Controlcenter {
             this.btnMysqlHost.Name = "btnMysqlHost";
             this.btnMysqlHost.Size = new System.Drawing.Size(194, 23);
             this.btnMysqlHost.TabIndex = 6;
-            this.btnMysqlHost.Text = Resources.button_save;
+            this.btnMysqlHost.Text = Resources.Localized.button_save;
             this.btnMysqlHost.UseVisualStyleBackColor = true;
             this.btnMysqlHost.Click += new System.EventHandler(btnMysqlHost_Click);
             this.textMysqlUser.Location = new System.Drawing.Point(9, 92);
@@ -2513,7 +2513,7 @@ namespace Crosire.Controlcenter {
             this.tab2Page3.Name = "tab2Page3";
             this.tab2Page3.Size = new System.Drawing.Size(713, 581);
             this.tab2Page3.TabIndex = 3;
-            this.tab2Page3.Text = Resources.tab2_page3;
+            this.tab2Page3.Text = Resources.Localized.tab2_page3;
             this.tab2Page3.UseVisualStyleBackColor = true;
             this.btnLogClear.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.btnLogClear.Location = new System.Drawing.Point(599, 5);
@@ -2587,7 +2587,7 @@ namespace Crosire.Controlcenter {
             this.groupAbout.TabStop = false;
             this.groupAbout.Text = "About";
             this.pictureLicense.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.pictureLicense.Image = Resources.license;
+            this.pictureLicense.Image = Resources.Localized.license;
             this.pictureLicense.Location = new System.Drawing.Point(588, 21);
             this.pictureLicense.Name = "pictureLicense";
             this.pictureLicense.Size = new System.Drawing.Size(100, 64);
@@ -2610,7 +2610,7 @@ namespace Crosire.Controlcenter {
             this.labelVersionText.Size = new System.Drawing.Size(57, 16);
             this.labelVersionText.TabIndex = 1;
             this.labelVersionText.Text = "Version:";
-            this.pictureIcon.BackgroundImage = Resources.logo;
+            this.pictureIcon.BackgroundImage = Resources.Localized.logo;
             this.pictureIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureIcon.Location = new System.Drawing.Point(11, 21);
             this.pictureIcon.Name = "pictureIcon";
@@ -2647,7 +2647,7 @@ namespace Crosire.Controlcenter {
             this.tab3Page1.Padding = new System.Windows.Forms.Padding(3);
             this.tab3Page1.Size = new System.Drawing.Size(713, 581);
             this.tab3Page1.TabIndex = 1;
-            this.tab3Page1.Text = Resources.tab3_page1;
+            this.tab3Page1.Text = Resources.Localized.tab3_page1;
             this.tab3Page1.UseVisualStyleBackColor = true;
             this.tab3Page2.Controls.Add(this.checkWhitelisted);
             this.tab3Page2.Controls.Add(this.groupSurvivor);
@@ -2794,7 +2794,7 @@ namespace Crosire.Controlcenter {
             this.btnPlayerAdd.Name = "btnPlayerAdd";
             this.btnPlayerAdd.Size = new System.Drawing.Size(250, 23);
             this.btnPlayerAdd.TabIndex = 20;
-            this.btnPlayerAdd.Text = Resources.button_add_player;
+            this.btnPlayerAdd.Text = Resources.Localized.button_add_player;
             this.btnPlayerAdd.UseVisualStyleBackColor = true;
             this.btnPlayerAdd.Click += new System.EventHandler(btnPlayer_Click);
             this.btnSave4.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
@@ -2837,7 +2837,7 @@ namespace Crosire.Controlcenter {
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(671, 50);
             this.btnReset.TabIndex = 4;
-            this.btnReset.Text = Resources.button_reset;
+            this.btnReset.Text = Resources.Localized.button_reset;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(btnReset_Click);
             this.groupAutoBackup.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2862,7 +2862,7 @@ namespace Crosire.Controlcenter {
             this.btnAutoBackup.Name = "btnAutoBackup";
             this.btnAutoBackup.Size = new System.Drawing.Size(671, 50);
             this.btnAutoBackup.TabIndex = 4;
-            this.btnAutoBackup.Text = Resources.button_autobackup_start;
+            this.btnAutoBackup.Text = Resources.Localized.button_autobackup_start;
             this.btnAutoBackup.UseVisualStyleBackColor = true;
             this.btnAutoBackup.Click += new System.EventHandler(btnAutoBackup_Click);
             this.numBackupInterval.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2893,7 +2893,7 @@ namespace Crosire.Controlcenter {
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(671, 50);
             this.btnRestore.TabIndex = 2;
-            this.btnRestore.Text = Resources.button_restore;
+            this.btnRestore.Text = Resources.Localized.button_restore;
             this.btnRestore.UseVisualStyleBackColor = true;
             this.btnRestore.Click += new System.EventHandler(btnRestore_Click);
             this.groupBackup.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2912,7 +2912,7 @@ namespace Crosire.Controlcenter {
             this.btnBackupBrowse.Name = "btnBackupBrowse";
             this.btnBackupBrowse.Size = new System.Drawing.Size(80, 23);
             this.btnBackupBrowse.TabIndex = 4;
-            this.btnBackupBrowse.Text = Resources.button_browse;
+            this.btnBackupBrowse.Text = Resources.Localized.button_browse;
             this.btnBackupBrowse.UseVisualStyleBackColor = true;
             this.btnBackupBrowse.Click += new System.EventHandler(btnBackupBrowse_Click);
             this.textBackupPath.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -2933,7 +2933,7 @@ namespace Crosire.Controlcenter {
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(671, 50);
             this.btnBackup.TabIndex = 0;
-            this.btnBackup.Text = Resources.button_backup;
+            this.btnBackup.Text = Resources.Localized.button_backup;
             this.btnBackup.UseVisualStyleBackColor = true;
             this.btnBackup.Click += new System.EventHandler(btnBackup_Click);
             this.container2_1.Controls.Add(this.tab1);
@@ -2975,14 +2975,14 @@ namespace Crosire.Controlcenter {
             this.tab1Page1.Padding = new System.Windows.Forms.Padding(3);
             this.tab1Page1.Size = new System.Drawing.Size(712, 581);
             this.tab1Page1.TabIndex = 1;
-            this.tab1Page1.Text = Resources.tab1_page1;
+            this.tab1Page1.Text = Resources.Localized.tab1_page1;
             this.tab1Page1.UseVisualStyleBackColor = true;
             this.btnSave1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.btnSave1.Location = new System.Drawing.Point(449, 545);
             this.btnSave1.Name = "btnSave1";
             this.btnSave1.Size = new System.Drawing.Size(250, 23);
             this.btnSave1.TabIndex = 18;
-            this.btnSave1.Text = Resources.button_save_config;
+            this.btnSave1.Text = Resources.Localized.button_save_config;
             this.btnSave1.UseVisualStyleBackColor = true;
             this.btnSave1.Click += new System.EventHandler(btnSave1_Click);
             this.textBuild.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
@@ -3069,14 +3069,14 @@ namespace Crosire.Controlcenter {
             this.checkRmod.Name = "checkRmod";
             this.checkRmod.Size = new System.Drawing.Size(86, 17);
             this.checkRmod.TabIndex = 31;
-            this.checkRmod.Text = Resources.check_rmod;
+            this.checkRmod.Text = Resources.Localized.check_rmod;
             this.checkRmod.UseVisualStyleBackColor = true;
             this.btnDatabase.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.btnDatabase.Location = new System.Drawing.Point(545, 77);
             this.btnDatabase.Name = "btnDatabase";
             this.btnDatabase.Size = new System.Drawing.Size(137, 23);
             this.btnDatabase.TabIndex = 21;
-            this.btnDatabase.Text = Resources.button_add_database;
+            this.btnDatabase.Text = Resources.Localized.button_add_database;
             this.btnDatabase.UseVisualStyleBackColor = true;
             this.btnDatabase.Click += new System.EventHandler(btnDatabase_Click);
             this.cbxDatabase.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -3128,7 +3128,7 @@ namespace Crosire.Controlcenter {
             this.checkPersistent.Name = "checkPersistent";
             this.checkPersistent.Size = new System.Drawing.Size(121, 17);
             this.checkPersistent.TabIndex = 11;
-            this.checkPersistent.Text = Resources.check_persistent;
+            this.checkPersistent.Text = Resources.Localized.check_persistent;
             this.checkPersistent.UseVisualStyleBackColor = true;
             this.groupVon.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.groupVon.Controls.Add(this.numVonQuality);
@@ -3162,7 +3162,7 @@ namespace Crosire.Controlcenter {
             this.checkVon.Name = "checkVon";
             this.checkVon.Size = new System.Drawing.Size(65, 17);
             this.checkVon.TabIndex = 0;
-            this.checkVon.Text = Resources.check_enabled;
+            this.checkVon.Text = Resources.Localized.check_enabled;
             this.checkVon.UseVisualStyleBackColor = true;
             this.labelRequiredBuild.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.labelRequiredBuild.Location = new System.Drawing.Point(205, 67);
@@ -3282,7 +3282,7 @@ namespace Crosire.Controlcenter {
             this.tab1Page2.Name = "tab1Page2";
             this.tab1Page2.Size = new System.Drawing.Size(712, 581);
             this.tab1Page2.TabIndex = 2;
-            this.tab1Page2.Text = Resources.tab1_page2;
+            this.tab1Page2.Text = Resources.Localized.tab1_page2;
             this.tab1Page2.UseVisualStyleBackColor = true;
             this.groupWhitelist.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.groupWhitelist.Controls.Add(this.textWhitelistMessage);
@@ -3319,7 +3319,7 @@ namespace Crosire.Controlcenter {
             this.btnRandomPass.Name = "btnRandomPass";
             this.btnRandomPass.Size = new System.Drawing.Size(265, 23);
             this.btnRandomPass.TabIndex = 20;
-            this.btnRandomPass.Text = Resources.button_random;
+            this.btnRandomPass.Text = Resources.Localized.button_random;
             this.btnRandomPass.UseVisualStyleBackColor = true;
             this.btnRandomPass.Click += new System.EventHandler(btnRandomPass_Click);
             this.btnSave2.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
@@ -3327,7 +3327,7 @@ namespace Crosire.Controlcenter {
             this.btnSave2.Name = "btnSave2";
             this.btnSave2.Size = new System.Drawing.Size(250, 23);
             this.btnSave2.TabIndex = 14;
-            this.btnSave2.Text = Resources.button_save_config;
+            this.btnSave2.Text = Resources.Localized.button_save_config;
             this.btnSave2.UseVisualStyleBackColor = true;
             this.btnSave2.Click += new System.EventHandler(btnSave2_Click);
             this.groupSignatures.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -3399,7 +3399,7 @@ namespace Crosire.Controlcenter {
             this.checkDuplicate.Name = "checkDuplicate";
             this.checkDuplicate.Size = new System.Drawing.Size(95, 17);
             this.checkDuplicate.TabIndex = 33;
-            this.checkDuplicate.Text = Resources.check_duplicate;
+            this.checkDuplicate.Text = Resources.Localized.check_duplicate;
             this.checkDuplicate.UseVisualStyleBackColor = true;
             this.textRegularCheck.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.textRegularCheck.Location = new System.Drawing.Point(165, 199);
@@ -3521,7 +3521,7 @@ namespace Crosire.Controlcenter {
             this.checkBattleye.Name = "checkBattleye";
             this.checkBattleye.Size = new System.Drawing.Size(65, 17);
             this.checkBattleye.TabIndex = 0;
-            this.checkBattleye.Text = Resources.check_enabled;
+            this.checkBattleye.Text = Resources.Localized.check_enabled;
             this.checkBattleye.UseVisualStyleBackColor = true;
             this.checkBattleye.CheckedChanged += new System.EventHandler(checkBattleye_CheckedChanged);
             this.textPasswordRcon.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -3567,7 +3567,7 @@ namespace Crosire.Controlcenter {
             this.tab1Page3.Name = "tab1Page3";
             this.tab1Page3.Size = new System.Drawing.Size(712, 581);
             this.tab1Page3.TabIndex = 4;
-            this.tab1Page3.Text = Resources.tab1_page3;
+            this.tab1Page3.Text = Resources.Localized.tab1_page3;
             this.tab1Page3.UseVisualStyleBackColor = true;
             this.groupAdditional.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.groupAdditional.Controls.Add(this.cbxLoadoutBackpack);
@@ -3619,7 +3619,7 @@ namespace Crosire.Controlcenter {
                 "[[\"M9SD\",\"FoodCanBakedBeans\",\"ItemMap\",\"LeeEnfield\"],[\"15Rnd_9x19_M9SD\",\"ItemBandage\",\"15Rnd_9x19_M9SD\",\"10x_303\",\"10x_303\",\"10x_303\",\"10x_303\"]]",
                 "[[\"M9SD\",\"FoodCanBakedBeans\",\"ItemMap\",\"Mk_48_DZ\"],[\"15Rnd_9x19_M9SD\",\"ItemBandage\",\"15Rnd_9x19_M9SD\",\"100Rnd_762x51_M240\",\"100Rnd_762x51_M240\"]]",
                 "[[\"ItemMap\",\"ItemCompass\",\"ItemMatchbox\",\"FoodCanBakedBeans\",\"ItemKnife\",\"FoodCanBakedBeans\"],[\"ItemTent\",\"ItemBandage\",\"ItemBandage\"]]",
-                resources.GetString("cbxLoadout.Items")
+                resourceMan.GetString("cbxLoadout.Items")
             });
             this.cbxLoadout.Location = new System.Drawing.Point(165, 49);
             this.cbxLoadout.Name = "cbxLoadout";
@@ -3657,7 +3657,7 @@ namespace Crosire.Controlcenter {
             this.btnSave3.Name = "btnSave3";
             this.btnSave3.Size = new System.Drawing.Size(250, 23);
             this.btnSave3.TabIndex = 9;
-            this.btnSave3.Text = Resources.button_save_config;
+            this.btnSave3.Text = Resources.Localized.button_save_config;
             this.btnSave3.UseVisualStyleBackColor = true;
             this.btnSave3.Click += new System.EventHandler(btnSave3_Click);
             this.groupNetwork.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -3818,7 +3818,7 @@ namespace Crosire.Controlcenter {
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new System.Drawing.Size(884, 612);
             base.Controls.Add(this.container1);
-            base.Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            base.Icon = (System.Drawing.Icon)resourceMan.GetObject("$this.Icon");
             this.MinimumSize = new System.Drawing.Size(800, 650);
             base.Name = "frmMain";
             base.FormClosing += new System.Windows.Forms.FormClosingEventHandler(frmMain_FormClosing);
