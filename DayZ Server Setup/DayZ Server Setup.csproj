@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{8DFC0C3A-F700-46B1-AD91-8D34B4D6E17D}</ProjectGuid>
+    <ProjectGuid>{3EF68639-3200-4E5A-A1E6-AB305F0DBEEA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Crosire.Controlcenter.Setup</RootNamespace>
     <AssemblyName>DayZ Server Setup</AssemblyName>
@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -32,18 +33,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog">
-      <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -80,23 +73,43 @@
     <EmbeddedResource Include="frmSetup.resx">
       <DependentUpon>frmSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.da.resx" />
-    <EmbeddedResource Include="Properties\Resources.de.resx" />
-    <EmbeddedResource Include="Properties\Resources.en.resx" />
-    <EmbeddedResource Include="Properties\Resources.es.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.ru.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Crosire\Crosire.csproj">
-      <Project>{8dfc0c3a-f700-46b1-ad91-8d34b4d6e179}</Project>
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbee7}</Project>
       <Name>Crosire</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef0}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MySql.Data\MySql.Data.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbeed}</Project>
+      <Name>MySql.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NLog\NLog.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbeee}</Project>
+      <Name>NLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef2}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef3}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef4}</Project>
+      <Name>System</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="app.manifest" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

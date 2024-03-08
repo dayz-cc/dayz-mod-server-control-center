@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{8DFC0C3A-F700-46B1-AD91-8D34B4D6E17E}</ProjectGuid>
+    <ProjectGuid>{3EF68639-3200-4E5A-A1E6-AB305F0DBEEB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>DayZ Server Controlcenter.resources</RootNamespace>
     <AssemblyName>DayZ Server Controlcenter.resources</AssemblyName>
@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -29,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
   </PropertyGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />

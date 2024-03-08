@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{8DFC0C3A-F700-46B1-AD91-8D34B4D6E17A}</ProjectGuid>
+    <ProjectGuid>{3EF68639-3200-4E5A-A1E6-AB305F0DBEE8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DayZ Loadout Generator</RootNamespace>
     <AssemblyName>DayZ Loadout Generator</AssemblyName>
@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -31,13 +32,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
@@ -69,6 +66,28 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="{73bac200-655c-4090-a2c6-89a80d2150b2}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.VisualBasic\Microsoft.VisualBasic.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef1}</Project>
+      <Name>Microsoft.VisualBasic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef0}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef2}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef3}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{3ef68639-3200-4e5a-a1e6-ab305f0dbef4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

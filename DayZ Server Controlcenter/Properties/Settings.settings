@@ -9,13 +9,13 @@
       <Value Profile="(Default)">release</Value>
     </Setting>
     <Setting Name="updateUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ftp://www.dayzcc.tk</Value>
+      <Value Profile="(Default)">ftp://mgc-portal.dyndns.org</Value>
     </Setting>
     <Setting Name="updateFolder" Type="System.String" Scope="Application">
       <Value Profile="(Default)">DayZ_Server_Controlcenter_{0}-{1}-{2}-{3}</Value>
     </Setting>
     <Setting Name="updateFull" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://rapidshare.com/files/3403905477/{0}.{1}.{2}.{3}.tar.gz?directstart=1</Value>
+      <Value Profile="(Default)">http://mgc-portal.dyndns.org/dayzcc/5.9.4.1.tar.gz</Value>
     </Setting>
     <Setting Name="uiState" Type="System.Windows.Forms.FormWindowState" Scope="User">
       <Value Profile="(Default)">Normal</Value>
@@ -33,7 +33,7 @@
       <Value Profile="(Default)">http://127.0.0.1:78/chive/index.php</Value>
     </Setting>
     <Setting Name="uiUrlHomepage" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://www.dayzcc.tk</Value>
+      <Value Profile="(Default)">http://www.dayzcc.org</Value>
     </Setting>
     <Setting Name="confTemplates" Type="System.String" Scope="Application">
       <Value Profile="(Default)">dayz.chernarus, dayz.lingor, dayz.utes, dayz.takistan, dayz.panthera2, dayz.fallujah, dayz.zargabad, dayz.namalsk, dayz.mbg_celle2, dayz.tavi, dayz.thirsk, dayz.oring, dayz.isladuala</Value>

@@ -26,7 +26,7 @@ namespace Crosire.Controlcenter.Forms
 			this.labelVersion.Text = "Version " + Application.ProductVersion;
 		}
 
-		// Token: 0x06000075 RID: 117 RVA: 0x000169A4 File Offset: 0x00014BA4
+		// Token: 0x06000075 RID: 117 RVA: 0x00016998 File Offset: 0x00014B98
 		private void frmSplash_Load(object sender, EventArgs e)
 		{
 			foreach (string text in Environment.GetCommandLineArgs())
@@ -145,13 +145,13 @@ namespace Crosire.Controlcenter.Forms
 			}
 		}
 
-		// Token: 0x06000076 RID: 118 RVA: 0x00016E73 File Offset: 0x00015073
+		// Token: 0x06000076 RID: 118 RVA: 0x00016E67 File Offset: 0x00015067
 		private void frmSplash_Shown(object sender, EventArgs e)
 		{
 			base.TopMost = false;
 		}
 
-		// Token: 0x06000077 RID: 119 RVA: 0x00016E98 File Offset: 0x00015098
+		// Token: 0x06000077 RID: 119 RVA: 0x00016E8C File Offset: 0x0001508C
 		private void workerMain_DoWork(object sender, DoWorkEventArgs e)
 		{
 			if (File.Exists(Path.Combine(this.pathApp, "Crosire.dll")))
@@ -358,19 +358,19 @@ namespace Crosire.Controlcenter.Forms
 			Thread.Sleep(7000);
 		}
 
-		// Token: 0x06000078 RID: 120 RVA: 0x00017904 File Offset: 0x00015B04
+		// Token: 0x06000078 RID: 120 RVA: 0x000178F8 File Offset: 0x00015AF8
 		private void workerMain_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			this.Exit(DialogResult.OK);
 		}
 
-		// Token: 0x06000079 RID: 121 RVA: 0x00017910 File Offset: 0x00015B10
+		// Token: 0x06000079 RID: 121 RVA: 0x00017904 File Offset: 0x00015B04
 		public int subCheckVersion(string vold, string vnew)
 		{
 			return new Version(vold.Replace(",", ".")).CompareTo(new Version(vnew.Replace(",", ".")));
 		}
 
-		// Token: 0x0600007A RID: 122 RVA: 0x00017974 File Offset: 0x00015B74
+		// Token: 0x0600007A RID: 122 RVA: 0x00017968 File Offset: 0x00015B68
 		public void subDownloadChanged(object sender, DownloadProgressChangedEventArgs e)
 		{
 			if (base.InvokeRequired)
@@ -400,7 +400,7 @@ namespace Crosire.Controlcenter.Forms
 			}
 		}
 
-		// Token: 0x0600007B RID: 123 RVA: 0x00017AB8 File Offset: 0x00015CB8
+		// Token: 0x0600007B RID: 123 RVA: 0x00017AAC File Offset: 0x00015CAC
 		public void subAppendProgress(string message)
 		{
 			if (base.InvokeRequired)
@@ -420,7 +420,7 @@ namespace Crosire.Controlcenter.Forms
 			}
 		}
 
-		// Token: 0x0600007C RID: 124 RVA: 0x00017BA0 File Offset: 0x00015DA0
+		// Token: 0x0600007C RID: 124 RVA: 0x00017B94 File Offset: 0x00015D94
 		public void Exit(DialogResult result)
 		{
 			if (base.InvokeRequired)
@@ -437,38 +437,20 @@ namespace Crosire.Controlcenter.Forms
 			}
 		}
 
-		// Token: 0x0600007D RID: 125 RVA: 0x00017C03 File Offset: 0x00015E03
+		// Token: 0x0600007D RID: 125 RVA: 0x00017BF7 File Offset: 0x00015DF7
 		private void pictureBanner_Click(object sender, EventArgs e)
 		{
 			Process.Start(this.url_dayzcc);
 		}
 
-		// Token: 0x0600007E RID: 126 RVA: 0x00017C12 File Offset: 0x00015E12
-		private void pictureSupporter_Click(object sender, EventArgs e)
-		{
-			Process.Start(this.url_dayzpriv);
-		}
-
-		// Token: 0x0600007F RID: 127 RVA: 0x00017C21 File Offset: 0x00015E21
+		// Token: 0x0600007E RID: 126 RVA: 0x00017C06 File Offset: 0x00015E06
 		private void pictureBanner_MouseHover(object sender, EventArgs e)
 		{
 			this.Cursor = Cursors.Hand;
 		}
 
-		// Token: 0x06000080 RID: 128 RVA: 0x00017C30 File Offset: 0x00015E30
+		// Token: 0x0600007F RID: 127 RVA: 0x00017C15 File Offset: 0x00015E15
 		private void pictureBanner_MouseLeave(object sender, EventArgs e)
-		{
-			this.Cursor = Cursors.Default;
-		}
-
-		// Token: 0x06000081 RID: 129 RVA: 0x00017C3F File Offset: 0x00015E3F
-		private void pictureSupporter_MouseHover(object sender, EventArgs e)
-		{
-			this.Cursor = Cursors.Hand;
-		}
-
-		// Token: 0x06000082 RID: 130 RVA: 0x00017C4E File Offset: 0x00015E4E
-		private void pictureSupporter_MouseLeave(object sender, EventArgs e)
 		{
 			this.Cursor = Cursors.Default;
 		}
@@ -515,12 +497,9 @@ namespace Crosire.Controlcenter.Forms
 		public string versionBetaOnline = "0.0.0.0";
 
 		// Token: 0x04000140 RID: 320
-		private string url_dayzcc = "http://www.dayzcc.tk";
+		private string url_dayzcc = "http://www.dayzcc.org";
 
 		// Token: 0x04000141 RID: 321
-		private string url_dayzpriv = "http://www.dayzpriv.com";
-
-		// Token: 0x04000142 RID: 322
 		private static Logger logger = LogManager.GetCurrentClassLogger();
 	}
 }

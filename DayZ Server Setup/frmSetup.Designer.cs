@@ -3,7 +3,7 @@
 	// Token: 0x02000006 RID: 6
 	public partial class frmSetup : global::System.Windows.Forms.Form
 	{
-		// Token: 0x06000026 RID: 38 RVA: 0x00004854 File Offset: 0x00002A54
+		// Token: 0x06000023 RID: 35 RVA: 0x0000483C File Offset: 0x00002A3C
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && this.components != null)
@@ -13,7 +13,7 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x06000027 RID: 39 RVA: 0x00004874 File Offset: 0x00002A74
+		// Token: 0x06000024 RID: 36 RVA: 0x0000485C File Offset: 0x00002A5C
 		private void InitializeComponent()
 		{
 			global::System.ComponentModel.ComponentResourceManager componentResourceManager = new global::System.ComponentModel.ComponentResourceManager(typeof(global::Crosire.Controlcenter.Setup.frmSetup));
@@ -57,8 +57,6 @@
 			this.textProgress = new global::System.Windows.Forms.RichTextBox();
 			this.progressbar = new global::System.Windows.Forms.ProgressBar();
 			this.lblMaintainer = new global::System.Windows.Forms.Label();
-			this.pictureLogo = new global::System.Windows.Forms.PictureBox();
-			this.lblSupporter = new global::System.Windows.Forms.Label();
 			this.lblDayzModDescription = new global::System.Windows.Forms.Label();
 			this.lblDayZModVersion = new global::System.Windows.Forms.Label();
 			this.containerButtons.SuspendLayout();
@@ -68,7 +66,6 @@
 			this.groupOptions.SuspendLayout();
 			this.groupDatabase.SuspendLayout();
 			this.container3.SuspendLayout();
-			((global::System.ComponentModel.ISupportInitialize)this.pictureLogo).BeginInit();
 			base.SuspendLayout();
 			this.containerButtons.Anchor = global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Right;
 			this.containerButtons.BackColor = global::System.Drawing.Color.Transparent;
@@ -173,11 +170,11 @@
 			this.labelCopyright.BackColor = global::System.Drawing.Color.Transparent;
 			this.labelCopyright.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 9f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.labelCopyright.ForeColor = global::System.Drawing.Color.Gray;
-			this.labelCopyright.Location = new global::System.Drawing.Point(7, 542);
+			this.labelCopyright.Location = new global::System.Drawing.Point(7, 470);
 			this.labelCopyright.Name = "labelCopyright";
 			this.labelCopyright.Size = new global::System.Drawing.Size(475, 15);
 			this.labelCopyright.TabIndex = 21;
-			this.labelCopyright.Text = "Copyright ©2012 - 2013 Crosire and DayZ Priv. All rights reserved.";
+			this.labelCopyright.Text = "Copyright ©2012 - 2013 Crosire. All rights reserved.";
 			this.labelCopyright.TextAlign = global::System.Drawing.ContentAlignment.MiddleCenter;
 			this.labelCompany.AutoSize = true;
 			this.labelCompany.BackColor = global::System.Drawing.Color.Transparent;
@@ -284,7 +281,6 @@
 			this.checkBeta.TabIndex = 0;
 			this.checkBeta.Text = "Install required beta patch";
 			this.checkBeta.UseVisualStyleBackColor = true;
-			this.groupDatabase.Anchor = global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left | global::System.Windows.Forms.AnchorStyles.Right;
 			this.groupDatabase.Controls.Add(this.checkOwn);
 			this.groupDatabase.Controls.Add(this.labelEnterDatabase);
 			this.groupDatabase.Controls.Add(this.labelHost);
@@ -396,30 +392,9 @@
 			this.lblMaintainer.ForeColor = global::System.Drawing.Color.White;
 			this.lblMaintainer.Location = new global::System.Drawing.Point(7, 445);
 			this.lblMaintainer.Name = "lblMaintainer";
-			this.lblMaintainer.Size = new global::System.Drawing.Size(147, 15);
+			this.lblMaintainer.Size = new global::System.Drawing.Size(144, 15);
 			this.lblMaintainer.TabIndex = 27;
-			this.lblMaintainer.Text = "Maintained by: NovoGeek";
-			this.pictureLogo.BackColor = global::System.Drawing.Color.Transparent;
-			this.pictureLogo.BackgroundImage = global::Crosire.Controlcenter.Setup.Properties.Resources.logo;
-			this.pictureLogo.BackgroundImageLayout = global::System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureLogo.Location = new global::System.Drawing.Point(10, 492);
-			this.pictureLogo.Name = "pictureLogo";
-			this.pictureLogo.Size = new global::System.Drawing.Size(472, 44);
-			this.pictureLogo.TabIndex = 28;
-			this.pictureLogo.TabStop = false;
-			this.pictureLogo.Click += new global::System.EventHandler(this.pictureLogo_Click);
-			this.pictureLogo.MouseLeave += new global::System.EventHandler(this.pictureLogo_MouseLeave);
-			this.pictureLogo.MouseHover += new global::System.EventHandler(this.pictureLogo_MouseHover);
-			this.lblSupporter.Anchor = global::System.Windows.Forms.AnchorStyles.Top;
-			this.lblSupporter.BackColor = global::System.Drawing.Color.Transparent;
-			this.lblSupporter.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
-			this.lblSupporter.ForeColor = global::System.Drawing.Color.White;
-			this.lblSupporter.Location = new global::System.Drawing.Point(10, 471);
-			this.lblSupporter.Name = "lblSupporter";
-			this.lblSupporter.Size = new global::System.Drawing.Size(472, 25);
-			this.lblSupporter.TabIndex = 29;
-			this.lblSupporter.Text = "Proudly Supported and Maintained By";
-			this.lblSupporter.TextAlign = global::System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblMaintainer.Text = "Maintained by: Squadron";
 			this.lblDayzModDescription.Anchor = global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left;
 			this.lblDayzModDescription.AutoSize = true;
 			this.lblDayzModDescription.BackColor = global::System.Drawing.Color.Transparent;
@@ -437,16 +412,14 @@
 			this.lblDayZModVersion.Name = "lblDayZModVersion";
 			this.lblDayZModVersion.Size = new global::System.Drawing.Size(40, 13);
 			this.lblDayZModVersion.TabIndex = 31;
-			this.lblDayZModVersion.Text = "1.7.7.1";
+			this.lblDayZModVersion.Text = "1.8.0.3";
 			base.AutoScaleDimensions = new global::System.Drawing.SizeF(6f, 13f);
 			base.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Crosire.Controlcenter.Setup.Properties.Resources.background;
 			this.BackgroundImageLayout = global::System.Windows.Forms.ImageLayout.Stretch;
-			base.ClientSize = new global::System.Drawing.Size(492, 566);
+			base.ClientSize = new global::System.Drawing.Size(492, 496);
 			base.Controls.Add(this.lblDayzModDescription);
 			base.Controls.Add(this.lblDayZModVersion);
-			base.Controls.Add(this.lblSupporter);
-			base.Controls.Add(this.pictureLogo);
 			base.Controls.Add(this.lblMaintainer);
 			base.Controls.Add(this.container2);
 			base.Controls.Add(this.container3);
@@ -474,144 +447,137 @@
 			this.groupDatabase.ResumeLayout(false);
 			this.groupDatabase.PerformLayout();
 			this.container3.ResumeLayout(false);
-			((global::System.ComponentModel.ISupportInitialize)this.pictureLogo).EndInit();
 			base.ResumeLayout(false);
 			base.PerformLayout();
 		}
 
-		// Token: 0x0400002F RID: 47
+		// Token: 0x0400002E RID: 46
 		private global::System.ComponentModel.IContainer components;
 
-		// Token: 0x04000030 RID: 48
+		// Token: 0x0400002F RID: 47
 		internal global::System.Windows.Forms.TableLayoutPanel containerButtons;
 
-		// Token: 0x04000031 RID: 49
+		// Token: 0x04000030 RID: 48
 		internal global::System.Windows.Forms.Button btnBack;
 
-		// Token: 0x04000032 RID: 50
+		// Token: 0x04000031 RID: 49
 		internal global::System.Windows.Forms.Button btnCancel;
 
-		// Token: 0x04000033 RID: 51
+		// Token: 0x04000032 RID: 50
 		internal global::System.Windows.Forms.Button btnNext;
 
-		// Token: 0x04000034 RID: 52
+		// Token: 0x04000033 RID: 51
 		internal global::System.Windows.Forms.Label labelVersionDescription;
 
-		// Token: 0x04000035 RID: 53
+		// Token: 0x04000034 RID: 52
 		internal global::System.Windows.Forms.Label labelVersion;
 
-		// Token: 0x04000036 RID: 54
+		// Token: 0x04000035 RID: 53
 		private global::System.Windows.Forms.PictureBox pictureBanner;
 
-		// Token: 0x04000037 RID: 55
+		// Token: 0x04000036 RID: 54
 		private global::System.ComponentModel.BackgroundWorker workerMain;
 
-		// Token: 0x04000038 RID: 56
+		// Token: 0x04000037 RID: 55
 		private global::System.ComponentModel.BackgroundWorker workerReconfig;
 
-		// Token: 0x04000039 RID: 57
+		// Token: 0x04000038 RID: 56
 		private global::System.Net.WebClient downloader;
 
-		// Token: 0x0400003A RID: 58
+		// Token: 0x04000039 RID: 57
 		private global::System.Windows.Forms.Label labelStep;
 
-		// Token: 0x0400003B RID: 59
+		// Token: 0x0400003A RID: 58
 		private global::System.Windows.Forms.Label labelCopyright;
 
-		// Token: 0x0400003C RID: 60
+		// Token: 0x0400003B RID: 59
 		private global::System.Windows.Forms.Label labelCompany;
 
-		// Token: 0x0400003D RID: 61
+		// Token: 0x0400003C RID: 60
 		private global::System.Windows.Forms.Panel container1;
 
-		// Token: 0x0400003E RID: 62
+		// Token: 0x0400003D RID: 61
 		internal global::System.Windows.Forms.Button btnBrowse;
 
-		// Token: 0x0400003F RID: 63
+		// Token: 0x0400003E RID: 62
 		private global::System.Windows.Forms.TextBox textPath;
 
-		// Token: 0x04000040 RID: 64
+		// Token: 0x0400003F RID: 63
 		private global::System.Windows.Forms.Label labelEnterPath;
 
-		// Token: 0x04000041 RID: 65
+		// Token: 0x04000040 RID: 64
 		private global::System.Windows.Forms.RichTextBox textReadme;
 
-		// Token: 0x04000042 RID: 66
+		// Token: 0x04000041 RID: 65
 		private global::System.Windows.Forms.Panel container2;
 
-		// Token: 0x04000043 RID: 67
+		// Token: 0x04000042 RID: 66
 		internal global::System.Windows.Forms.GroupBox groupOptions;
 
-		// Token: 0x04000044 RID: 68
+		// Token: 0x04000043 RID: 67
 		internal global::System.Windows.Forms.RadioButton radioReconfig;
 
-		// Token: 0x04000045 RID: 69
+		// Token: 0x04000044 RID: 68
 		internal global::System.Windows.Forms.RadioButton radioInstall;
 
-		// Token: 0x04000046 RID: 70
+		// Token: 0x04000045 RID: 69
 		internal global::System.Windows.Forms.CheckBox checkRedis;
 
-		// Token: 0x04000047 RID: 71
+		// Token: 0x04000046 RID: 70
 		internal global::System.Windows.Forms.CheckBox checkBeta;
 
-		// Token: 0x04000048 RID: 72
+		// Token: 0x04000047 RID: 71
 		internal global::System.Windows.Forms.GroupBox groupDatabase;
 
-		// Token: 0x04000049 RID: 73
+		// Token: 0x04000048 RID: 72
 		private global::System.Windows.Forms.CheckBox checkOwn;
 
-		// Token: 0x0400004A RID: 74
+		// Token: 0x04000049 RID: 73
 		private global::System.Windows.Forms.Label labelEnterDatabase;
 
-		// Token: 0x0400004B RID: 75
+		// Token: 0x0400004A RID: 74
 		private global::System.Windows.Forms.Label labelHost;
 
-		// Token: 0x0400004C RID: 76
+		// Token: 0x0400004B RID: 75
 		private global::System.Windows.Forms.TextBox textDatabase;
 
-		// Token: 0x0400004D RID: 77
+		// Token: 0x0400004C RID: 76
 		private global::System.Windows.Forms.Label labelPass;
 
-		// Token: 0x0400004E RID: 78
+		// Token: 0x0400004D RID: 77
 		private global::System.Windows.Forms.TextBox textUser;
 
-		// Token: 0x0400004F RID: 79
+		// Token: 0x0400004E RID: 78
 		private global::System.Windows.Forms.Label labelUser;
 
-		// Token: 0x04000050 RID: 80
+		// Token: 0x0400004F RID: 79
 		private global::System.Windows.Forms.TextBox textPort;
 
-		// Token: 0x04000051 RID: 81
+		// Token: 0x04000050 RID: 80
 		private global::System.Windows.Forms.Label labelSeperator;
 
-		// Token: 0x04000052 RID: 82
+		// Token: 0x04000051 RID: 81
 		private global::System.Windows.Forms.TextBox textHost;
 
-		// Token: 0x04000053 RID: 83
+		// Token: 0x04000052 RID: 82
 		private global::System.Windows.Forms.TextBox textPass;
 
-		// Token: 0x04000054 RID: 84
+		// Token: 0x04000053 RID: 83
 		private global::System.Windows.Forms.Panel container3;
 
-		// Token: 0x04000055 RID: 85
+		// Token: 0x04000054 RID: 84
 		private global::System.Windows.Forms.RichTextBox textProgress;
 
-		// Token: 0x04000056 RID: 86
+		// Token: 0x04000055 RID: 85
 		private global::System.Windows.Forms.ProgressBar progressbar;
 
-		// Token: 0x04000057 RID: 87
+		// Token: 0x04000056 RID: 86
 		private global::System.Windows.Forms.Label lblMaintainer;
 
-		// Token: 0x04000058 RID: 88
-		private global::System.Windows.Forms.PictureBox pictureLogo;
-
-		// Token: 0x04000059 RID: 89
-		private global::System.Windows.Forms.Label lblSupporter;
-
-		// Token: 0x0400005A RID: 90
+		// Token: 0x04000057 RID: 87
 		internal global::System.Windows.Forms.Label lblDayzModDescription;
 
-		// Token: 0x0400005B RID: 91
+		// Token: 0x04000058 RID: 88
 		internal global::System.Windows.Forms.Label lblDayZModVersion;
 	}
 }

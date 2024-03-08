@@ -3,7 +3,7 @@
 	// Token: 0x0200000A RID: 10
 	public partial class frmSplash : global::System.Windows.Forms.Form
 	{
-		// Token: 0x06000083 RID: 131 RVA: 0x00017C60 File Offset: 0x00015E60
+		// Token: 0x06000080 RID: 128 RVA: 0x00017C24 File Offset: 0x00015E24
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && this.components != null)
@@ -13,7 +13,7 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x06000084 RID: 132 RVA: 0x00017C98 File Offset: 0x00015E98
+		// Token: 0x06000081 RID: 129 RVA: 0x00017C5C File Offset: 0x00015E5C
 		private void InitializeComponent()
 		{
 			global::System.ComponentModel.ComponentResourceManager componentResourceManager = new global::System.ComponentModel.ComponentResourceManager(typeof(global::Crosire.Controlcenter.Forms.frmSplash));
@@ -26,11 +26,8 @@
 			this.labelProgress = new global::System.Windows.Forms.Label();
 			this.progressUpdate = new global::System.Windows.Forms.ProgressBar();
 			this.textProgress = new global::System.Windows.Forms.RichTextBox();
-			this.pictureSupporter = new global::System.Windows.Forms.PictureBox();
-			this.lblSupporter = new global::System.Windows.Forms.Label();
 			this.lblMaintainer = new global::System.Windows.Forms.Label();
 			((global::System.ComponentModel.ISupportInitialize)this.pictureBanner).BeginInit();
-			((global::System.ComponentModel.ISupportInitialize)this.pictureSupporter).BeginInit();
 			base.SuspendLayout();
 			this.workerMain.DoWork += new global::System.ComponentModel.DoWorkEventHandler(this.workerMain_DoWork);
 			this.workerMain.RunWorkerCompleted += new global::System.ComponentModel.RunWorkerCompletedEventHandler(this.workerMain_RunWorkerCompleted);
@@ -65,11 +62,11 @@
 			this.labelCopyright.BackColor = global::System.Drawing.Color.Transparent;
 			this.labelCopyright.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 9f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.labelCopyright.ForeColor = global::System.Drawing.Color.Gray;
-			this.labelCopyright.Location = new global::System.Drawing.Point(13, 389);
+			this.labelCopyright.Location = new global::System.Drawing.Point(13, 320);
 			this.labelCopyright.Name = "labelCopyright";
 			this.labelCopyright.Size = new global::System.Drawing.Size(471, 15);
 			this.labelCopyright.TabIndex = 16;
-			this.labelCopyright.Text = "Copyright ©2012 - 2013 Crosire and DayZ Priv. All rights reserved.";
+			this.labelCopyright.Text = "Copyright ©2012 - 2013 Crosire. All rights reserved.";
 			this.labelCopyright.TextAlign = global::System.Drawing.ContentAlignment.MiddleCenter;
 			this.pictureBanner.Anchor = global::System.Windows.Forms.AnchorStyles.Bottom;
 			this.pictureBanner.BackColor = global::System.Drawing.Color.Transparent;
@@ -110,45 +107,21 @@
 			this.textProgress.TabIndex = 22;
 			this.textProgress.TabStop = false;
 			this.textProgress.Text = "Initializing ...";
-			this.pictureSupporter.BackColor = global::System.Drawing.Color.Transparent;
-			this.pictureSupporter.BackgroundImage = global::Crosire.Controlcenter.Properties.Resources.logo_dayzpriv;
-			this.pictureSupporter.BackgroundImageLayout = global::System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureSupporter.Location = new global::System.Drawing.Point(12, 336);
-			this.pictureSupporter.Name = "pictureSupporter";
-			this.pictureSupporter.Size = new global::System.Drawing.Size(472, 50);
-			this.pictureSupporter.SizeMode = global::System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureSupporter.TabIndex = 25;
-			this.pictureSupporter.TabStop = false;
-			this.pictureSupporter.Click += new global::System.EventHandler(this.pictureSupporter_Click);
-			this.pictureSupporter.MouseLeave += new global::System.EventHandler(this.pictureSupporter_MouseLeave);
-			this.pictureSupporter.MouseHover += new global::System.EventHandler(this.pictureSupporter_MouseHover);
-			this.lblSupporter.Anchor = global::System.Windows.Forms.AnchorStyles.Top;
-			this.lblSupporter.BackColor = global::System.Drawing.Color.Transparent;
-			this.lblSupporter.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
-			this.lblSupporter.ForeColor = global::System.Drawing.Color.White;
-			this.lblSupporter.Location = new global::System.Drawing.Point(10, 308);
-			this.lblSupporter.Name = "lblSupporter";
-			this.lblSupporter.Size = new global::System.Drawing.Size(472, 25);
-			this.lblSupporter.TabIndex = 30;
-			this.lblSupporter.Text = "Proudly Supported and Maintained By";
-			this.lblSupporter.TextAlign = global::System.Drawing.ContentAlignment.MiddleCenter;
 			this.lblMaintainer.AutoSize = true;
 			this.lblMaintainer.BackColor = global::System.Drawing.Color.Transparent;
 			this.lblMaintainer.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 9f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.lblMaintainer.ForeColor = global::System.Drawing.Color.White;
 			this.lblMaintainer.Location = new global::System.Drawing.Point(339, 293);
 			this.lblMaintainer.Name = "lblMaintainer";
-			this.lblMaintainer.Size = new global::System.Drawing.Size(147, 15);
+			this.lblMaintainer.Size = new global::System.Drawing.Size(144, 15);
 			this.lblMaintainer.TabIndex = 31;
-			this.lblMaintainer.Text = "Maintained by: NovoGeek";
+			this.lblMaintainer.Text = "Maintained by: Squadron";
 			base.AutoScaleDimensions = new global::System.Drawing.SizeF(6f, 13f);
 			base.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Crosire.Controlcenter.Properties.Resources.background;
 			this.BackgroundImageLayout = global::System.Windows.Forms.ImageLayout.Stretch;
-			base.ClientSize = new global::System.Drawing.Size(498, 413);
+			base.ClientSize = new global::System.Drawing.Size(498, 340);
 			base.Controls.Add(this.lblMaintainer);
-			base.Controls.Add(this.lblSupporter);
-			base.Controls.Add(this.pictureSupporter);
 			base.Controls.Add(this.labelProgress);
 			base.Controls.Add(this.progressUpdate);
 			base.Controls.Add(this.textProgress);
@@ -171,48 +144,41 @@
 			base.Load += new global::System.EventHandler(this.frmSplash_Load);
 			base.Shown += new global::System.EventHandler(this.frmSplash_Shown);
 			((global::System.ComponentModel.ISupportInitialize)this.pictureBanner).EndInit();
-			((global::System.ComponentModel.ISupportInitialize)this.pictureSupporter).EndInit();
 			base.ResumeLayout(false);
 			base.PerformLayout();
 		}
 
-		// Token: 0x04000143 RID: 323
+		// Token: 0x04000142 RID: 322
 		private global::System.ComponentModel.IContainer components = null;
 
-		// Token: 0x04000144 RID: 324
+		// Token: 0x04000143 RID: 323
 		private global::System.ComponentModel.BackgroundWorker workerMain;
 
-		// Token: 0x04000145 RID: 325
+		// Token: 0x04000144 RID: 324
 		private global::System.Windows.Forms.Label labelTitle;
 
-		// Token: 0x04000146 RID: 326
+		// Token: 0x04000145 RID: 325
 		private global::System.Windows.Forms.Label labelCompany;
 
-		// Token: 0x04000147 RID: 327
+		// Token: 0x04000146 RID: 326
 		private global::System.Windows.Forms.Label labelVersion;
 
-		// Token: 0x04000148 RID: 328
+		// Token: 0x04000147 RID: 327
 		private global::System.Windows.Forms.Label labelCopyright;
 
-		// Token: 0x04000149 RID: 329
+		// Token: 0x04000148 RID: 328
 		private global::System.Windows.Forms.PictureBox pictureBanner;
 
-		// Token: 0x0400014A RID: 330
+		// Token: 0x04000149 RID: 329
 		private global::System.Windows.Forms.Label labelProgress;
 
-		// Token: 0x0400014B RID: 331
+		// Token: 0x0400014A RID: 330
 		private global::System.Windows.Forms.ProgressBar progressUpdate;
 
-		// Token: 0x0400014C RID: 332
+		// Token: 0x0400014B RID: 331
 		private global::System.Windows.Forms.RichTextBox textProgress;
 
-		// Token: 0x0400014D RID: 333
-		private global::System.Windows.Forms.PictureBox pictureSupporter;
-
-		// Token: 0x0400014E RID: 334
-		private global::System.Windows.Forms.Label lblSupporter;
-
-		// Token: 0x0400014F RID: 335
+		// Token: 0x0400014C RID: 332
 		private global::System.Windows.Forms.Label lblMaintainer;
 	}
 }

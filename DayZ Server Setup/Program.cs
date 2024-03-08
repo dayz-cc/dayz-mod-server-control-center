@@ -9,7 +9,7 @@ namespace Crosire.Controlcenter.Setup
 	// Token: 0x02000007 RID: 7
 	internal static class Program
 	{
-		// Token: 0x06000029 RID: 41 RVA: 0x00006649 File Offset: 0x00004849
+		// Token: 0x06000026 RID: 38 RVA: 0x0000645D File Offset: 0x0000465D
 		[STAThread]
 		private static void Main()
 		{
@@ -20,7 +20,7 @@ namespace Crosire.Controlcenter.Setup
 			Application.Run(new frmSetup());
 		}
 
-		// Token: 0x0600002A RID: 42 RVA: 0x00006688 File Offset: 0x00004888
+		// Token: 0x06000027 RID: 39 RVA: 0x0000649C File Offset: 0x0000469C
 		private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
 		{
 			Program.logger.Log(LogLevel.Fatal, e.Exception.ToString() + " [" + e.Exception.Message + "]");
@@ -53,7 +53,7 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x0600002B RID: 43 RVA: 0x000067C8 File Offset: 0x000049C8
+		// Token: 0x06000028 RID: 40 RVA: 0x000065DC File Offset: 0x000047DC
 		private static void Application_UnhandledException(object sender, UnhandledExceptionEventArgs e)
 		{
 			try
@@ -85,7 +85,7 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x0400005C RID: 92
+		// Token: 0x04000059 RID: 89
 		private static Logger logger = LogManager.GetCurrentClassLogger();
 	}
 }

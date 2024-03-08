@@ -12,8 +12,8 @@ namespace Crosire.Controlcenter.Properties
 	[GeneratedCode("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
 	internal sealed partial class Settings : ApplicationSettingsBase
 	{
-		// Token: 0x1700008A RID: 138
-		// (get) Token: 0x06000115 RID: 277 RVA: 0x00019FB8 File Offset: 0x000181B8
+		// Token: 0x17000089 RID: 137
+		// (get) Token: 0x06000111 RID: 273 RVA: 0x00019D5C File Offset: 0x00017F5C
 		public static Settings Default
 		{
 			get
@@ -22,9 +22,9 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x1700008B RID: 139
-		// (get) Token: 0x06000116 RID: 278 RVA: 0x00019FD0 File Offset: 0x000181D0
-		// (set) Token: 0x06000117 RID: 279 RVA: 0x00019FF2 File Offset: 0x000181F2
+		// Token: 0x1700008A RID: 138
+		// (get) Token: 0x06000112 RID: 274 RVA: 0x00019D74 File Offset: 0x00017F74
+		// (set) Token: 0x06000113 RID: 275 RVA: 0x00019D96 File Offset: 0x00017F96
 		[UserScopedSetting]
 		[DebuggerNonUserCode]
 		[DefaultSettingValue("")]
@@ -40,8 +40,8 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x1700008C RID: 140
-		// (get) Token: 0x06000118 RID: 280 RVA: 0x0001A004 File Offset: 0x00018204
+		// Token: 0x1700008B RID: 139
+		// (get) Token: 0x06000114 RID: 276 RVA: 0x00019DA8 File Offset: 0x00017FA8
 		[ApplicationScopedSetting]
 		[DebuggerNonUserCode]
 		[DefaultSettingValue("release")]
@@ -53,10 +53,10 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x1700008D RID: 141
-		// (get) Token: 0x06000119 RID: 281 RVA: 0x0001A028 File Offset: 0x00018228
+		// Token: 0x1700008C RID: 140
+		// (get) Token: 0x06000115 RID: 277 RVA: 0x00019DCC File Offset: 0x00017FCC
 		[DebuggerNonUserCode]
-		[DefaultSettingValue("ftp://www.dayzcc.tk")]
+		[DefaultSettingValue("ftp://mgc-portal.dyndns.org")]
 		[ApplicationScopedSetting]
 		public string updateUrl
 		{
@@ -66,8 +66,8 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x1700008E RID: 142
-		// (get) Token: 0x0600011A RID: 282 RVA: 0x0001A04C File Offset: 0x0001824C
+		// Token: 0x1700008D RID: 141
+		// (get) Token: 0x06000116 RID: 278 RVA: 0x00019DF0 File Offset: 0x00017FF0
 		[ApplicationScopedSetting]
 		[DefaultSettingValue("DayZ_Server_Controlcenter_{0}-{1}-{2}-{3}")]
 		[DebuggerNonUserCode]
@@ -79,10 +79,10 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x1700008F RID: 143
-		// (get) Token: 0x0600011B RID: 283 RVA: 0x0001A070 File Offset: 0x00018270
+		// Token: 0x1700008E RID: 142
+		// (get) Token: 0x06000117 RID: 279 RVA: 0x00019E14 File Offset: 0x00018014
 		[ApplicationScopedSetting]
-		[DefaultSettingValue("http://rapidshare.com/files/3403905477/{0}.{1}.{2}.{3}.tar.gz?directstart=1")]
+		[DefaultSettingValue("http://mgc-portal.dyndns.org/dayzcc/5.9.4.1.tar.gz")]
 		[DebuggerNonUserCode]
 		public string updateFull
 		{
@@ -92,9 +92,9 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x17000090 RID: 144
-		// (get) Token: 0x0600011C RID: 284 RVA: 0x0001A094 File Offset: 0x00018294
-		// (set) Token: 0x0600011D RID: 285 RVA: 0x0001A0B6 File Offset: 0x000182B6
+		// Token: 0x1700008F RID: 143
+		// (get) Token: 0x06000118 RID: 280 RVA: 0x00019E38 File Offset: 0x00018038
+		// (set) Token: 0x06000119 RID: 281 RVA: 0x00019E5A File Offset: 0x0001805A
 		[UserScopedSetting]
 		[DebuggerNonUserCode]
 		[DefaultSettingValue("Normal")]
@@ -110,9 +110,9 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x17000091 RID: 145
-		// (get) Token: 0x0600011E RID: 286 RVA: 0x0001A0CC File Offset: 0x000182CC
-		// (set) Token: 0x0600011F RID: 287 RVA: 0x0001A0EE File Offset: 0x000182EE
+		// Token: 0x17000090 RID: 144
+		// (get) Token: 0x0600011A RID: 282 RVA: 0x00019E70 File Offset: 0x00018070
+		// (set) Token: 0x0600011B RID: 283 RVA: 0x00019E92 File Offset: 0x00018092
 		[DebuggerNonUserCode]
 		[DefaultSettingValue("en")]
 		[UserScopedSetting]
@@ -128,8 +128,8 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x17000092 RID: 146
-		// (get) Token: 0x06000120 RID: 288 RVA: 0x0001A100 File Offset: 0x00018300
+		// Token: 0x17000091 RID: 145
+		// (get) Token: 0x0600011C RID: 284 RVA: 0x00019EA4 File Offset: 0x000180A4
 		[ApplicationScopedSetting]
 		[DebuggerNonUserCode]
 		[DefaultSettingValue("6")]
@@ -141,8 +141,8 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x17000093 RID: 147
-		// (get) Token: 0x06000121 RID: 289 RVA: 0x0001A124 File Offset: 0x00018324
+		// Token: 0x17000092 RID: 146
+		// (get) Token: 0x0600011D RID: 285 RVA: 0x00019EC8 File Offset: 0x000180C8
 		[DebuggerNonUserCode]
 		[DefaultSettingValue("http://127.0.0.1:78/dayz/index.php")]
 		[ApplicationScopedSetting]
@@ -154,8 +154,8 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x17000094 RID: 148
-		// (get) Token: 0x06000122 RID: 290 RVA: 0x0001A148 File Offset: 0x00018348
+		// Token: 0x17000093 RID: 147
+		// (get) Token: 0x0600011E RID: 286 RVA: 0x00019EEC File Offset: 0x000180EC
 		[DefaultSettingValue("http://127.0.0.1:78/chive/index.php")]
 		[DebuggerNonUserCode]
 		[ApplicationScopedSetting]
@@ -167,9 +167,9 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x17000095 RID: 149
-		// (get) Token: 0x06000123 RID: 291 RVA: 0x0001A16C File Offset: 0x0001836C
-		[DefaultSettingValue("http://www.dayzcc.tk")]
+		// Token: 0x17000094 RID: 148
+		// (get) Token: 0x0600011F RID: 287 RVA: 0x00019F10 File Offset: 0x00018110
+		[DefaultSettingValue("http://www.dayzcc.org")]
 		[ApplicationScopedSetting]
 		[DebuggerNonUserCode]
 		public string uiUrlHomepage
@@ -180,8 +180,8 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x17000096 RID: 150
-		// (get) Token: 0x06000124 RID: 292 RVA: 0x0001A190 File Offset: 0x00018390
+		// Token: 0x17000095 RID: 149
+		// (get) Token: 0x06000120 RID: 288 RVA: 0x00019F34 File Offset: 0x00018134
 		[DebuggerNonUserCode]
 		[DefaultSettingValue("dayz.chernarus, dayz.lingor, dayz.utes, dayz.takistan, dayz.panthera2, dayz.fallujah, dayz.zargabad, dayz.namalsk, dayz.mbg_celle2, dayz.tavi, dayz.thirsk, dayz.oring, dayz.isladuala")]
 		[ApplicationScopedSetting]
@@ -193,7 +193,7 @@ namespace Crosire.Controlcenter.Properties
 			}
 		}
 
-		// Token: 0x04000153 RID: 339
+		// Token: 0x04000150 RID: 336
 		private static Settings defaultInstance = (Settings)SettingsBase.Synchronized(new Settings());
 	}
 }

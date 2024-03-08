@@ -28,14 +28,14 @@ namespace Crosire.Controlcenter.Setup
 			this.InitializeComponent();
 		}
 
-		// Token: 0x0600000B RID: 11 RVA: 0x000024B5 File Offset: 0x000006B5
+		// Token: 0x0600000B RID: 11 RVA: 0x000024AA File Offset: 0x000006AA
 		private void btnBack_Click(object sender, EventArgs e)
 		{
 			this.wizPos--;
 			this.subUpdateWizard();
 		}
 
-		// Token: 0x0600000C RID: 12 RVA: 0x000024CC File Offset: 0x000006CC
+		// Token: 0x0600000C RID: 12 RVA: 0x000024C0 File Offset: 0x000006C0
 		private void btnBrowse_Click(object sender, EventArgs e)
 		{
 			using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
@@ -48,14 +48,14 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x0600000D RID: 13 RVA: 0x00002520 File Offset: 0x00000720
+		// Token: 0x0600000D RID: 13 RVA: 0x00002514 File Offset: 0x00000714
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
 			base.DialogResult = DialogResult.Abort;
 			base.Close();
 		}
 
-		// Token: 0x0600000E RID: 14 RVA: 0x0000252F File Offset: 0x0000072F
+		// Token: 0x0600000E RID: 14 RVA: 0x00002523 File Offset: 0x00000723
 		private void btnNext_Click(object sender, EventArgs e)
 		{
 			if (this.wizFinished)
@@ -68,7 +68,7 @@ namespace Crosire.Controlcenter.Setup
 			this.subUpdateWizard();
 		}
 
-		// Token: 0x0600000F RID: 15 RVA: 0x0000255C File Offset: 0x0000075C
+		// Token: 0x0600000F RID: 15 RVA: 0x00002550 File Offset: 0x00000750
 		private void checkOwn_CheckedChanged(object sender, EventArgs e)
 		{
 			if (this.checkOwn.Checked)
@@ -93,7 +93,7 @@ namespace Crosire.Controlcenter.Setup
 			this.textPass.Visible = false;
 		}
 
-		// Token: 0x06000010 RID: 16 RVA: 0x00002638 File Offset: 0x00000838
+		// Token: 0x06000010 RID: 16 RVA: 0x0000262C File Offset: 0x0000082C
 		private void downloader_DownloadCompleted(object sender, AsyncCompletedEventArgs e)
 		{
 			if (e.Error == null)
@@ -106,13 +106,13 @@ namespace Crosire.Controlcenter.Setup
 			this.subFinished();
 		}
 
-		// Token: 0x06000011 RID: 17 RVA: 0x0000268F File Offset: 0x0000088F
+		// Token: 0x06000011 RID: 17 RVA: 0x00002683 File Offset: 0x00000883
 		private void downloader_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
 		{
 			this.progressbar.Value = e.ProgressPercentage;
 		}
 
-		// Token: 0x06000012 RID: 18 RVA: 0x000026A4 File Offset: 0x000008A4
+		// Token: 0x06000012 RID: 18 RVA: 0x00002698 File Offset: 0x00000898
 		private void frmSetup_Load(object sender, EventArgs e)
 		{
 			foreach (string text in Environment.GetCommandLineArgs())
@@ -270,43 +270,25 @@ namespace Crosire.Controlcenter.Setup
 			this.subStart();
 		}
 
-		// Token: 0x06000013 RID: 19 RVA: 0x00002BC4 File Offset: 0x00000DC4
+		// Token: 0x06000013 RID: 19 RVA: 0x00002BB8 File Offset: 0x00000DB8
 		private void pictureBanner_Click(object sender, EventArgs e)
 		{
 			Process.Start(this.url_dayzcc);
 		}
 
-		// Token: 0x06000014 RID: 20 RVA: 0x00002BD2 File Offset: 0x00000DD2
+		// Token: 0x06000014 RID: 20 RVA: 0x00002BC6 File Offset: 0x00000DC6
 		private void pictureBanner_MouseHover(object sender, EventArgs e)
 		{
 			this.Cursor = Cursors.Hand;
 		}
 
-		// Token: 0x06000015 RID: 21 RVA: 0x00002BDF File Offset: 0x00000DDF
+		// Token: 0x06000015 RID: 21 RVA: 0x00002BD3 File Offset: 0x00000DD3
 		private void pictureBanner_MouseLeave(object sender, EventArgs e)
 		{
 			this.Cursor = Cursors.Default;
 		}
 
-		// Token: 0x06000016 RID: 22 RVA: 0x00002BEC File Offset: 0x00000DEC
-		private void pictureLogo_Click(object sender, EventArgs e)
-		{
-			Process.Start(this.url_dayzpriv);
-		}
-
-		// Token: 0x06000017 RID: 23 RVA: 0x00002BFA File Offset: 0x00000DFA
-		private void pictureLogo_MouseHover(object sender, EventArgs e)
-		{
-			this.Cursor = Cursors.Hand;
-		}
-
-		// Token: 0x06000018 RID: 24 RVA: 0x00002C07 File Offset: 0x00000E07
-		private void pictureLogo_MouseLeave(object sender, EventArgs e)
-		{
-			this.Cursor = Cursors.Default;
-		}
-
-		// Token: 0x06000019 RID: 25 RVA: 0x00002C38 File Offset: 0x00000E38
+		// Token: 0x06000016 RID: 22 RVA: 0x00002C04 File Offset: 0x00000E04
 		private void subAppendProgress(string message, LogLevel level)
 		{
 			if (base.InvokeRequired)
@@ -328,7 +310,7 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x0600001A RID: 26 RVA: 0x00002D10 File Offset: 0x00000F10
+		// Token: 0x06000017 RID: 23 RVA: 0x00002CDC File Offset: 0x00000EDC
 		private void subFinished()
 		{
 			if (!this.noWindow)
@@ -345,7 +327,7 @@ namespace Crosire.Controlcenter.Setup
 			base.Close();
 		}
 
-		// Token: 0x0600001B RID: 27 RVA: 0x00002D90 File Offset: 0x00000F90
+		// Token: 0x06000018 RID: 24 RVA: 0x00002D5C File Offset: 0x00000F5C
 		private void subReloadResources()
 		{
 			this.labelStep.Text = Resources.step_1;
@@ -373,7 +355,7 @@ namespace Crosire.Controlcenter.Setup
 			this.radioInstall.Text = Resources.button_fresh;
 		}
 
-		// Token: 0x0600001C RID: 28 RVA: 0x00002ED8 File Offset: 0x000010D8
+		// Token: 0x06000019 RID: 25 RVA: 0x00002EA4 File Offset: 0x000010A4
 		private void subReloadSettings()
 		{
 			XmlDocument xmlDocument = new XmlDocument();
@@ -390,7 +372,7 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x0600001D RID: 29 RVA: 0x00002F3C File Offset: 0x0000113C
+		// Token: 0x0600001A RID: 26 RVA: 0x00002F08 File Offset: 0x00001108
 		private void subSetProgress(int progress)
 		{
 			if (base.InvokeRequired)
@@ -404,7 +386,7 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x0600001E RID: 30 RVA: 0x00002FA0 File Offset: 0x000011A0
+		// Token: 0x0600001B RID: 27 RVA: 0x00002F6C File Offset: 0x0000116C
 		private void subStart()
 		{
 			frmSetup.logger.Log(LogLevel.Info, "Initializing DayZ Server Setup " + Application.ProductVersion);
@@ -538,7 +520,7 @@ namespace Crosire.Controlcenter.Setup
 			})), frmSetup.pathThis + "\\Serverfiles.tar.gz");
 		}
 
-		// Token: 0x0600001F RID: 31 RVA: 0x0000345C File Offset: 0x0000165C
+		// Token: 0x0600001C RID: 28 RVA: 0x00003428 File Offset: 0x00001628
 		private void subUpdateWizard()
 		{
 			switch (this.wizPos)
@@ -573,7 +555,7 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x06000020 RID: 32 RVA: 0x0000356F File Offset: 0x0000176F
+		// Token: 0x0600001D RID: 29 RVA: 0x0000353B File Offset: 0x0000173B
 		private void textPath_TextChanged(object sender, EventArgs e)
 		{
 			if (string.IsNullOrEmpty(this.textPath.Text))
@@ -584,7 +566,7 @@ namespace Crosire.Controlcenter.Setup
 			this.btnNext.Enabled = true;
 		}
 
-		// Token: 0x06000021 RID: 33 RVA: 0x0000359C File Offset: 0x0000179C
+		// Token: 0x0600001E RID: 30 RVA: 0x00003568 File Offset: 0x00001768
 		private void textReadme_VScroll(object sender, EventArgs e)
 		{
 			if (Scrollinfo.CheckBottom(this.textReadme))
@@ -593,7 +575,7 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x06000022 RID: 34 RVA: 0x000035B8 File Offset: 0x000017B8
+		// Token: 0x0600001F RID: 31 RVA: 0x00003584 File Offset: 0x00001784
 		private void threadreconfig_DoWork(object sender, DoWorkEventArgs e)
 		{
 			this.subAppendProgress(Environment.NewLine + "Reconfigurating files ...", LogLevel.Info);
@@ -639,13 +621,13 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x06000023 RID: 35 RVA: 0x00003794 File Offset: 0x00001994
+		// Token: 0x06000020 RID: 32 RVA: 0x00003760 File Offset: 0x00001960
 		private void threadreconfig_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			this.subFinished();
 		}
 
-		// Token: 0x06000024 RID: 36 RVA: 0x0000379C File Offset: 0x0000199C
+		// Token: 0x06000021 RID: 33 RVA: 0x00003768 File Offset: 0x00001968
 		private void threadworker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			int num = 0;
@@ -901,29 +883,30 @@ namespace Crosire.Controlcenter.Setup
 						{
 							if (!this.dbHost.StartsWith("10."))
 							{
-								goto IL_A2D;
+								goto IL_A48;
 							}
 						}
 						try
 						{
 							process3.StartInfo.FileName = frmSetup.pathMain + "\\mysql\\bin\\mysqld.exe";
+							process3.StartInfo.WorkingDirectory = frmSetup.pathMain + "\\mysql";
 							process3.StartInfo.Arguments = "--defaults-file=\"" + frmSetup.pathMain + "\\mysql\\bin\\my.ini\"";
 							process3.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
 							process3.Start();
 							this.subAppendProgress("> Starting own MySQL server!", LogLevel.Info);
-							goto IL_A3D;
+							goto IL_A58;
 						}
 						catch (Exception ex11)
 						{
 							this.subAppendProgress("> Error while starting MySQL!", LogLevel.Warn);
 							this.subAppendProgress("> Exception: " + ex11.Message, LogLevel.Fatal);
 							this.workerMain.CancelAsync();
-							goto IL_A3D;
+							goto IL_A58;
 						}
-						goto IL_A2D;
+						goto IL_A48;
 					}
-					goto IL_A2D;
-					IL_A3D:
+					goto IL_A48;
+					IL_A58:
 					Thread.Sleep(15000);
 					if (IO.GetProcessState("mysqld"))
 					{
@@ -942,9 +925,9 @@ namespace Crosire.Controlcenter.Setup
 					}
 					l++;
 					continue;
-					IL_A2D:
+					IL_A48:
 					this.subAppendProgress("> Found already running MySQL server!", LogLevel.Info);
-					goto IL_A3D;
+					goto IL_A58;
 				}
 				MySqlConnection mySqlConnection = new MySqlConnection(string.Format("server={0};port={1};user={2};password={3};", new object[] { this.dbHost, this.dbPort, this.dbUser, this.dbPass }));
 				this.subAppendProgress("> Testing MySQL User details for user \"" + this.dbUser + "\" ...", LogLevel.Info);
@@ -1035,7 +1018,7 @@ namespace Crosire.Controlcenter.Setup
 			}
 		}
 
-		// Token: 0x06000025 RID: 37 RVA: 0x0000484C File Offset: 0x00002A4C
+		// Token: 0x06000022 RID: 34 RVA: 0x00004834 File Offset: 0x00002A34
 		private void threadworker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			this.subFinished();
@@ -1123,9 +1106,6 @@ namespace Crosire.Controlcenter.Setup
 		public static string pathConfig = Path.Combine(frmSetup.pathThis, "DayZ Server Controlcenter.exe.config");
 
 		// Token: 0x0400002D RID: 45
-		private string url_dayzcc = "http://www.dayzcc.tk";
-
-		// Token: 0x0400002E RID: 46
-		private string url_dayzpriv = "http://www.dayzpriv.com";
+		private string url_dayzcc = "http://www.dayzcc.org";
 	}
 }
