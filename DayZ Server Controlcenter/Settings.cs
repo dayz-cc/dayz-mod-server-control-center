@@ -30,7 +30,7 @@ namespace Crosire.Controlcenter {
         public string updateChannel => (string)this["updateChannel"];
 
         [DebuggerNonUserCode]
-        [DefaultSettingValue("https://github.com/Bluscream/dayz-mod-server-control-center/raw/source/version.xml")]
+        [DefaultSettingValue("https://github.com/dayz-cc/dayz-mod-server-control-center/raw/source/version.xml")]
         [ApplicationScopedSetting]
         public string versionXmlUri => (string)this["versionUrl"];
 
@@ -45,7 +45,7 @@ namespace Crosire.Controlcenter {
         public string updateFolder => (string)this["updateFolder"];
 
         [ApplicationScopedSetting]
-        [DefaultSettingValue("https://github.com/Bluscream/dayz-mod-server-control-center/releases/latest/download/Serverfiles.tar.gz")]
+        [DefaultSettingValue("https://github.com/dayz-cc/serverfiles/archive/refs/tags/5.9.2.0.tar.gz")]
         [DebuggerNonUserCode]
         public string updateFull => (string)this["updateFull"];
 
@@ -88,7 +88,7 @@ namespace Crosire.Controlcenter {
         [ApplicationScopedSetting]
         public string uiUrlDatabase => (string)this["uiUrlDatabase"];
 
-        [DefaultSettingValue("https://github.com/Bluscream/dayz-mod-server-control-center")]
+        [DefaultSettingValue("https://github.com/dayz-cc/dayz-mod-server-control-center")]
         [ApplicationScopedSetting]
         [DebuggerNonUserCode]
         public string uiUrlHomepage => (string)this["uiUrlHomepage"];

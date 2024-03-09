@@ -1,15 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <AssemblyName>DayZ Server Controlcenter</AssemblyName>
+    <AssemblyName>DayZ Server Setup</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <OutputType>WinExe</OutputType>
     <UseWindowsForms>True</UseWindowsForms>
     <TargetFramework>net462</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <Platforms>AnyCPU;x86</Platforms>
-    <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
-<CefSharpBuildAction>Content</CefSharpBuildAction>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>6</LangVersion>
@@ -18,88 +16,66 @@
   <PropertyGroup>
     <ApplicationIcon>app.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <RootNamespace>Crosire.Controlcenter</RootNamespace>
-    <StartupObject>Crosire.Controlcenter.Program</StartupObject>
+    <RootNamespace>Crosire.Controlcenter.Setup</RootNamespace>
+    <StartupObject>Crosire.Controlcenter.Setup.Program</StartupObject>
     <BaseOutputPath>..\bin\</BaseOutputPath>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>embedded</DebugType>
     <Prefer32Bit>True</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <DebugType>embedded</DebugType>
-    <Prefer32Bit>True</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DebugType>embedded</DebugType>
     <Prefer32Bit>True</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <DebugType>embedded</DebugType>
-    <Prefer32Bit>True</Prefer32Bit>
   </PropertyGroup>
-  <ItemGroup>
-    <AdditionalFiles Remove="app.manifest" />
-  </ItemGroup>
   <ItemGroup>
     <None Remove="app.config" />
-    <None Remove="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="CefSharp.WinForms" Version="121.3.130" />
     <PackageReference Include="MySql.Data" Version="8.3.0" />
     <PackageReference Include="NLog" Version="5.2.8" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="BattleNET">
-      <HintPath>..\lib\BattleNET.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog">
-      <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Crosire\Crosire.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Resources\Localized.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localized.resx</DependentUpon>
-    </Compile>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\AppData\Local\Temp\dayz-mod-server-control-center\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Resources\Images.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Images.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Localized.Designer.cs">
+      <DependentUpon>Localized.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Settings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Localized.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localized.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Images.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Images.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localized.resx">
+      <LastGenOutput>Localized.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Settings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <None Update="DayZ Loadout Generator.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <Target Name="CefSharpAfterBuildDebug" AfterTargets="AfterBuild">
-    <CallTarget Targets="CefSharpAfterBuildDiagnostic" />
-  </Target>
-  <Import Project="..\packages\CefSharp.Common.114.2.120\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.114.2.120\build\CefSharp.Common.targets')" />
 </Project>

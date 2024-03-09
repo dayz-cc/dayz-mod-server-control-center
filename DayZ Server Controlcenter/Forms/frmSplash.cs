@@ -44,7 +44,7 @@ namespace Crosire.Controlcenter.Forms {
 
         public string versionBetaOnline = "0.0.0.0";
 
-        private string url_dayzcc = "https://github.com/Bluscream/dayz-mod-server-control-center";
+        private string url_dayzcc = "https://github.com/dayz-cc/dayz-mod-server-control-center";
 
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
