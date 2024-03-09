@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>DayZ Server Setup</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <UseWindowsForms>True</UseWindowsForms>
     <TargetFramework>net462</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>

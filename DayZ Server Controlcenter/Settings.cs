@@ -45,7 +45,7 @@ namespace Crosire.Controlcenter {
         public string updateFolder => (string)this["updateFolder"];
 
         [ApplicationScopedSetting]
-        [DefaultSettingValue("https://github.com/dayz-cc/serverfiles/archive/refs/heads/main.tar.gz")]
+        [DefaultSettingValue("https://github.com/dayz-cc/serverfiles/releases/lastest/download/serverfiles.tar.gz")] // https://github.com/dayz-cc/serverfiles/archive/refs/heads/main.tar.gz
         [DebuggerNonUserCode]
         public string updateFull => (string)this["updateFull"];
 

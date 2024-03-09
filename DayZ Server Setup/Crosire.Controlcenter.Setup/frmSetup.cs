@@ -831,23 +831,34 @@ namespace Crosire.Controlcenter.Setup {
                     try {
                         process3.StartInfo.FileName = pathMain + "\\install\\migrate.bat";
                         process3.StartInfo.WorkingDirectory = pathMain + "\\install";
-                        process3.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                         process3.StartInfo.Arguments = text + " " + dbHost + " " + dbPort + " " + dbUser + " " + dbPass;
+                        process3.StartInfo.RedirectStandardOutput = true;
+                        process3.StartInfo.RedirectStandardError = true;
+                        process3.StartInfo.UseShellExecute = false;
+                        process3.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                        process3.StartInfo.CreateNoWindow = false;
                         process3.Start();
-                        process3.WaitForExit(30000);
+                        var has_exited = process3.WaitForExit(30000);
+                        if (!has_exited) {
+                            process3.Kill();
+                            continue;
+                        }
                         if (process3.ExitCode == 0) {
                             subAppendProgress("> Updated database \"" + text + "\"!", LogLevel.Info);
                             continue;
-                        }
-                        subAppendProgress("> Error while updating the database \"" + text + "\"!", LogLevel.Warn);
-                        subAppendProgress("> Exit Code: " + process3.ExitCode, LogLevel.Error);
-                        switch (process3.ExitCode) {
-                            case 1:
-                                subAppendProgress("> Could not connect to MySQL server!", null);
-                                break;
-                            case 2:
-                                subAppendProgress("> Database creation failed!", null);
-                                break;
+                        } else {
+                            subAppendProgress(process3.StandardOutput.ReadToEnd(), LogLevel.Info);
+                            subAppendProgress(process3.StandardError.ReadToEnd(), LogLevel.Error);
+                            subAppendProgress("> Error while updating the database \"" + text + "\"!", LogLevel.Warn);
+                            subAppendProgress("> Exit Code: " + process3.ExitCode, LogLevel.Error);
+                            switch (process3.ExitCode) {
+                                case 1:
+                                    subAppendProgress("> Could not connect to MySQL server!", null);
+                                    break;
+                                case 2:
+                                    subAppendProgress("> Database creation failed!", null);
+                                    break;
+                            }
                         }
                     } catch (Exception ex13) {
                         subAppendProgress("> Error while updating the database \"" + text + "\"!", LogLevel.Warn);
