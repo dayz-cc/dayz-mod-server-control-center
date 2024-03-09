@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CefSharp.WinForms" Version="121.3.130" />
-    <PackageReference Include="MySql.Data" Version="6.7.9" />
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
     <PackageReference Include="NLog" Version="5.2.8" />
   </ItemGroup>
   <ItemGroup>
