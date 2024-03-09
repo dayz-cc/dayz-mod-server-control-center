@@ -71,7 +71,7 @@ namespace Crosire.Controlcenter.Setup {
 
         public static string pathConfig = Path.Combine(pathThis, "DayZ Server Controlcenter.exe.config");
 
-        private string url_dayzcc = "http://www.dayzcc.org";
+        private string url_dayzcc = "https://github.com/Bluscream/dayz-mod-server-control-center";
 
         private IContainer components;
 

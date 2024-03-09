@@ -13,8 +13,7 @@ using Crosire.Library;
 using Crosire.Library.Forms;
 using NLog;
 
-namespace Crosire.Controlcenter.Forms
-{
+namespace Crosire.Controlcenter.Forms {
     public class frmSplash : Form {
         private string pathApp = frmMain.pathApp;
 
@@ -45,7 +44,7 @@ namespace Crosire.Controlcenter.Forms
 
         public string versionBetaOnline = "0.0.0.0";
 
-        private string url_dayzcc = "http://www.dayzcc.org";
+        private string url_dayzcc = "https://github.com/Bluscream/dayz-mod-server-control-center";
 
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
