@@ -40,7 +40,7 @@ namespace Crosire.Controlcenter {
         public string updateFolder => (string)this["updateFolder"];
 
         [ApplicationScopedSetting]
-        [DefaultSettingValue("https://minopia.de/dayzcc/5.9.4.1.tar.gz")]
+        [DefaultSettingValue("https://github.com/Bluscream/dayz-mod-server-control-center/releases/latest/download/Serverfiles.tar.gz")]
         [DebuggerNonUserCode]
         public string updateFull => (string)this["updateFull"];
 
