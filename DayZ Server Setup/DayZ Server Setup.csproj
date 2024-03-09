@@ -19,14 +19,16 @@
     <RootNamespace>Crosire.Controlcenter.Setup</RootNamespace>
     <StartupObject>Crosire.Controlcenter.Setup.Program</StartupObject>
     <BaseOutputPath>..\bin\</BaseOutputPath>
-    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Prefer32Bit>True</Prefer32Bit>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <Prefer32Bit>True</Prefer32Bit>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="6.7.9" />
