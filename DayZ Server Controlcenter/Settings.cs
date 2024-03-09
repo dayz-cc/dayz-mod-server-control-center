@@ -30,9 +30,14 @@ namespace Crosire.Controlcenter {
         public string updateChannel => (string)this["updateChannel"];
 
         [DebuggerNonUserCode]
-        [DefaultSettingValue("ftp://minopia.de")]
+        [DefaultSettingValue("https://github.com/Bluscream/dayz-mod-server-control-center/raw/source/version.xml")]
         [ApplicationScopedSetting]
-        public string updateUrl => (string)this["updateUrl"];
+        public string versionXmlUri => (string)this["versionUrl"];
+
+        [DebuggerNonUserCode]
+        [DefaultSettingValue("ftp://dayzcc@v45619.1blu.de:21")]
+        [ApplicationScopedSetting]
+        public string updateFtpServer => (string)this["updateFtpServer"];
 
         [ApplicationScopedSetting]
         [DefaultSettingValue("DayZ_Server_Controlcenter_{0}-{1}-{2}-{3}")]

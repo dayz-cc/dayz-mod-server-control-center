@@ -177,7 +177,10 @@ namespace Crosire.Controlcenter.Forms {
                 subAppendProgress(Environment.NewLine + "Searching for updates ...");
                 logger.Log(LogLevel.Info, "Updater: Loading data from server");
                 try {
-                    string text = Web.ftpRead(Settings.Default.updateUrl + "/version.xml");
+                    string text = string.Empty;
+                    if (Settings.Default.versionXmlUri.StartsWith("ftp://"))
+                        text = Web.ftpRead(Settings.Default.versionXmlUri);
+                    else text = Web.httpRead(Settings.Default.versionXmlUri);
                     if (!string.IsNullOrEmpty(text)) {
                         XmlDocument xmlDocument = new XmlDocument();
                         xmlDocument.Load(new StringReader(text));
@@ -237,7 +240,7 @@ namespace Crosire.Controlcenter.Forms {
                                 File.Delete(pathUpdate + ".exe");
                             }
                             string[] array = versionOnline[0].Split('.');
-                            foreach (Ftp.FtpData item in Ftp.DownloadList(Settings.Default.updateUrl + "/" + string.Format(Settings.Default.updateFolder, array[0], array[1], array[2], array[3]), new DirectoryInfo(pathUpdate), true)) {
+                            foreach (Ftp.FtpData item in Ftp.DownloadList(Settings.Default.updateFtpServer + "/" + string.Format(Settings.Default.updateFolder, array[0], array[1], array[2], array[3]), new DirectoryInfo(pathUpdate), true)) {
                                 logger.Log(LogLevel.Info, "Updater: Downloading file: \"" + item.fileName + "\" (" + item.fileSize + ")");
                                 subAppendProgress("> Downloading file: \"" + item.fileName + "\"");
                                 Ftp.DownloadFileAsync(item, subDownloadChanged);
@@ -248,7 +251,7 @@ namespace Crosire.Controlcenter.Forms {
                             }
                             logger.Log(LogLevel.Info, "Updater: Downloading Updater");
                             subAppendProgress("> Downloading Updater");
-                            Ftp.DownloadFileAsync(new Ftp.FtpData(Settings.Default.updateUrl + "/update.exe", "update.exe", new DirectoryInfo(pathApp)), subDownloadChanged);
+                            Ftp.DownloadFileAsync(new Ftp.FtpData(Settings.Default.updateFtpServer + "/update.exe", "update.exe", new DirectoryInfo(pathApp)), subDownloadChanged);
                             Thread.Sleep(1000);
                             if (File.Exists(pathUpdate + ".exe")) {
                                 if (MessageBoxTop.Show("Do you want to install the updates now?", "Updates available!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
