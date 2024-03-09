@@ -7,7 +7,7 @@ using System.Runtime.Versioning;
 [assembly: Guid("a187dc13-2200-4bb4-a44c-2a9fb95c831c")]
 [assembly: AssemblyDescription("Setup for DayZ Control Center")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Bluscream, novogeek, Crosire")]
+[assembly: AssemblyCompany("Bluscream, Squadron, novogeek, Crosire")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyTitle("DayZ Server Control Center Setup")]
 [assembly: AssemblyProduct("DayZ Server Control Center Setup")]

@@ -1270,7 +1270,7 @@ namespace Crosire.Controlcenter.Setup {
             this.lblMaintainer.Name = "lblMaintainer";
             this.lblMaintainer.Size = new System.Drawing.Size(144, 15);
             this.lblMaintainer.TabIndex = 27;
-            this.lblMaintainer.Text = "Maintained by: Squadron";
+            this.lblMaintainer.Text = "Maintained by: Bluscream";
             this.lblDayzModDescription.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.lblDayzModDescription.AutoSize = true;
             this.lblDayzModDescription.BackColor = System.Drawing.Color.Transparent;

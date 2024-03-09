@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DayZ Server Control Center Updater")]
 [assembly: AssemblyDescription("Updater for DayZ Control Center")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Bluscream, novogeek, Crosire")]
+[assembly: AssemblyCompany("Bluscream, Squadron, novogeek, Crosire")]
 [assembly: AssemblyProduct("DayZ Server Control Center Updater")]
 [assembly: AssemblyCopyright("Copyleft ©2024 Bluscream")]
 [assembly: AssemblyTrademark("")]

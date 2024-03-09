@@ -6,7 +6,7 @@ using System.Runtime.Versioning;
 
 [assembly: Guid("989e855f-8547-489f-8740-da319dc338f0")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Bluscream, novogeek, Crosire")]
+[assembly: AssemblyCompany("Bluscream, Squadron, novogeek, Crosire")]
 [assembly: AssemblyTitle("DayZ Server Control Center")]
 [assembly: AssemblyDescription("DayZ Server Control Center")]
 [assembly: AssemblyCopyright("Copyleft ©2024 Bluscream")]

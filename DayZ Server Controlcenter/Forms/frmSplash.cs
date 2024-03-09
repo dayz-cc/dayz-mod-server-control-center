@@ -490,7 +490,7 @@ namespace Crosire.Controlcenter.Forms {
             this.lblMaintainer.Name = "lblMaintainer";
             this.lblMaintainer.Size = new System.Drawing.Size(144, 15);
             this.lblMaintainer.TabIndex = 31;
-            this.lblMaintainer.Text = "Maintained by: Squadron";
+            this.lblMaintainer.Text = "Maintained by: Bluscream";
             // 
             // frmSplash
             // 
