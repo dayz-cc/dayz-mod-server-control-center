@@ -44,7 +44,6 @@
     <AdditionalFiles Remove="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="app.config" />
     <None Remove="app.manifest" />
   </ItemGroup>
   <ItemGroup>
