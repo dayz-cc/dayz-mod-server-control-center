@@ -1,0 +1,37 @@
+2013-04-13 15:59:35.0137|INFO|Crosire.Controlcenter.Setup.frmSetup|Initializing DayZ Server Setup 5.9.2.0
+2013-04-13 15:59:35.1937|INFO|Crosire.Controlcenter.Setup.frmSetup|Installing beta patch ...
+2013-04-13 15:59:35.2517|INFO|Crosire.Controlcenter.Setup.frmSetup|Previous beta patch uninstalled!
+2013-04-13 15:59:43.6312|INFO|Crosire.Controlcenter.Setup.frmSetup|Beta patch installed!
+2013-04-13 15:59:43.6312|INFO|Crosire.Controlcenter.Setup.frmSetup|Installing redistributables ...
+2013-04-13 16:00:48.6109|INFO|Crosire.Controlcenter.Setup.frmSetup|Redistributables installed!
+2013-04-13 16:00:48.6109|INFO|Crosire.Controlcenter.Setup.frmSetup|Downloading files from download server ...
+2013-04-13 16:02:26.2715|INFO|Crosire.Controlcenter.Setup.frmSetup|Download finished!
+2013-04-13 16:02:26.5085|INFO|Crosire.Controlcenter.Setup.frmSetup|Extracting downloaded files ...
+2013-04-13 16:02:47.8837|INFO|Crosire.Controlcenter.Setup.frmSetup|Extracting finished!
+2013-04-13 16:02:47.8837|INFO|Crosire.Controlcenter.Setup.frmSetup|Copying files to ArmA directory ...
+2013-04-13 16:03:00.4585|ERROR|Crosire.Controlcenter.Setup.frmSetup|Error: The beta patch is not installed!
+2013-04-13 16:03:00.4585|WARN|Crosire.Controlcenter.Setup.frmSetup|Warning: Could not delete a temporary folder!
+2013-04-13 16:03:00.4715|INFO|Crosire.Controlcenter.Setup.frmSetup|Configurating files ...
+2013-04-13 16:03:03.9387|INFO|Crosire.Controlcenter.Setup.frmSetup|Finished!
+2013-04-13 16:03:03.9387|INFO|Crosire.Controlcenter.Setup.frmSetup|Installing database ...
+2013-04-13 16:03:05.3097|INFO|Crosire.Controlcenter.Setup.frmSetup|Starting own MySQL server!
+2013-04-13 16:03:20.3176|INFO|Crosire.Controlcenter.Setup.frmSetup|MySQL is running.
+2013-04-13 16:03:20.4616|INFO|Crosire.Controlcenter.Setup.frmSetup|Testing MySQL User details for user "root" ...
+2013-04-13 16:03:20.7586|INFO|Crosire.Controlcenter.Setup.frmSetup|Success!
+2013-04-13 16:03:24.8529|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_chernarus"!
+2013-04-13 16:03:28.4381|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_lingor"!
+2013-04-13 16:03:31.2452|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_namalsk"!
+2013-04-13 16:03:33.9184|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_taviana"!
+2013-04-13 16:03:37.3836|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_utes"!
+2013-04-13 16:03:40.7318|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_panthera"!
+2013-04-13 16:03:43.5789|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_zargabad"!
+2013-04-13 16:03:47.1381|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_takistan"!
+2013-04-13 16:03:50.4893|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_fallujah"!
+2013-04-13 16:03:53.2445|INFO|Crosire.Controlcenter.Setup.frmSetup|Updated database "dayz_celle"!
+2013-04-13 16:03:53.2445|INFO|Crosire.Controlcenter.Setup.frmSetup|Changing password for user "root" to "??g-uBLN"
+2013-04-13 16:03:53.2595|INFO|Crosire.Controlcenter.Setup.frmSetup|Successfully changed the password!
+2013-04-13 16:11:19.5230|INFO|Crosire.Controlcenter.Setup.frmSetup|Initializing DayZ Server Setup 5.9.2.0
+2013-04-13 16:11:19.5360|INFO|Crosire.Controlcenter.Setup.frmSetup|Installing beta patch ...
+2013-04-13 16:11:45.6535|INFO|Crosire.Controlcenter.Setup.frmSetup|Beta patch installed!
+2013-04-13 16:11:45.6665|INFO|Crosire.Controlcenter.Setup.frmSetup|Reconfigurating files ...
+2013-04-13 16:11:45.8165|INFO|Crosire.Controlcenter.Setup.frmSetup|Finished!
