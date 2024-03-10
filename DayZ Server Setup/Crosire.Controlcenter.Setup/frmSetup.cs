@@ -887,6 +887,7 @@ namespace Crosire.Controlcenter.Setup {
             } finally {
                 mySqlConnection2.Close();
             }
+            subAppendProgress("Admin credentials for webinterface (username: \"admin\" password: \"adminpass\")", LogLevel.Info); // todo: not hardcoded lol
             num += 5;
             subSetProgress(num);
         }
