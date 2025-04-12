@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <AssemblyName>DayZ Server Controlcenter</AssemblyName>
@@ -50,7 +50,7 @@
     <Content Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CefSharp.WinForms" Version="121.3.130" />
+    <PackageReference Include="CefSharp.WinForms" Version="134.3.90" />
     <PackageReference Include="MySql.Data" Version="8.3.0" />
     <PackageReference Include="NLog" Version="5.2.8" />
   </ItemGroup>
